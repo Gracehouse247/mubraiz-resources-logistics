@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mubraiz Logistics - Cost Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee2b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d1b0d] dark:text-white min-h-screen flex flex-col">
+<!-- Top Navbar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7f3e7] dark:border-[#2a4e2a] bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-4 md:px-10 py-3">
+<div class="flex items-center gap-4 text-[#0d1b0d] dark:text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<h2 class="text-[#0d1b0d] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Mubraiz Logistics</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#0d1b0d] dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Services</a>
+<a class="text-[#0d1b0d] dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Tracking</a>
+<a class="text-[#0d1b0d] dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Support</a>
+<a class="text-[#0d1b0d] dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Contact</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-[#25d625] transition-colors text-[#0d1b0d] text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Log In</span>
+</button>
+</div>
+<button class="md:hidden text-[#0d1b0d] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 md:px-10 py-8 md:py-12 max-w-[1280px] mx-auto w-full">
+<!-- Breadcrumb / Stepper -->
+<nav class="mb-8 overflow-x-auto">
+<ol class="flex items-center min-w-max text-sm font-medium text-gray-500 dark:text-gray-400">
+<li class="flex items-center">
+<span class="flex items-center justify-center w-8 h-8 mr-2 bg-primary text-[#0d1b0d] rounded-full shrink-0">1</span>
+<span class="text-[#0d1b0d] dark:text-white font-bold">Route</span>
+<span class="mx-4 text-gray-300 dark:text-gray-600">/</span>
+</li>
+<li class="flex items-center">
+<span class="flex items-center justify-center w-8 h-8 mr-2 border-2 border-primary text-primary bg-transparent rounded-full shrink-0">2</span>
+<span class="text-primary font-bold">Package</span>
+<span class="mx-4 text-gray-300 dark:text-gray-600">/</span>
+</li>
+<li class="flex items-center">
+<span class="flex items-center justify-center w-8 h-8 mr-2 border-2 border-gray-200 dark:border-gray-700 rounded-full shrink-0">3</span>
+<span>Options</span>
+<span class="mx-4 text-gray-300 dark:text-gray-600">/</span>
+</li>
+<li class="flex items-center">
+<span class="flex items-center justify-center w-8 h-8 mr-2 border-2 border-gray-200 dark:border-gray-700 rounded-full shrink-0">4</span>
+<span>Quote</span>
+</li>
+</ol>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Wizard Form -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Page Heading -->
+<div class="flex flex-col gap-3">
+<h1 class="text-[#0d1b0d] dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Shipping Cost Calculator</h1>
+<p class="text-gray-600 dark:text-gray-300 text-base font-normal leading-normal max-w-2xl">
+                        Enter your shipment details to get an instant quote. We calculate chargeable weight based on the greater of actual or volumetric weight.
+                    </p>
+</div>
+<!-- Unit Toggle -->
+<div class="inline-flex h-10 items-center justify-center rounded-lg bg-[#e7f3e7] dark:bg-[#1a2e1a] p-1 w-full sm:w-auto">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-[4px] px-4 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-[#0d1b0d] dark:has-[:checked]:text-white text-gray-500 dark:text-gray-400 text-sm font-medium transition-all">
+<span class="truncate">Metric (cm/kg)</span>
+<input checked="" class="invisible w-0" name="units" type="radio" value="metric"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-[4px] px-4 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-[#0d1b0d] dark:has-[:checked]:text-white text-gray-500 dark:text-gray-400 text-sm font-medium transition-all">
+<span class="truncate">Imperial (in/lbs)</span>
+<input class="invisible w-0" name="units" type="radio" value="imperial"/>
+</label>
+</div>
+<!-- Route Section -->
+<div class="bg-white dark:bg-[#1a2e1a] rounded-xl p-6 shadow-sm border border-[#e7f3e7] dark:border-[#2a4e2a]">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">map</span> Route Details
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-[#0d1b0d] dark:text-white text-sm font-medium">Origin Country/City</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 material-symbols-outlined">location_on</span>
+<input class="w-full rounded-lg border border-[#cfe7cf] dark:border-[#2a4e2a] bg-[#f8fcf8] dark:bg-background-dark h-12 pl-10 pr-4 text-base focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="e.g. New York, USA" value="New York, NY"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[#0d1b0d] dark:text-white text-sm font-medium">Destination Country/City</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 material-symbols-outlined">flight_land</span>
+<input class="w-full rounded-lg border border-[#cfe7cf] dark:border-[#2a4e2a] bg-[#f8fcf8] dark:bg-background-dark h-12 pl-10 pr-4 text-base focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="e.g. London, UK"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Package Details Section -->
+<div class="bg-white dark:bg-[#1a2e1a] rounded-xl p-6 shadow-sm border border-[#e7f3e7] dark:border-[#2a4e2a]">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">package_2</span> Package 1
+                        </h3>
+<button class="text-sm text-primary font-medium hover:underline">+ Add Another Package</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Length (cm)</label>
+<input class="w-full rounded-lg border border-[#cfe7cf] dark:border-[#2a4e2a] bg-[#f8fcf8] dark:bg-background-dark h-12 px-4 text-base focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="0" type="number" value="40"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Width (cm)</label>
+<input class="w-full rounded-lg border border-[#cfe7cf] dark:border-[#2a4e2a] bg-[#f8fcf8] dark:bg-background-dark h-12 px-4 text-base focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="0" type="number" value="30"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Height (cm)</label>
+<input class="w-full rounded-lg border border-[#cfe7cf] dark:border-[#2a4e2a] bg-[#f8fcf8] dark:bg-background-dark h-12 px-4 text-base focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="0" type="number" value="20"/>
+</div>
+<div class="space-y-2 relative">
+<label class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Weight (kg)</label>
+<input class="w-full rounded-lg border border-[#cfe7cf] dark:border-[#2a4e2a] bg-[#f8fcf8] dark:bg-background-dark h-12 px-4 text-base focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="0" type="number" value="4"/>
+<span class="absolute right-3 top-[34px] text-green-600 material-symbols-outlined text-lg">check_circle</span>
+</div>
+</div>
+<!-- Chargeable Weight Logic Visualization -->
+<div class="bg-blue-50 dark:bg-blue-900/10 rounded-lg p-4 flex flex-col sm:flex-row gap-4 items-start sm:items-center border border-blue-100 dark:border-blue-900/30">
+<div class="bg-blue-100 dark:bg-blue-800/30 p-2 rounded-full text-blue-600 dark:text-blue-300">
+<span class="material-symbols-outlined">calculate</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="font-bold text-blue-900 dark:text-blue-100">Chargeable Weight: 4.8 kg</h4>
+<span class="text-xs font-mono bg-white dark:bg-blue-950 px-2 py-0.5 rounded text-blue-800 dark:text-blue-200 border border-blue-200 dark:border-blue-800">Volumetric &gt; Actual</span>
+</div>
+<p class="text-sm text-blue-800 dark:text-blue-300">
+                                The volumetric weight <span class="font-mono">(40x30x20)/5000 = 4.8kg</span> is greater than the actual weight <span class="font-mono">(4kg)</span>.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex justify-between pt-4">
+<button class="flex items-center gap-2 px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        Back
+                    </button>
+<button class="flex items-center gap-2 px-8 py-3 rounded-lg bg-primary text-[#0d1b0d] font-bold hover:bg-[#25d625] transition-transform active:scale-95 shadow-lg shadow-green-500/20">
+                        Continue to Options
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Summary & Eco Hub -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Green Logistics Hub -->
+<div class="bg-gradient-to-br from-[#f0fdf0] to-white dark:from-[#152915] dark:to-[#1a2e1a] rounded-xl p-6 shadow-sm border border-primary/30 relative overflow-hidden group">
+<div class="absolute -right-6 -top-6 text-primary/10 group-hover:text-primary/20 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 140px;">eco</span>
+</div>
+<div class="relative z-10">
+<h3 class="flex items-center gap-2 text-lg font-bold text-[#0d1b0d] dark:text-white mb-4">
+<span class="material-symbols-outlined text-primary fill-1">eco</span>
+                            Green Logistics Hub
+                        </h3>
+<div class="mb-6">
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Estimated Carbon Footprint</p>
+<div class="flex items-end gap-2 mb-2">
+<span class="text-3xl font-black text-[#0d1b0d] dark:text-white">12.5</span>
+<span class="text-sm font-medium text-gray-500 mb-1">kg CO2e</span>
+</div>
+<!-- Visual Bar -->
+<div class="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-green-400 to-yellow-400 w-[35%] rounded-full"></div>
+</div>
+<div class="flex justify-between text-[10px] text-gray-400 mt-1 uppercase font-semibold tracking-wider">
+<span>Low Impact</span>
+<span>High Impact</span>
+</div>
+</div>
+<div class="bg-white/60 dark:bg-black/20 backdrop-blur-sm p-3 rounded-lg border border-primary/20">
+<label class="flex items-start gap-3 cursor-pointer">
+<div class="relative flex items-center">
+<input class="peer h-5 w-5 cursor-pointer appearance-none rounded-md border border-gray-300 transition-all checked:border-primary checked:bg-primary" type="checkbox"/>
+<span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 peer-checked:opacity-100 material-symbols-outlined text-sm pointer-events-none">check</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-[#0d1b0d] dark:text-white">Offset this shipment</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Add <span class="font-bold text-primary">$2.00</span> to contribute to reforestation projects.</p>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Summary Card -->
+<div class="bg-white dark:bg-[#1a2e1a] rounded-xl p-6 shadow-sm border border-[#e7f3e7] dark:border-[#2a4e2a]">
+<h3 class="text-lg font-bold mb-4 text-[#0d1b0d] dark:text-white">Shipment Summary</h3>
+<div class="space-y-4">
+<div class="flex gap-3">
+<div class="mt-1">
+<div class="size-2.5 rounded-full bg-primary mb-1 ml-1"></div>
+<div class="w-0.5 h-8 bg-gray-200 dark:bg-gray-700 ml-2"></div>
+<div class="size-2.5 rounded-full border-2 border-primary ml-1 bg-white dark:bg-[#1a2e1a]"></div>
+</div>
+<div class="flex-1 space-y-4">
+<div>
+<p class="text-xs text-gray-500 uppercase font-semibold">From</p>
+<p class="font-medium text-[#0d1b0d] dark:text-white">New York, NY, USA</p>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase font-semibold">To</p>
+<p class="font-medium text-gray-400 italic">Select Destination...</p>
+</div>
+</div>
+</div>
+<hr class="border-gray-100 dark:border-gray-800"/>
+<div>
+<p class="text-xs text-gray-500 uppercase font-semibold mb-2">Total Details</p>
+<div class="flex justify-between text-sm mb-1">
+<span class="text-gray-600 dark:text-gray-400">Packages</span>
+<span class="font-medium dark:text-white">1</span>
+</div>
+<div class="flex justify-between text-sm mb-1">
+<span class="text-gray-600 dark:text-gray-400">Total Weight</span>
+<span class="font-medium dark:text-white">4 kg</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-gray-600 dark:text-gray-400">Volumetric Weight</span>
+<span class="font-medium dark:text-white">4.8 kg</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Help Box -->
+<div class="bg-[#f8fcf8] dark:bg-background-dark rounded-lg p-4 border border-[#e7f3e7] dark:border-[#2a4e2a] flex gap-3">
+<span class="material-symbols-outlined text-gray-400">help</span>
+<div class="text-sm text-gray-600 dark:text-gray-400">
+<p class="mb-1 font-medium text-[#0d1b0d] dark:text-white">Need assistance?</p>
+<p>Call our support line at <a class="text-primary hover:underline" href="#">+1 (800) 123-4567</a> for complex shipments.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

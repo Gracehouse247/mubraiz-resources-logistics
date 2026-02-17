@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Secure Support Ticketing System | Mubraiz Resources Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee2b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                        "slate-grey": "#64748b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d1b0d] min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7f3e7] dark:border-[#1a2e1a] px-10 py-3 bg-white dark:bg-[#0a160a] sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#0d1b0d] dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<h2 class="text-[#0d1b0d] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Mubraiz Resources Ltd</h2>
+<p class="text-xs text-slate-grey font-medium uppercase tracking-wider">Secure Client Portal</p>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-[#0d1b0d] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-[#0d1b0d] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">Shipments</a>
+<a class="text-[#0d1b0d] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">Invoices</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Support</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#e7f3e7] dark:bg-[#1a2e1a] text-[#0d1b0d] dark:text-white">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#e7f3e7] dark:bg-[#1a2e1a] text-[#0d1b0d] dark:text-white">
+<span class="material-symbols-outlined">verified_user</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User avatar profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTtaJUKT1SFiPRpptXF4AkqFKGi6ZT3Ajjlys_8sL7plxrszexaDILNgnefrYPpqFYOLNK9BjCmtFFhxp05Ko5ExmopKSbDSGq2eoS4y9L6DYYUIUb-wuIGz29KO_seMZ5OBNs7loAHb0kM_I9aYZy59vab3TE4jTlgdpuTjt5tn2NbMI1IANtm2-32KhIDZbVaQ_UKmXT-uwurcsMVJtZ6HWMn0E8tiRL5Q7sQUahMMSQmboieyuC7VmuoINDa9wFZ9CPSwp6yu0");'></div>
+</div>
+</header>
+<!-- Main Content Area: Split Pane Layout -->
+<main class="flex-1 flex overflow-hidden">
+<!-- Left Pane: Sidebar & Ticket History -->
+<aside class="w-96 border-r border-[#e7f3e7] dark:border-[#1a2e1a] bg-white dark:bg-[#0a160a] flex flex-col">
+<!-- Sidebar Header & Action -->
+<div class="p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-[#0d1b0d] dark:text-white text-xl font-bold">Support Center</h1>
+<p class="text-slate-grey text-xs">Manage your global logistics inquiries</p>
+</div>
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">support_agent</span>
+</div>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg h-12 bg-primary text-[#0d1b0d] text-sm font-bold transition-transform active:scale-95 shadow-sm">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Create New Ticket</span>
+</button>
+</div>
+<!-- Search Bar -->
+<div class="px-6 pb-4">
+<label class="relative block">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-grey">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</span>
+<input class="block w-full rounded-lg border-none bg-background-light dark:bg-[#1a2e1a] py-3 pl-10 pr-3 text-sm placeholder:text-slate-grey focus:ring-1 focus:ring-primary" placeholder="Search ticket history..." type="text"/>
+</label>
+</div>
+<!-- Filter Categories -->
+<div class="flex gap-2 px-6 overflow-x-auto scrollbar-hide mb-4">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/20 text-[#0d1b0d] dark:text-white text-xs font-bold border border-primary/30 shrink-0 cursor-pointer">
+<span class="material-symbols-outlined text-sm">all_inbox</span> All
+                </div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-background-light dark:bg-[#1a2e1a] text-slate-grey text-xs font-medium border border-transparent shrink-0 cursor-pointer hover:bg-white dark:hover:bg-black/20">
+<span class="material-symbols-outlined text-sm">schedule</span> Open
+                </div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-background-light dark:bg-[#1a2e1a] text-slate-grey text-xs font-medium border border-transparent shrink-0 cursor-pointer hover:bg-white dark:hover:bg-black/20">
+<span class="material-symbols-outlined text-sm">trending_up</span> Active
+                </div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-background-light dark:bg-[#1a2e1a] text-slate-grey text-xs font-medium border border-transparent shrink-0 cursor-pointer hover:bg-white dark:hover:bg-black/20">
+<span class="material-symbols-outlined text-sm">check_circle</span> Resolved
+                </div>
+</div>
+<!-- Ticket List Container -->
+<div class="flex-1 overflow-y-auto border-t border-[#e7f3e7] dark:border-[#1a2e1a]">
+<!-- Ticket Item: Active/Selected -->
+<div class="p-4 border-b border-[#e7f3e7] dark:border-[#1a2e1a] bg-[#e7f3e7]/50 dark:bg-primary/5 cursor-pointer relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter">T-2024-089</span>
+<span class="text-[10px] font-semibold text-slate-grey">2h ago</span>
+</div>
+<h3 class="text-sm font-bold text-[#0d1b0d] dark:text-white mb-2 line-clamp-1">Delayed Customs Clearance - Singapore Port</h3>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="size-2 rounded-full bg-red-500"></span>
+<span class="text-[11px] text-slate-grey font-medium uppercase">High Priority</span>
+</div>
+<div class="px-2 py-0.5 rounded bg-amber-100 text-amber-700 text-[10px] font-bold uppercase">In Progress</div>
+</div>
+</div>
+<!-- Ticket Item -->
+<div class="p-4 border-b border-[#e7f3e7] dark:border-[#1a2e1a] hover:bg-background-light dark:hover:bg-white/5 cursor-pointer transition-colors">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold text-slate-grey uppercase tracking-tighter">T-2024-085</span>
+<span class="text-[10px] font-semibold text-slate-grey">1d ago</span>
+</div>
+<h3 class="text-sm font-semibold text-[#0d1b0d] dark:text-white mb-2 line-clamp-1">Billing Discrepancy: Invoice #MB-992</h3>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="size-2 rounded-full bg-amber-500"></span>
+<span class="text-[11px] text-slate-grey font-medium uppercase">Medium</span>
+</div>
+<div class="px-2 py-0.5 rounded bg-[#e7f3e7] text-[#078823] text-[10px] font-bold uppercase">Open</div>
+</div>
+</div>
+<!-- Ticket Item -->
+<div class="p-4 border-b border-[#e7f3e7] dark:border-[#1a2e1a] hover:bg-background-light dark:hover:bg-white/5 cursor-pointer transition-colors opacity-75">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold text-slate-grey uppercase tracking-tighter">T-2024-072</span>
+<span class="text-[10px] font-semibold text-slate-grey">4d ago</span>
+</div>
+<h3 class="text-sm font-semibold text-[#0d1b0d] dark:text-white mb-2 line-clamp-1">Technical: API Key Auth Errors</h3>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="size-2 rounded-full bg-blue-500"></span>
+<span class="text-[11px] text-slate-grey font-medium uppercase">Low</span>
+</div>
+<div class="px-2 py-0.5 rounded bg-gray-200 text-gray-600 dark:bg-gray-800 dark:text-gray-400 text-[10px] font-bold uppercase">Resolved</div>
+</div>
+</div>
+<!-- Ticket Item -->
+<div class="p-4 border-b border-[#e7f3e7] dark:border-[#1a2e1a] hover:bg-background-light dark:hover:bg-white/5 cursor-pointer transition-colors">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold text-slate-grey uppercase tracking-tighter">T-2024-068</span>
+<span class="text-[10px] font-semibold text-slate-grey">1w ago</span>
+</div>
+<h3 class="text-sm font-semibold text-[#0d1b0d] dark:text-white mb-2 line-clamp-1">Route Optimization Request - West Africa</h3>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="size-2 rounded-full bg-amber-500"></span>
+<span class="text-[11px] text-slate-grey font-medium uppercase">Medium</span>
+</div>
+<div class="px-2 py-0.5 rounded bg-gray-200 text-gray-600 dark:bg-gray-800 dark:text-gray-400 text-[10px] font-bold uppercase">Resolved</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Right Pane: Active Ticket Conversation -->
+<section class="flex-1 flex flex-col bg-white dark:bg-[#0a160a]">
+<!-- Conversation Header -->
+<div class="px-8 py-5 border-b border-[#e7f3e7] dark:border-[#1a2e1a] flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-3 mb-1">
+<span class="text-xs font-bold text-primary px-2 py-0.5 bg-primary/10 rounded">T-2024-089</span>
+<h2 class="text-lg font-bold text-[#0d1b0d] dark:text-white">Delayed Customs Clearance - Singapore Port</h2>
+</div>
+<div class="flex items-center gap-4 text-xs text-slate-grey">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">category</span> Logistics &amp; Shipping</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> Assigned to: Alex Wong (Senior Agent)</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 border border-[#e7f3e7] dark:border-[#1a2e1a] rounded-lg text-sm font-medium hover:bg-background-light dark:hover:bg-white/5 flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-sm">print</span>
+</button>
+<button class="px-4 py-2 border border-[#e7f3e7] dark:border-[#1a2e1a] rounded-lg text-sm font-medium hover:bg-background-light dark:hover:bg-white/5 flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-sm">archive</span>
+</button>
+</div>
+</div>
+<!-- Conversation Thread -->
+<div class="flex-1 overflow-y-auto p-8 flex flex-col gap-8 scrollbar-hide">
+<!-- Client Message -->
+<div class="flex flex-col items-start max-w-[80%]">
+<div class="flex items-center gap-2 mb-2">
+<div class="size-6 rounded-full bg-primary/30 flex items-center justify-center text-[10px] font-bold">ME</div>
+<span class="text-xs font-bold">You</span>
+<span class="text-[10px] text-slate-grey">Aug 24, 10:15 AM</span>
+</div>
+<div class="bg-background-light dark:bg-[#1a2e1a] p-4 rounded-xl rounded-tl-none border border-[#e7f3e7] dark:border-white/10 text-sm leading-relaxed">
+                        Hello, we have a shipment (Ref: MB-SG-8812) currently held at the Singapore Customs. The portal says "Pending Documentation," but we already uploaded the Bill of Lading yesterday. Can you check why this hasn't cleared yet? This is a high-priority delivery.
+                    </div>
+</div>
+<!-- Agent Message -->
+<div class="flex flex-col items-end self-end max-w-[80%] text-right">
+<div class="flex items-center gap-2 mb-2 flex-row-reverse">
+<div class="size-6 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px] font-bold">AW</div>
+<span class="text-xs font-bold">Alex Wong (Support)</span>
+<span class="text-[10px] text-slate-grey">Aug 24, 11:30 AM</span>
+</div>
+<div class="bg-primary/10 dark:bg-primary/5 p-4 rounded-xl rounded-tr-none border border-primary/20 text-sm leading-relaxed text-left">
+                        Hi there, thank you for reaching out. I've looked into the records for MB-SG-8812. It appears the Singapore Customs office requires an additional "Certificate of Origin" for this specific category of electronics. I have updated the status to "In Progress" and am reaching out to our regional port officer to expedite the verification of the BoL you uploaded. 
+                        <br/><br/>
+                        Could you please upload the Certificate of Origin if you have it available?
+                    </div>
+</div>
+<!-- Client Message with Attachment -->
+<div class="flex flex-col items-start max-w-[80%]">
+<div class="flex items-center gap-2 mb-2">
+<div class="size-6 rounded-full bg-primary/30 flex items-center justify-center text-[10px] font-bold">ME</div>
+<span class="text-xs font-bold">You</span>
+<span class="text-[10px] text-slate-grey">Aug 24, 11:45 AM</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="bg-background-light dark:bg-[#1a2e1a] p-4 rounded-xl rounded-tl-none border border-[#e7f3e7] dark:border-white/10 text-sm leading-relaxed">
+                            Attached is the requested document. Please let us know as soon as the status changes.
+                        </div>
+<div class="flex gap-2">
+<div class="flex items-center gap-3 p-2 bg-white dark:bg-black/20 border border-primary/20 rounded-lg max-w-xs shadow-sm group cursor-pointer hover:border-primary transition-colors">
+<div class="size-10 bg-red-50 text-red-500 rounded flex items-center justify-center">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex flex-col overflow-hidden">
+<span class="text-xs font-bold truncate">Cert_of_Origin_SG_8812.pdf</span>
+<span class="text-[10px] text-slate-grey">1.2 MB • PDF</span>
+</div>
+<span class="material-symbols-outlined text-slate-grey group-hover:text-primary ml-auto text-lg">download</span>
+</div>
+</div>
+</div>
+</div>
+<!-- System Notice -->
+<div class="flex justify-center my-2">
+<div class="px-4 py-1.5 rounded-full bg-background-light dark:bg-[#1a2e1a] border border-[#e7f3e7] dark:border-white/5 text-[10px] font-bold text-slate-grey uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">lock</span>
+                        End-to-end Encrypted Conversation
+                    </div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-6 border-t border-[#e7f3e7] dark:border-[#1a2e1a]">
+<div class="max-w-4xl mx-auto flex flex-col gap-3">
+<div class="relative">
+<textarea class="w-full rounded-xl border-2 border-background-light dark:border-[#1a2e1a] bg-white dark:bg-[#0a160a] p-4 text-sm focus:border-primary focus:ring-0 min-h-[120px] placeholder:text-slate-grey resize-none" placeholder="Type your reply here..."></textarea>
+<!-- Toolbar Overlay -->
+<div class="absolute bottom-3 left-3 right-3 flex justify-between items-center pointer-events-none">
+<div class="flex gap-1 pointer-events-auto">
+<button class="p-2 text-slate-grey hover:text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<button class="p-2 text-slate-grey hover:text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">image</span>
+</button>
+<button class="p-2 text-slate-grey hover:text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">sentiment_satisfied</span>
+</button>
+</div>
+<button class="pointer-events-auto flex items-center gap-2 bg-primary px-6 py-2 rounded-lg text-[#0d1b0d] text-sm font-bold hover:shadow-lg transition-all active:scale-95">
+<span>Send Reply</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 px-2 text-[11px] text-slate-grey">
+<span class="material-symbols-outlined text-sm">info</span>
+<span>Shift + Enter for new line. Files up to 25MB are supported.</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Create Ticket Modal (Hidden by default, shown here for design purpose) -->
+<div class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4 hidden">
+<div class="bg-white dark:bg-[#0a160a] w-full max-w-lg rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+<div class="p-6 border-b border-[#e7f3e7] dark:border-[#1a2e1a] flex justify-between items-center">
+<h3 class="text-lg font-bold">New Support Request</h3>
+<button class="text-slate-grey hover:text-[#0d1b0d] dark:hover:text-white">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-6 flex flex-col gap-5">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-slate-grey uppercase tracking-wider">Department</label>
+<select class="rounded-lg border-background-light dark:border-[#1a2e1a] bg-background-light dark:bg-[#1a2e1a] text-sm focus:ring-primary focus:border-primary">
+<option>Logistics &amp; Shipping</option>
+<option>Billing &amp; Invoicing</option>
+<option>Technical Support</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-slate-grey uppercase tracking-wider">Urgency</label>
+<select class="rounded-lg border-background-light dark:border-[#1a2e1a] bg-background-light dark:bg-[#1a2e1a] text-sm focus:ring-primary focus:border-primary">
+<option>Low - Routine Query</option>
+<option>Medium - Standard</option>
+<option selected="">High - Critical/Delayed</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-slate-grey uppercase tracking-wider">Subject</label>
+<input class="rounded-lg border-background-light dark:border-[#1a2e1a] bg-background-light dark:bg-[#1a2e1a] text-sm focus:ring-primary focus:border-primary" placeholder="Summary of the issue" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-slate-grey uppercase tracking-wider">Detailed Description</label>
+<textarea class="rounded-lg border-background-light dark:border-[#1a2e1a] bg-background-light dark:bg-[#1a2e1a] text-sm focus:ring-primary focus:border-primary" placeholder="Describe your issue in detail..." rows="4"></textarea>
+</div>
+</div>
+<div class="p-6 bg-background-light dark:bg-[#1a2e1a]/50 border-t border-[#e7f3e7] dark:border-[#1a2e1a] flex gap-3 justify-end">
+<button class="px-6 py-2.5 rounded-lg text-sm font-bold text-slate-grey hover:text-[#0d1b0d] dark:hover:text-white transition-colors">Cancel</button>
+<button class="px-8 py-2.5 rounded-lg bg-primary text-[#0d1b0d] text-sm font-bold shadow-sm shadow-primary/20">Submit Ticket</button>
+</div>
+</div>
+</div>
+</body></html>

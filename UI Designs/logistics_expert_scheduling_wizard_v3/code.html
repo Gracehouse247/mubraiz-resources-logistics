@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Logistics Expert Scheduling Wizard v3 | Mubraiz Resources Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#37ec13",
+                        "safety-yellow": "#facc15",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#132210",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark min-h-screen text-[#101b0d] dark:text-[#f0f4f0]">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e9f3e7] dark:border-[#2a3a2a] px-10 py-3 bg-white dark:bg-[#1a2e16]">
+<div class="flex items-center gap-4 text-[#101b0d] dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Mubraiz Resources Ltd</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Solutions</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Fleet</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Network</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-[#101b0d] text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-all">
+<span>Client Portal</span>
+</button>
+</div>
+</header>
+<main class="max-w-[960px] mx-auto px-4 py-8">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 py-4 mb-4">
+<a class="text-[#599a4c] dark:text-[#88c47b] text-sm font-medium leading-normal" href="#">Global Services</a>
+<span class="text-[#599a4c] dark:text-[#88c47b] text-sm font-medium leading-normal">/</span>
+<a class="text-[#599a4c] dark:text-[#88c47b] text-sm font-medium leading-normal" href="#">Expert Console</a>
+<span class="text-[#599a4c] dark:text-[#88c47b] text-sm font-medium leading-normal">/</span>
+<span class="text-[#101b0d] dark:text-white text-sm font-medium leading-normal">Scheduling Wizard</span>
+</div>
+<!-- Headline -->
+<div class="mb-8">
+<h1 class="text-[#101b0d] dark:text-white tracking-light text-[32px] md:text-[40px] font-bold leading-tight text-center">Schedule a Logistics Consultation</h1>
+<p class="text-center text-[#599a4c] dark:text-[#88c47b] mt-2">Connect with our global network of supply chain experts.</p>
+</div>
+<!-- Main Wizard Card -->
+<div class="bg-white dark:bg-[#1a2e16] rounded-xl shadow-xl overflow-hidden border border-[#e9f3e7] dark:border-[#2a3a2a]">
+<!-- Tabs / Progress Steps -->
+<div class="border-b border-[#d3e7cf] dark:border-[#2a3a2a] px-8 flex justify-between">
+<div class="flex gap-8 overflow-x-auto">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#599a4c] pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">1. Service</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#599a4c] pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">2. Expert</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-[#101b0d] dark:text-white pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">3. Date &amp; Time</p>
+</a>
+</div>
+<!-- Quick Book Option -->
+<div class="hidden md:flex items-center">
+<button class="bg-safety-yellow text-black px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-2 shadow-sm hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">bolt</span>
+                        QUICK BOOK URGENT
+                    </button>
+</div>
+</div>
+<div class="p-8">
+<!-- Section Header -->
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-[#101b0d] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Step 3: Select Date &amp; Time</h2>
+<div class="text-sm text-[#599a4c] dark:text-[#88c47b] flex items-center gap-2">
+<span class="material-symbols-outlined text-base">public</span>
+                        GMT+1 (London)
+                    </div>
+</div>
+<!-- Step 3 Content: Calendar Scroller -->
+<div class="mb-8">
+<p class="text-sm font-semibold text-[#599a4c] dark:text-[#88c47b] mb-4 uppercase tracking-wider">Select Date</p>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+<!-- Date Pill: Previous -->
+<button class="flex flex-col items-center justify-center min-w-[70px] h-20 rounded-xl border border-[#d3e7cf] dark:border-[#2a3a2a] opacity-50 cursor-not-allowed">
+<span class="text-xs font-bold uppercase">Mon</span>
+<span class="text-xl font-bold">11</span>
+</button>
+<!-- Date Pill: Active/Selected -->
+<button class="flex flex-col items-center justify-center min-w-[70px] h-20 rounded-xl bg-primary text-[#101b0d] shadow-lg shadow-primary/20">
+<span class="text-xs font-bold uppercase">Tue</span>
+<span class="text-xl font-bold">12</span>
+</button>
+<!-- Date Pill: Normal -->
+<button class="flex flex-col items-center justify-center min-w-[70px] h-20 rounded-xl border border-[#d3e7cf] dark:border-[#2a3a2a] hover:border-primary/50 transition-colors">
+<span class="text-xs font-bold uppercase">Wed</span>
+<span class="text-xl font-bold">13</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[70px] h-20 rounded-xl border border-[#d3e7cf] dark:border-[#2a3a2a] hover:border-primary/50 transition-colors">
+<span class="text-xs font-bold uppercase">Thu</span>
+<span class="text-xl font-bold">14</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[70px] h-20 rounded-xl border border-[#d3e7cf] dark:border-[#2a3a2a] hover:border-primary/50 transition-colors">
+<span class="text-xs font-bold uppercase">Fri</span>
+<span class="text-xl font-bold">15</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[70px] h-20 rounded-xl border border-[#d3e7cf] dark:border-[#2a3a2a] hover:border-primary/50 transition-colors">
+<span class="text-xs font-bold uppercase">Mon</span>
+<span class="text-xl font-bold">18</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[70px] h-20 rounded-xl border border-[#d3e7cf] dark:border-[#2a3a2a] hover:border-primary/50 transition-colors">
+<span class="text-xs font-bold uppercase">Tue</span>
+<span class="text-xl font-bold">19</span>
+</button>
+</div>
+</div>
+<!-- Time Slot Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Morning -->
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[#599a4c] dark:text-primary">wb_sunny</span>
+<p class="text-sm font-bold uppercase tracking-wide">Morning</p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="py-3 px-4 rounded-lg border border-[#d3e7cf] dark:border-[#2a3a2a] text-sm font-medium hover:bg-primary/10 transition-colors">09:00 AM</button>
+<button class="py-3 px-4 rounded-lg border border-[#d3e7cf] dark:border-[#2a3a2a] text-sm font-medium hover:bg-primary/10 transition-colors">09:30 AM</button>
+<button class="py-3 px-4 rounded-lg bg-primary/20 border border-primary text-[#101b0d] dark:text-white text-sm font-bold">10:30 AM</button>
+<button class="py-3 px-4 rounded-lg border border-[#d3e7cf] dark:border-[#2a3a2a] text-sm font-medium hover:bg-primary/10 transition-colors">11:00 AM</button>
+</div>
+</div>
+<!-- Afternoon -->
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[#599a4c] dark:text-primary">light_mode</span>
+<p class="text-sm font-bold uppercase tracking-wide">Afternoon</p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="py-3 px-4 rounded-lg border border-[#d3e7cf] dark:border-[#2a3a2a] text-sm font-medium hover:bg-primary/10 transition-colors">02:00 PM</button>
+<button class="py-3 px-4 rounded-lg border border-[#d3e7cf] dark:border-[#2a3a2a] text-sm font-medium hover:bg-primary/10 transition-colors">03:30 PM</button>
+<button class="py-3 px-4 rounded-lg border border-[#d3e7cf] dark:border-[#2a3a2a] text-sm font-medium hover:bg-primary/10 transition-colors">04:00 PM</button>
+<button class="py-3 px-4 rounded-lg border border-[#d3e7cf] dark:border-[#2a3a2a] text-sm font-medium hover:bg-primary/10 transition-colors">05:00 PM</button>
+</div>
+</div>
+</div>
+<!-- Footer Summary / Action -->
+<div class="mt-12 pt-8 border-t border-[#d3e7cf] dark:border-[#2a3a2a] flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full overflow-hidden bg-background-light">
+<img alt="Expert Avatar" class="w-full h-full object-cover" data-alt="Portrait of a logistics expert professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf12vokWVaYSfwWZoMeFbe7DW57xvyfrQ-cJChGLnYs6gqXW-qzCoVsD72ADGI_cKVHOTLBwp6Ck6tZ33YDgJh4Z6BAVb9iv4rDZ_FR7fDIH1ONTjy3aLEepN_Dll3P9p7z0XAhQM1ylKTE4s3iICP6bC5UVvaKhQ9rLddRYQV2VCFnCU8vUVWOKlWNav3dRhDNIAIvp1cMxn2WBeHLJhq88dCDZ4Zu7bY_5N2OwhIWZ_DrGQBJq7FxEs0hPUthMaWnD-8n2OS-8Y"/>
+</div>
+<div>
+<p class="text-xs text-[#599a4c] dark:text-[#88c47b] font-bold uppercase">Selected Expert</p>
+<p class="text-sm font-bold">Sarah Jenkins, Senior Supply Chain Analyst</p>
+</div>
+</div>
+<div class="flex gap-4 w-full md:w-auto">
+<button class="flex-1 md:flex-none min-w-[120px] px-6 h-12 rounded-lg border border-[#d3e7cf] dark:border-[#2a3a2a] font-bold text-sm hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">Back</button>
+<button class="flex-1 md:flex-none min-w-[180px] px-8 h-12 rounded-lg bg-primary text-[#101b0d] font-bold text-sm shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
+                            Confirm Appointment
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Quick Actions -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="p-4 bg-white dark:bg-[#1a2e16] rounded-lg border border-[#e9f3e7] dark:border-[#2a3a2a] flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">chat</span>
+<div>
+<p class="font-bold text-sm">Need Help?</p>
+<p class="text-xs text-[#599a4c] dark:text-[#88c47b]">Live chat with support</p>
+</div>
+</div>
+<div class="p-4 bg-white dark:bg-[#1a2e16] rounded-lg border border-[#e9f3e7] dark:border-[#2a3a2a] flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">description</span>
+<div>
+<p class="font-bold text-sm">Review Docs</p>
+<p class="text-xs text-[#599a4c] dark:text-[#88c47b]">Upload shipping manifests</p>
+</div>
+</div>
+<div class="p-4 bg-white dark:bg-[#1a2e16] rounded-lg border border-[#e9f3e7] dark:border-[#2a3a2a] flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">map</span>
+<div>
+<p class="font-bold text-sm">Network Status</p>
+<p class="text-xs text-[#599a4c] dark:text-[#88c47b]">Global port congestion live</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 border-t border-[#e9f3e7] dark:border-[#2a3a2a] py-10 px-10 bg-white dark:bg-[#1a2e16]">
+<div class="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2 text-[#101b0d] dark:text-white opacity-60">
+<span class="text-sm">© 2024 Mubraiz Resources Ltd. Global Operations.</span>
+</div>
+<div class="flex gap-6 opacity-60">
+<a class="text-sm hover:text-primary" href="#">Privacy</a>
+<a class="text-sm hover:text-primary" href="#">Terms</a>
+<a class="text-sm hover:text-primary" href="#">Compliance</a>
+</div>
+</div>
+</footer>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

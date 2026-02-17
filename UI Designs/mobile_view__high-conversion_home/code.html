@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mubraiz Resources - Mobile Experience</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6dec13",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#182210",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Mobile Viewport Simulation */
+        .mobile-frame {
+            max-width: 414px;
+            margin: 20px auto;
+            min-height: 800px;
+            border: 12px solid #1a1a1a;
+            border-radius: 40px;
+            overflow-y: auto;
+            position: relative;
+            background: #f7f8f6;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Persistent floating action for mobile thumb zone */
+        .fab-container {
+            position: sticky;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 16px;
+            padding-bottom: 16px;
+            pointer-events: none;
+        }
+        .fab-button {
+            pointer-events: auto;
+            box-shadow: 0 4px 14px 0 rgba(109, 236, 19, 0.39);
+        }
+    </style>
+</head>
+<body class="bg-gray-200 font-display text-[#131b0d]">
+<!-- Mobile Screen Wrapper (Desktop Simulation) -->
+<div class="mobile-frame bg-background-light dark:bg-background-dark">
+<!-- Sticky Top Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#ecf3e7] dark:border-white/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary font-bold">package_2</span>
+<h2 class="text-[#131b0d] dark:text-white text-lg font-bold leading-tight tracking-tight">Mubraiz</h2>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-primary text-[#131b0d] px-4 py-2 rounded-lg font-bold text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">request_quote</span>
+<span>Quote</span>
+</button>
+<button class="p-2 text-[#131b0d] dark:text-white">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</header>
+<!-- Hero Section (Stacked for Mobile) -->
+<section class="relative">
+<div class="flex min-h-[420px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-6 text-center" data-alt="Aerial view of logistics shipping port container terminal" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuASbtd32cpy_-c5PjZc9sGoMTi0ve3WtYGksB-hGEjTnQNsMy80sF8Q16YnttLWV1CmZEGml4Qfr7p9E100Wbmd7ydSzXCVU6JbHulXwQ-2YfERGD268mvQj7ufI5dXH9pZ60janIWB8r_W6UrL0PPzDUUJs5eFUHr1UZ8BqX_QzLowb_McqdJJ1BFlRkVAN3NEO7STlapFJP_s4uz26y294PaCWZysSwZQWuvjsUsP9LVCIhv6O_8IzG0t7EE__Ylst_cO88B3lvI");'>
+<div class="flex flex-col gap-3">
+<h1 class="text-white text-3xl font-black leading-tight tracking-tight">
+                        Global Logistics,<br/>Local Integrity
+                    </h1>
+<p class="text-white/90 text-sm font-normal leading-relaxed px-4">
+                        Simplifying your supply chain with speed, transparency, and global reach.
+                    </p>
+</div>
+<!-- Track Your Shipment Widget (Touch Optimized) -->
+<div class="w-full max-w-sm mt-4">
+<div class="flex flex-col gap-2">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border-none bg-white text-[#131b0d] placeholder:text-gray-400 focus:ring-2 focus:ring-primary shadow-lg text-base" placeholder="Enter Tracking Number" type="text"/>
+</div>
+<button class="w-full py-4 bg-primary text-[#131b0d] font-bold rounded-xl shadow-lg active:scale-[0.98] transition-transform">
+                            Track Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section (Swipeable Carousel) -->
+<section class="py-8 bg-white dark:bg-background-dark/50">
+<p class="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Trusted by Industry Leaders</p>
+<div class="flex overflow-x-auto no-scrollbar gap-10 px-8 items-center">
+<div class="flex-shrink-0 w-24 h-12 bg-contain bg-center bg-no-repeat opacity-50 grayscale" data-alt="Logistics company client logo 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_N_jspjQoQotvzBHe8i3yiDps56V7PrMTmXUcW_rI92uK2XPoF126rHyyJm1QVHW_OrMvIUCgK3gR4ZzZfG2bSySL1U6FmupI9eNsEuuFxdSfzbtOZzQXtNsFaSZqMC5IQ2Y3KxDWcZx49Am0pYAT9e8KOop0XNS4Z0VAmRtzPfUFdLcZySLVX236ww-OBE1VdkChAB11tOqFBESq9jeLyZh37LEd7gZ2O0gfjqWzk_wG4xvTj4-TgJJzFvntI9SBDrt0RCuiLHU");'></div>
+<div class="flex-shrink-0 w-24 h-12 bg-contain bg-center bg-no-repeat opacity-50 grayscale" data-alt="Logistics company client logo 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDU8zkVxqJpQYQKbmTay1W48kY-6HgqKIndelT9r3o1GkEY2fHA6vxMGezIQXS_bQ_ZEchrq97xMbAxiTM9igw1Td4pJhQqzK27nsjzRm8baq_BckOwXJbFEmc-_UPaCOzmuTN0chPg12jJ-nH7eOC6USW_Vj18lu4TVLq1QZqQP3VhhteipS4wkSM2OuvhoZfwURooQjPc7Mt7YHegvq8wGuGAha7yx05oPEbbyDq5oXi2YU76ikB5JZrUE8fN3jYB8j-uHyoI0pU");'></div>
+<div class="flex-shrink-0 w-24 h-12 bg-contain bg-center bg-no-repeat opacity-50 grayscale" data-alt="Logistics company client logo 3" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbv23cq2f0ym961NI4PhjZIKLrqSywF_szCNwCDv9qlH9T78UmdnJcBgX97WKT7iLml-kWQA6nUdY3q3EWcVwpLhUt_0xqtc79ZA4XTLy7CnkyiOsOqGKoEz7x0EYJaYD0Dmt1PxxY0I9Q2XzU7wjYGOgUeLAAWEiQmibd0FdlIZ3PEDrEsPRgo4h79IrnH7j5yhl0RgMsNBB_t1CWzVbJyDNO6CZrtEsOad2TYjMvX7S_zInK6XyCnpc5PmQlAfUPw_qjY9kiozM");'></div>
+<div class="flex-shrink-0 w-24 h-12 bg-contain bg-center bg-no-repeat opacity-50 grayscale" data-alt="Logistics company client logo 4" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCspHd_m0NwC4exkJUQyQhwI1P6Yp_g4a8ZX0_ypYglag7hBNZO51r51tkKCBVImo_qBFbrZklMbHID1QrKmpb_VqeRe4EZg1BtKFr39mycIxp1E83FrLFxZmYTf7khAxR42pNQCUCWJ6xPJJre_cH-2fDjqi5Vx1IB2GDDo5TCgLfs1cM0fjbbPnz6ANTlWNd3cKWdJrAjfQ9YM-yvk_jslPwOarmkcXkVlggrHu5fxx-sdka68PZSfphM-wQYU-O5ocAthN3Pbgo");'></div>
+<div class="flex-shrink-0 w-24 h-12 bg-contain bg-center bg-no-repeat opacity-50 grayscale" data-alt="Logistics company client logo 5" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAB6ax9up8bs5goe8lXHSYeDnxOIKIcVJYEVSCC7HP7uCkIlNayE8svyw0ybpOwKY_yE_e7p_6DrJC94BoUa7jjEJB5DtCy-oC7O_3tEQctFnuvycA-EhkNROBixfv2ZuYAThlE1HdInd7OKZ0687J27QbC3bgEnSQart4LS6jmq8gi2hfjn92TqR1lu1EvryqS2txN7LaE_qKM8ieCou_ZtttQxttBmHfCCkoYM1UZEsd0xb2vD1arhzc19w56r9i3elrrWbL13AA");'></div>
+</div>
+</section>
+<!-- Section Header -->
+<div class="px-6 pt-10 pb-4">
+<div class="flex items-center justify-between">
+<h2 class="text-[#131b0d] dark:text-white text-2xl font-black tracking-tight">Core Services</h2>
+<a class="text-primary text-sm font-bold flex items-center" href="#">View All <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span></a>
+</div>
+</div>
+<!-- Service Matrix (Stacked Cards) -->
+<div class="px-6 flex flex-col gap-6 pb-20">
+<!-- Service Card 1 -->
+<div class="flex flex-col bg-white dark:bg-[#1f2b15] rounded-xl overflow-hidden shadow-sm border border-[#ecf3e7] dark:border-white/5 group">
+<div class="h-48 w-full bg-center bg-cover" data-alt="Cargo plane being loaded with freight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD90sZSs9Cl3ZdKCGR2CxySPxX8a24mA5_XO6RNAWrDQt8cOSrsaP19MF81rAgTCfHT-jFDsiN7hHQaNnCFaa-8cZ-IBA7iy7OUXd2SyDFvqAkgwV9aWwMtp0PQm5wBvYplK4_1E8GRS9d_TvyR11v18qD27f70uM7nbRdmKS0iVNFtuowYt6_Irv1jkaGfkpWc-v_F-xmSkj2-qgEYY63U69IY0gOy8fCOeEGHjpusFitExapK5RQ1DglzZriAgmRgwvXe9cCViTg");'></div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">airplanemode_active</span>
+<p class="text-[#131b0d] dark:text-white text-lg font-bold">Freight Forwarding</p>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                        Efficient air, sea, and land cargo solutions across six continents with real-time tracking.
+                    </p>
+<button class="w-full py-3 bg-[#f7f8f6] dark:bg-background-dark text-[#131b0d] dark:text-white font-bold text-sm rounded-lg border border-[#ecf3e7] dark:border-white/10 active:bg-primary/20">
+                        Explore Logistics
+                    </button>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="flex flex-col bg-white dark:bg-[#1f2b15] rounded-xl overflow-hidden shadow-sm border border-[#ecf3e7] dark:border-white/5">
+<div class="h-48 w-full bg-center bg-cover" data-alt="Documents and stamps for customs clearing" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnbvPJcxUBXx3XjQxHZbLIwxwReWD9oTZB1QVKCRTCGgSGYp4nYkZcZreba5hZkSXaGMIjHh2ap-tWx9q6PHocO_jg1pzZ8A27BaB-YjMxr4igo4vwmpLBWdZrre64hJeWAexULuLfG_7V1D-wwMZbTMNhO5MpWdWoD85yPnToGiZKT_8hzgki2Z3wyyQWloRpL-cgsuRapNuVRWpLXNUEbMeDwXM_sFm_A8BcdszJuC_ibmZCbXjANi1SI-OVEbqr2g_qq1EzXc8");'></div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">description</span>
+<p class="text-[#131b0d] dark:text-white text-lg font-bold">Customs Clearing</p>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                        Expert handling of complex documentation and regulatory compliance for seamless border crossing.
+                    </p>
+<button class="w-full py-3 bg-[#f7f8f6] dark:bg-background-dark text-[#131b0d] dark:text-white font-bold text-sm rounded-lg border border-[#ecf3e7] dark:border-white/10 active:bg-primary/20">
+                        View Compliance
+                    </button>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="flex flex-col bg-white dark:bg-[#1f2b15] rounded-xl overflow-hidden shadow-sm border border-[#ecf3e7] dark:border-white/5">
+<div class="h-48 w-full bg-center bg-cover" data-alt="Modern high-tech warehouse storage" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBaxtWOcgGEu65ECPVGsy_XF6JktDii4fzE7YT2CJuRcEsmCPlRNC3AwyyF1QvS5m96-cXto4xoInjE9Lu5CskncUcTQQRB7FVKlcDW6HDI5Rx7uv8BX4EcybJFiexg8NXeuAgFaOk8VfHORzGm4tduvYGBLz_6LfmUl3aQCOZw8Kg3JZ-7Ln3iK-sScGtsrkVUnwqvKEc_DONz81e6TV9ZVqMZhwFuF5_cD7loEq_gyZDSvMfrUlbmN1pX331dS4SxqzBtz6CDDi4");'></div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">warehouse</span>
+<p class="text-[#131b0d] dark:text-white text-lg font-bold">Warehousing</p>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                        Strategic inventory management and secure storage solutions for goods of any scale.
+                    </p>
+<button class="w-full py-3 bg-[#f7f8f6] dark:bg-background-dark text-[#131b0d] dark:text-white font-bold text-sm rounded-lg border border-[#ecf3e7] dark:border-white/10 active:bg-primary/20">
+                        Learn More
+                    </button>
+</div>
+</div>
+</div>
+<!-- Floating Action Button (Thumb Zone Friendly) -->
+<div class="fab-container">
+<button class="fab-button flex h-14 w-14 items-center justify-center rounded-full bg-primary text-[#131b0d]">
+<span class="material-symbols-outlined text-[28px] font-bold">support_agent</span>
+</button>
+</div>
+<!-- Footer for Mobile -->
+<footer class="bg-[#131b0d] text-white px-6 py-10 mt-6">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">package_2</span>
+<h2 class="text-lg font-bold tracking-tight">Mubraiz Resources</h2>
+</div>
+<div class="grid grid-cols-2 gap-8 mb-10">
+<div class="flex flex-col gap-3">
+<p class="font-bold text-primary text-sm uppercase tracking-wider">Company</p>
+<a class="text-gray-400 text-sm" href="#">About Us</a>
+<a class="text-gray-400 text-sm" href="#">Services</a>
+<a class="text-gray-400 text-sm" href="#">Case Studies</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="font-bold text-primary text-sm uppercase tracking-wider">Support</p>
+<a class="text-gray-400 text-sm" href="#">Contact</a>
+<a class="text-gray-400 text-sm" href="#">Track Parcel</a>
+<a class="text-gray-400 text-sm" href="#">Privacy</a>
+</div>
+</div>
+<div class="pt-6 border-t border-white/10 text-center">
+<p class="text-gray-500 text-xs">© 2024 Mubraiz Resources Ltd. All rights reserved.</p>
+</div>
+</footer>
+</div>
+<!-- Notification for Simulation -->
+<div class="fixed bottom-10 right-10 hidden xl:block w-64 bg-white p-4 rounded-xl shadow-2xl border-l-4 border-primary">
+<p class="text-xs font-bold text-gray-400 uppercase mb-1">Mobile Preview</p>
+<p class="text-sm text-[#131b0d] font-medium">This is a responsive simulation of the mobile experience. Elements are optimized for touch and one-handed use.</p>
+</div>
+</body></html>

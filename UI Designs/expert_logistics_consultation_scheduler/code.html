@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Expert Logistics Consultation Scheduler | Mubraiz Resources Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6dec13",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#182210",
+                        "slate-grey": "#708090",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Work Sans", sans-serif;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-grey transition-colors duration-200">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#ecf3e7] dark:border-white/10 px-10 py-3 bg-white dark:bg-background-dark/50 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#131b0d] dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Mubraiz Resources Ltd</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Services</a>
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Logistics</a>
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#">About</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-[#131b0d] text-sm font-bold transition-all hover:scale-105 active:scale-95">
+<span>Contact Support</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="Professional profile picture of the user" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsEkZalSczs_QxwxS2GneAk9MusAazFRi_MURcS64aiPOVfQ9nTATScZDHjBKPm_Q_meUur6U1cvMFQzzq0b7upNsomlCs7hyZuFu4SsWra1gQoRmzMXftaLZQwz7VssmLnoARolQ6cjimWZQ6CYTCAPQ6tr6nObrgq5hhCYCYWnsCC8lglQPzuuwkhNVxsj77n8aTsaD25Y6VYljE1eNJEwaWlTR46ZtzlCvbvOwxTMZFtosPcAOA8YxTVn-RoN3r4pmEDLRm5dI");'></div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 py-8">
+<!-- Breadcrumbs -->
+<nav class="flex flex-wrap gap-2 py-4">
+<a class="text-primary text-sm font-medium leading-normal" href="#">Home</a>
+<span class="text-slate-grey/50 text-sm font-medium leading-normal">/</span>
+<span class="text-slate-grey text-sm font-medium leading-normal">Schedule Consultation</span>
+</nav>
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between items-end gap-3 pb-8">
+<div class="flex min-w-72 flex-col gap-2">
+<h1 class="text-[#131b0d] dark:text-white text-4xl font-black leading-tight tracking-tight">Schedule a Consultation</h1>
+<p class="text-slate-grey dark:text-slate-grey/80 text-lg font-normal">Expert logistics planning for your global business needs.</p>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Main Content Area (Modal-like interface) -->
+<div class="flex-1 bg-white dark:bg-[#1f2b15] rounded-xl shadow-xl border border-[#ecf3e7] dark:border-white/5 overflow-hidden flex flex-col">
+<!-- Progress Stepper -->
+<div class="flex px-8 py-6 border-b border-[#ecf3e7] dark:border-white/5 bg-background-light/50 dark:bg-background-dark/20">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-[#ecf3e7] dark:bg-white/10 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-lg px-2 bg-white dark:bg-background-dark shadow-sm text-[#131b0d] dark:text-white text-sm font-semibold transition-all">
+<span class="material-symbols-outlined text-sm mr-2">category</span>
+<span class="truncate">Service Type</span>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-lg px-2 text-slate-grey dark:text-slate-grey/60 text-sm font-medium hover:text-primary transition-all">
+<span class="material-symbols-outlined text-sm mr-2">calendar_month</span>
+<span class="truncate">Select Date</span>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-lg px-2 text-slate-grey dark:text-slate-grey/60 text-sm font-medium hover:text-primary transition-all">
+<span class="material-symbols-outlined text-sm mr-2">schedule</span>
+<span class="truncate">Select Time</span>
+</label>
+</div>
+</div>
+<div class="p-8 space-y-8">
+<!-- Step 1 Title -->
+<div>
+<h3 class="text-[#131b0d] dark:text-white text-2xl font-bold tracking-tight mb-2">Step 1: Select Service Type</h3>
+<p class="text-slate-grey text-sm">Choose the area of expertise you wish to discuss with our specialists.</p>
+</div>
+<!-- Service Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="group relative border-2 border-primary rounded-xl p-6 bg-primary/5 cursor-pointer transition-all hover:shadow-lg">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary/20 p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl">public</span>
+</div>
+<div class="bg-primary text-[#131b0d] rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">Popular</div>
+</div>
+<h4 class="text-lg font-bold text-[#131b0d] dark:text-white mb-1">Cross-Border Logistics</h4>
+<p class="text-sm text-slate-grey mb-4">Streamline international shipments and customs compliance.</p>
+<span class="material-symbols-outlined absolute bottom-4 right-4 text-primary opacity-100">check_circle</span>
+</div>
+<div class="group border-2 border-transparent bg-background-light dark:bg-background-dark/40 rounded-xl p-6 cursor-pointer transition-all hover:border-primary/40 hover:bg-white dark:hover:bg-background-dark/60">
+<div class="bg-slate-grey/10 p-3 rounded-lg text-slate-grey mb-4 inline-block">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<h4 class="text-lg font-bold text-[#131b0d] dark:text-white mb-1">Heavy Haulage</h4>
+<p class="text-sm text-slate-grey mb-4">Specialized transport for industrial equipment and bulk cargo.</p>
+</div>
+<div class="group border-2 border-transparent bg-background-light dark:bg-background-dark/40 rounded-xl p-6 cursor-pointer transition-all hover:border-primary/40 hover:bg-white dark:hover:bg-background-dark/60">
+<div class="bg-slate-grey/10 p-3 rounded-lg text-slate-grey mb-4 inline-block">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<h4 class="text-lg font-bold text-[#131b0d] dark:text-white mb-1">Supply Chain Strategy</h4>
+<p class="text-sm text-slate-grey mb-4">End-to-end optimization of your logistics network.</p>
+</div>
+<div class="group border-2 border-transparent bg-background-light dark:bg-background-dark/40 rounded-xl p-6 cursor-pointer transition-all hover:border-primary/40 hover:bg-white dark:hover:bg-background-dark/60">
+<div class="bg-slate-grey/10 p-3 rounded-lg text-slate-grey mb-4 inline-block">
+<span class="material-symbols-outlined text-3xl">warehouse</span>
+</div>
+<h4 class="text-lg font-bold text-[#131b0d] dark:text-white mb-1">Warehousing &amp; Dist.</h4>
+<p class="text-sm text-slate-grey mb-4">Optimized storage solutions and local distribution hubs.</p>
+</div>
+</div>
+<!-- Step 2: Calendar (Static Representation) -->
+<div class="pt-4">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-[#131b0d] dark:text-white text-xl font-bold tracking-tight">Step 2: Pick a Date</h3>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg hover:bg-primary/10 text-slate-grey"><span class="material-symbols-outlined">chevron_left</span></button>
+<span class="text-sm font-bold self-center px-2">October 2024</span>
+<button class="p-2 rounded-lg hover:bg-primary/10 text-slate-grey"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="calendar-grid text-center text-xs font-bold uppercase text-slate-grey/40 mb-2">
+<div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+</div>
+<div class="calendar-grid gap-1">
+<!-- Empty cells for padding -->
+<div class="aspect-square flex items-center justify-center text-slate-grey/20">29</div>
+<div class="aspect-square flex items-center justify-center text-slate-grey/20">30</div>
+<!-- Current Month -->
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">1</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">2</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">3</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">4</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">5</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">6</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">7</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">8</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">9</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">10</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">11</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">12</button>
+<button class="aspect-square rounded-lg bg-primary text-[#131b0d] font-bold flex items-center justify-center shadow-md">13</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">14</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">15</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">16</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">17</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">18</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">19</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">20</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">21</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">22</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">23</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">24</button>
+<button class="aspect-square rounded-lg flex items-center justify-center hover:bg-primary/10">25</button>
+</div>
+</div>
+<!-- Step 3: Time Slot Grid -->
+<div class="pt-4">
+<h3 class="text-[#131b0d] dark:text-white text-xl font-bold tracking-tight mb-6">Step 3: Select a Time</h3>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<button class="py-3 px-4 rounded-lg bg-background-light dark:bg-white/5 border border-transparent hover:border-primary text-sm font-medium">09:00 AM</button>
+<button class="py-3 px-4 rounded-lg bg-background-light dark:bg-white/5 border border-transparent hover:border-primary text-sm font-medium">10:00 AM</button>
+<button class="py-3 px-4 rounded-lg bg-primary/20 border-2 border-primary text-[#131b0d] dark:text-white text-sm font-bold">11:30 AM</button>
+<button class="py-3 px-4 rounded-lg bg-background-light dark:bg-white/5 border border-transparent hover:border-primary text-sm font-medium">01:00 PM</button>
+<button class="py-3 px-4 rounded-lg bg-background-light dark:bg-white/5 border border-transparent hover:border-primary text-sm font-medium">02:30 PM</button>
+<button class="py-3 px-4 rounded-lg bg-background-light dark:bg-white/5 border border-transparent hover:border-primary text-sm font-medium">04:00 PM</button>
+<button class="py-3 px-4 rounded-lg opacity-50 bg-slate-grey/10 line-through text-xs cursor-not-allowed">05:30 PM (Full)</button>
+<button class="py-3 px-4 rounded-lg opacity-50 bg-slate-grey/10 line-through text-xs cursor-not-allowed">06:00 PM (Full)</button>
+</div>
+</div>
+</div>
+<!-- Sticky Footer -->
+<div class="mt-auto border-t border-[#ecf3e7] dark:border-white/5 p-6 bg-white dark:bg-background-dark/80 flex items-center justify-between">
+<button class="px-6 py-2 rounded-lg border border-slate-grey/20 hover:bg-slate-grey/5 text-sm font-bold transition-all">
+                        Back
+                    </button>
+<button class="px-8 py-3 rounded-lg bg-primary text-[#131b0d] font-bold shadow-[0_4px_14px_0_rgba(109,236,19,0.39)] hover:shadow-[0_6px_20px_rgba(109,236,19,0.23)] transition-all">
+                        Confirm Appointment
+                    </button>
+</div>
+</div>
+<!-- Expert Sidebar -->
+<aside class="w-full lg:w-[350px] space-y-6">
+<div class="bg-white dark:bg-[#1f2b15] rounded-xl p-6 border border-[#ecf3e7] dark:border-white/5 shadow-sm">
+<h4 class="text-xs uppercase tracking-widest text-primary font-black mb-4">Assigned Expert</h4>
+<div class="flex items-center gap-4 mb-4">
+<div class="size-16 rounded-full bg-primary/10 p-1 border-2 border-primary overflow-hidden">
+<img class="w-full h-full object-cover rounded-full" data-alt="Logistics expert headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJKm0x6TnmzRlUHaBmRYoOv7nQux_smh4DD6snEpj8NTe-XR10woYWsAbtK_9-uEp4_u2vXzilrmReXM3fXjncX8X5slEIsxReGURI1A45385I3PBoDhCXDSQllx6xxbEsqHTvTfJC6VDzCMgodhkRFk-j4CCkv4RySsyLAAK-bpg5PVVCh6_ZnF27FrNbIsS0su3Nt1bUw-8TYhmuak7pcdyDb9cRP-du1CRIAAi8p2Sr1s8RWXrvPC_c6rlEmmJc4EBd3j3jEIg"/>
+</div>
+<div>
+<p class="font-bold text-[#131b0d] dark:text-white leading-tight">Sarah Jenkins</p>
+<p class="text-xs text-slate-grey">Senior Global Strategist</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">verified</span>
+<span>12+ years in cross-border logistics</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">public</span>
+<span>Expert in African &amp; EU markets</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">star</span>
+<span>4.9/5 Average Consultation Rating</span>
+</div>
+</div>
+<hr class="my-6 border-slate-grey/10"/>
+<p class="text-xs text-slate-grey italic leading-relaxed">
+                        "I specialize in simplifying complex supply chains and ensuring your cargo moves across borders with zero downtime."
+                    </p>
+</div>
+<div class="bg-[#131b0d] dark:bg-black rounded-xl p-6 text-white overflow-hidden relative group">
+<div class="relative z-10">
+<h4 class="font-bold text-lg mb-2">Need immediate help?</h4>
+<p class="text-sm text-slate-grey/80 mb-4">Our logistics emergency line is available 24/7 for active shipments.</p>
+<button class="w-full py-3 bg-white/10 hover:bg-white/20 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">call</span>
+                            Call Dispatch Center
+                        </button>
+</div>
+<!-- Abstract Background Pattern -->
+<div class="absolute inset-0 opacity-20 pointer-events-none" data-alt="Abstract dot pattern" style="background-image: radial-gradient(circle at 2px 2px, rgba(109,236,19,0.2) 1px, transparent 0); background-size: 20px 20px;"></div>
+</div>
+<div class="p-6">
+<h5 class="text-xs font-bold text-slate-grey mb-4 flex items-center gap-2 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-sm">info</span>
+                        Booking Policy
+                    </h5>
+<ul class="text-xs text-slate-grey space-y-2">
+<li>• Reschedule up to 24 hours before</li>
+<li>• Initial 30-min discovery is free</li>
+<li>• Meeting link sent via email</li>
+</ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="mt-20 py-10 border-t border-[#ecf3e7] dark:border-white/5 bg-white dark:bg-background-dark/50">
+<div class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3 text-slate-grey/60">
+<span class="material-symbols-outlined">language</span>
+<span class="text-xs">Global Logistics Ecosystem © 2024 Mubraiz Resources Ltd</span>
+</div>
+<div class="flex gap-6">
+<a class="text-xs font-medium text-slate-grey hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs font-medium text-slate-grey hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-xs font-medium text-slate-grey hover:text-primary transition-colors" href="#">Compliance</a>
+</div>
+</div>
+</footer>
+</body></html>

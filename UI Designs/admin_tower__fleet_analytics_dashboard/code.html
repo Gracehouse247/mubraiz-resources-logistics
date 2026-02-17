@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Tower: Fleet Analytics Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#37ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#132210",
+                        "slate-grey": "#64748b",
+                        "border-light": "#e2e8f0",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ping-active {
+            position: relative;
+        }
+        .ping-active::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            background-color: #37ec13;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .gauge-ring {
+            stroke-dasharray: 100 100;
+            stroke-dashoffset: 25;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 overflow-hidden">
+<!-- Main Container -->
+<div class="flex h-screen w-full">
+<!-- Sidebar Navigation -->
+<aside class="w-72 bg-white border-r border-border-light flex flex-col shrink-0">
+<div class="p-6 border-b border-border-light">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-background-dark">domain</span>
+</div>
+<div>
+<h1 class="text-slate-900 text-lg font-bold leading-none">Admin Tower</h1>
+<p class="text-slate-grey text-xs font-medium uppercase tracking-wider mt-1">Mubraiz Resources</p>
+</div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto px-4 py-6">
+<div class="mb-8">
+<h3 class="text-xs font-bold text-slate-grey uppercase px-3 mb-4 tracking-widest">Main Menu</h3>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-slate-900 font-semibold" href="#">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span class="text-sm font-display">Fleet Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-grey hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-sm font-display">Live Tracking</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-grey hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined">construction</span>
+<span class="text-sm font-display">Maintenance</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-grey hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-sm font-display">Drivers</span>
+</a>
+</nav>
+</div>
+<div>
+<div class="flex items-center justify-between px-3 mb-4">
+<h3 class="text-xs font-bold text-slate-grey uppercase tracking-widest">Active Assets</h3>
+<span class="text-[10px] bg-primary text-white px-1.5 py-0.5 rounded font-bold">LIVE</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 rounded-lg border border-border-light bg-white shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900">FH-750 (Truck 04)</span>
+<span class="text-[10px] text-slate-grey">M. Arslan • Route 401</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-grey text-sm">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg border border-border-light bg-white shadow-sm opacity-80">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900">VN-200 (Van 12)</span>
+<span class="text-[10px] text-slate-grey">S. Chen • Express B</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-grey text-sm">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg border border-border-light bg-white shadow-sm opacity-60">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900">FH-750 (Truck 09)</span>
+<span class="text-[10px] text-slate-grey">J. Doe • Sector G</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-grey text-sm">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 border-t border-border-light">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-grey">person</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900">Admin User</span>
+<span class="text-xs text-slate-grey">Logistics Manager</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="h-20 bg-white border-b border-border-light flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-slate-grey text-sm font-medium">Global Logistics</span>
+<span class="material-symbols-outlined text-slate-grey text-xs">chevron_right</span>
+<span class="text-slate-900 text-sm font-bold">Fleet Analytics</span>
+</div>
+<h2 class="text-xl font-bold text-slate-900">Real-time Performance</h2>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-4 mr-4">
+<div class="text-right">
+<p class="text-[10px] font-bold text-slate-grey uppercase tracking-widest">Fleet Uptime</p>
+<p class="text-lg font-bold text-slate-900 leading-none">99.82%</p>
+</div>
+<div class="h-10 w-[1px] bg-border-light"></div>
+<div class="bg-primary px-4 py-2 rounded-lg text-background-dark font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">monetization_on</span>
+<span class="text-sm">Fuel Savings: +12.5%</span>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-border-light text-slate-grey hover:bg-slate-50">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-border-light text-slate-grey hover:bg-slate-50">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="flex-1 overflow-y-auto p-8 bg-background-light">
+<!-- Filter Section -->
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center bg-white p-1 rounded-xl border border-border-light shadow-sm">
+<button class="px-6 py-2 rounded-lg bg-primary/10 text-primary font-bold text-sm">Live</button>
+<button class="px-6 py-2 rounded-lg text-slate-grey font-medium text-sm hover:bg-slate-50">24H</button>
+<button class="px-6 py-2 rounded-lg text-slate-grey font-medium text-sm hover:bg-slate-50">Weekly</button>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-white border border-border-light rounded-lg text-sm font-bold text-slate-900 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-sm">download</span>
+                            Export Report
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-bold hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-sm">refresh</span>
+                            Sync Data
+                        </button>
+</div>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-12 gap-6 mb-8">
+<!-- Real-time Fuel Efficiency Line Chart -->
+<div class="col-span-8 bg-white p-6 rounded-xl border border-border-light shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h3 class="text-base font-bold text-slate-900">Real-time Fuel Efficiency</h3>
+<p class="text-xs text-slate-grey font-medium">Liters / 100km across active fleet</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-xs font-bold text-slate-900">Current</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-slate-200"></div>
+<span class="text-xs font-bold text-slate-grey">Target</span>
+</div>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between gap-1 relative pt-4">
+<!-- SVG Placeholder for Graph Lines -->
+<div class="absolute inset-0 flex items-center justify-center opacity-10">
+<span class="material-symbols-outlined text-[120px] text-slate-grey">show_chart</span>
+</div>
+<!-- Mock Bars for visual density -->
+<div class="w-full h-full flex items-end gap-1.5 px-2">
+<div class="flex-1 bg-slate-50 rounded-t h-[40%]"></div>
+<div class="flex-1 bg-slate-100 rounded-t h-[55%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t h-[75%]"></div>
+<div class="flex-1 bg-primary/30 rounded-t h-[60%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t h-[85%]"></div>
+<div class="flex-1 bg-primary/50 rounded-t h-[70%]"></div>
+<div class="flex-1 bg-primary rounded-t h-[95%]"></div>
+<div class="flex-1 bg-primary/60 rounded-t h-[80%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t h-[65%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t h-[50%]"></div>
+</div>
+</div>
+</div>
+<!-- Driver Behavior Radar Chart -->
+<div class="col-span-4 bg-white p-6 rounded-xl border border-border-light shadow-sm">
+<h3 class="text-base font-bold text-slate-900 mb-2">Driver Behavior Scores</h3>
+<p class="text-xs text-slate-grey font-medium mb-6">Aggregate safety index</p>
+<div class="h-64 flex flex-col items-center justify-center relative">
+<!-- Mock Radar Visual -->
+<div class="w-48 h-48 rounded-full border border-slate-100 flex items-center justify-center relative">
+<div class="w-36 h-36 rounded-full border border-slate-100 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full border border-slate-100"></div>
+</div>
+<!-- Scoring Point Visuals -->
+<div class="absolute top-0 w-2 h-2 bg-primary rounded-full"></div>
+<div class="absolute right-4 top-10 w-2 h-2 bg-primary rounded-full"></div>
+<div class="absolute bottom-6 right-8 w-2 h-2 bg-primary rounded-full"></div>
+<div class="absolute bottom-6 left-8 w-2 h-2 bg-primary rounded-full"></div>
+<div class="absolute left-4 top-10 w-2 h-2 bg-primary rounded-full"></div>
+</div>
+<div class="mt-4 grid grid-cols-2 gap-4 w-full">
+<div class="text-center">
+<p class="text-[10px] text-slate-grey font-bold uppercase tracking-widest">Avg Speed</p>
+<p class="text-sm font-bold text-slate-900">88/100</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-slate-grey font-bold uppercase tracking-widest">Idle Time</p>
+<p class="text-sm font-bold text-primary">94/100</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Maintenance Health Gauge Indicators -->
+<div class="col-span-12 lg:col-span-5 bg-white p-6 rounded-xl border border-border-light shadow-sm">
+<h3 class="text-base font-bold text-slate-900 mb-6">Maintenance Health</h3>
+<div class="flex justify-between items-center px-4">
+<!-- Gauge 1 -->
+<div class="flex flex-col items-center">
+<div class="relative w-24 h-24 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle cx="48" cy="48" fill="none" r="40" stroke="#f1f5f9" stroke-width="8"></circle>
+<circle cx="48" cy="48" fill="none" r="40" stroke="#37ec13" stroke-dasharray="251.2" stroke-dashoffset="50.24" stroke-width="8"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="text-lg font-bold">80</span>
+<span class="text-[8px] font-bold text-slate-grey uppercase">PSI</span>
+</div>
+</div>
+<span class="text-xs font-bold text-slate-900 mt-2">Tire Pressure</span>
+</div>
+<!-- Gauge 2 -->
+<div class="flex flex-col items-center">
+<div class="relative w-24 h-24 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle cx="48" cy="48" fill="none" r="40" stroke="#f1f5f9" stroke-width="8"></circle>
+<circle cx="48" cy="48" fill="none" r="40" stroke="#37ec13" stroke-dasharray="251.2" stroke-dashoffset="25.12" stroke-width="8"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="text-lg font-bold">90%</span>
+<span class="text-[8px] font-bold text-slate-grey uppercase">Oil Life</span>
+</div>
+</div>
+<span class="text-xs font-bold text-slate-900 mt-2">Engine Oil</span>
+</div>
+<!-- Gauge 3 -->
+<div class="flex flex-col items-center">
+<div class="relative w-24 h-24 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle cx="48" cy="48" fill="none" r="40" stroke="#f1f5f9" stroke-width="8"></circle>
+<circle cx="48" cy="48" fill="none" r="40" stroke="#37ec13" stroke-dasharray="251.2" stroke-dashoffset="0" stroke-width="8"></circle>
+</svg>
+<div class="absolute flex flex-col items-center text-primary">
+<span class="material-symbols-outlined">satellite_alt</span>
+</div>
+</div>
+<span class="text-xs font-bold text-slate-900 mt-2">GPS Sync</span>
+</div>
+</div>
+</div>
+<!-- Route Deviation Heatmap -->
+<div class="col-span-12 lg:col-span-7 bg-white p-6 rounded-xl border border-border-light shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="text-base font-bold text-slate-900">Route Compliance &amp; Delays</h3>
+<p class="text-xs text-slate-grey font-medium">Real-time heatmap of operational bottlenecks</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-slate-grey uppercase">Congestion Intensity:</span>
+<div class="flex gap-1">
+<div class="w-4 h-2 rounded-sm bg-primary/20"></div>
+<div class="w-4 h-2 rounded-sm bg-primary/60"></div>
+<div class="w-4 h-2 rounded-sm bg-primary"></div>
+<div class="w-4 h-2 rounded-sm bg-red-500"></div>
+</div>
+</div>
+</div>
+<div class="flex-1 rounded-lg bg-slate-50 border border-slate-100 overflow-hidden relative min-h-[160px]">
+<!-- Mock Heatmap Map -->
+<img alt="Simplified geographic street map for logistics tracking" class="w-full h-full object-cover opacity-30 mix-blend-multiply" data-alt="Logistics street map heatmap overlay" data-location="New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSDmXtHFWJBaN1xsB90tlvMJDHzXnb4Vlyr27DCEdMC7W8mZoxHmieaA2CHCPGCxSXPN-GrL9xJ0qxuoTpk8JWh9jzLnMAEo_GRfooof3v3T_iXCZC9WHenC08ZxhcU3tRPBKo8kQJyHVYEJFCBNfwnUfiJz9-b1GdA75XGPTCUMdTM_0J1MgAkNsqjV8AGOhxwpRyMwOLCnZ8hizKnUxdGmU0fAiWPelGtcdMv88mutRYYe0u0nITv9lEZm1jXaCCiOp6zCT-Y8U"/>
+<div class="absolute inset-0 p-10 flex flex-wrap gap-4">
+<!-- Heatmap Blobs -->
+<div class="w-16 h-16 bg-primary/30 rounded-full blur-xl absolute top-10 left-20"></div>
+<div class="w-24 h-24 bg-red-500/20 rounded-full blur-2xl absolute bottom-12 right-32"></div>
+<div class="w-12 h-12 bg-primary/50 rounded-full blur-lg absolute top-1/2 left-1/3"></div>
+<!-- Alert Pins -->
+<div class="absolute top-24 left-40">
+<div class="flex items-center gap-2 bg-white px-2 py-1 rounded shadow-md border border-red-100">
+<div class="w-2 h-2 rounded-full bg-red-500 animate-ping"></div>
+<span class="text-[10px] font-bold text-slate-900">Delay +15m</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Summary Stats -->
+<div class="grid grid-cols-4 gap-6">
+<div class="p-5 bg-white rounded-xl border border-border-light flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-slate-50 flex items-center justify-center text-slate-900">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-grey uppercase tracking-wider">Active Units</p>
+<p class="text-xl font-bold text-slate-900">1,248</p>
+</div>
+</div>
+<div class="p-5 bg-white rounded-xl border border-border-light flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-grey uppercase tracking-wider">Carbon Offset</p>
+<p class="text-xl font-bold text-slate-900">14.2 Tons</p>
+</div>
+</div>
+<div class="p-5 bg-white rounded-xl border border-border-light flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-slate-50 flex items-center justify-center text-slate-900">
+<span class="material-symbols-outlined">timer</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-grey uppercase tracking-wider">Avg. Turnaround</p>
+<p class="text-xl font-bold text-slate-900">4.2 Hrs</p>
+</div>
+</div>
+<div class="p-5 bg-white rounded-xl border border-border-light flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-slate-50 flex items-center justify-center text-slate-900">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-grey uppercase tracking-wider">Open Alerts</p>
+<p class="text-xl font-bold text-slate-900">03</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

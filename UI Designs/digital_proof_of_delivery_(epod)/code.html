@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Proof of Delivery (ePOD) - Mubraiz Resources Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#37ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#132210",
+                        "slate-grey": "#708090",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-grey transition-colors duration-200">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between border-b border-solid border-slate-200 dark:border-white/10 bg-white dark:bg-background-dark px-6 md:px-10 lg:px-40 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-background-dark dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Mubraiz Resources Ltd</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-grey dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Shipments</a>
+<a class="text-slate-grey dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Reports</a>
+<a class="text-slate-grey dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Documents</a>
+<a class="text-slate-grey dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Support</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-primary flex border-none bg-slate-100 dark:bg-white/5 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-background-dark dark:text-white focus:outline-0 focus:ring-0 border-none bg-slate-100 dark:bg-white/5 focus:border-none h-full placeholder:text-slate-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal" placeholder="Search Shipment ID"/>
+</div>
+</label>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200" data-alt="User profile placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfdqBmeCA9I2OJS2KpJiVyPNGgwynDnZFcELY4Zm6dWCxEbgRVuFPaZflvTDWlAfV25a2Oj7pVffmPRVAUGzCvGRUTToK43r5xKblIfbY0DtlF450XFwhW81_aq1RsNnRlRPIitobY9-O5DdwF-NHcecZ_C7FQSWCdi7rNdNpKp3itIkbtVmeqAAedkP-APxAJWNrIcYv3kgqaHE8aSL-V6MK4LBFJ__6qLbJwZuZlXLO9vGrLOyz70i_dzJtu_WJcC5ZcVzHZeps");'></div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center">
+<div class="w-full max-w-[1280px] px-6 lg:px-10 py-8 flex flex-col gap-6">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 items-center text-sm font-medium">
+<a class="text-primary hover:underline" href="#">Home</a>
+<span class="text-slate-400">/</span>
+<a class="text-primary hover:underline" href="#">Logistics Dashboard</a>
+<span class="text-slate-400">/</span>
+<span class="text-background-dark dark:text-white">ePOD - Shipment #MR-99281</span>
+</div>
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-end gap-6 bg-white dark:bg-white/5 p-6 rounded-xl border border-slate-100 dark:border-white/10 shadow-sm">
+<div class="flex min-w-72 flex-col gap-2">
+<div class="flex items-center gap-3">
+<p class="text-background-dark dark:text-white text-4xl font-black leading-tight tracking-tight">Delivery Confirmation</p>
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Verified</span>
+</div>
+<p class="text-slate-grey dark:text-slate-400 text-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">event_available</span>
+                            Oct 24, 2023 | 14:35 GMT
+                        </p>
+</div>
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined">download</span>
+<span class="truncate uppercase">Download Official ePOD (PDF)</span>
+</button>
+</div>
+<!-- Stats Summary -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-100 dark:border-white/10 bg-white dark:bg-white/5 shadow-sm">
+<p class="text-slate-grey dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Status</p>
+<p class="text-primary tracking-tight text-3xl font-black italic">DELIVERED</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-100 dark:border-white/10 bg-white dark:bg-white/5 shadow-sm">
+<p class="text-slate-grey dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Reference Number</p>
+<p class="text-background-dark dark:text-white tracking-tight text-3xl font-black">MBL-88721094</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-100 dark:border-white/10 bg-white dark:bg-white/5 shadow-sm">
+<p class="text-slate-grey dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Client</p>
+<p class="text-background-dark dark:text-white tracking-tight text-3xl font-black">Global Logistics Corp</p>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left Column: Evidence -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Delivery Photos -->
+<div class="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-xl overflow-hidden shadow-sm">
+<h2 class="text-background-dark dark:text-white text-[20px] font-bold px-6 py-4 border-b border-slate-100 dark:border-white/10 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">photo_library</span>
+                                Delivery Photo Evidence
+                            </h2>
+<div class="p-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="group relative aspect-video overflow-hidden rounded-lg bg-slate-100">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Logistics container at destination dock" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAHfwxacXMnG-m2GgRCbn_ERPGeIWU8fBYS-ilQl26-ZiXv2mDsfPb8u59mDJjGDhRAmyZAKUWc7Rqp4AwA9LOMzMGjRP-HU47hNXH8Y8Hv0NxfM3brUE29PKVM5VEVeTcugaXZsBPPidaWiaGyYotZWiNrqGtD94oP3jdq_7YlcSt0RYGP7ArPwZzGrqo88QxsVi8RgvLNhU1OWILMq1Sx_R1RlQK9ncE7ihF_r3tEEVgas_iZLfUz_oG0JeeAagJBg7ixN_2h2A"/>
+<div class="absolute bottom-2 left-2 bg-background-dark/80 text-white text-[10px] px-2 py-1 rounded">Cargo at Arrival Gate</div>
+</div>
+<div class="group relative aspect-video overflow-hidden rounded-lg bg-slate-100">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Close up of cargo seal intact" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAR10xsHNvyAYSY04sS5GoGsZXCXszBc8Q2MVu-UShiMNMg4Q-lt8aVktr4iTzfKYGoAR8WQv3MYlkD7jSPF7QEy-hk5qc6RkIuvIkPfIjAgjgWfu1ymEw4UceFUU_-Be_Hr6pFraWt-LD-qQeZCREhDSEu-6ou78AKVPzGmgI6Uo_WthEnuZLlv3ZMX5gcyvUCmLdo1GAviuzSHxbJEi9egbcHjqAnoaipptScbSFIQxNKp9ERBZ5aN2r3T7Fj4RxSHJepTERy6k"/>
+<div class="absolute bottom-2 left-2 bg-background-dark/80 text-white text-[10px] px-2 py-1 rounded">Security Seal Check</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Signature and Receiver -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-xl overflow-hidden shadow-sm">
+<h2 class="text-background-dark dark:text-white text-[18px] font-bold px-6 py-4 border-b border-slate-100 dark:border-white/10 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">draw</span>
+                                    Digital Signature
+                                </h2>
+<div class="p-8 flex flex-col items-center justify-center">
+<div class="w-full h-32 border-2 border-dashed border-slate-200 dark:border-white/10 rounded flex items-center justify-center bg-slate-50 dark:bg-white/5">
+<img class="max-h-24 opacity-80 invert dark:invert-0" data-alt="Receiver digital signature" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGny9B_dIugJTsqCavhQMBIOWDsGNM9XbOCVTE8GJLRS6tyE3P2YrsLJlN8LbjMxAkxYgWMRPFUvRfqsi3DJAcc4EH_CiX4gZXqhYX--9Yecvo8f-F1OXc7w3bbpmcBpiLTdUiXIc9A9VvNeOf8yn5sBicFpCmHLwNsNglOsPIVykbXjPaMeLiacZStS8280nzn5PBYe2AAce7_50o_PcNl61-OfT3OUuCa5VzfR7GHEXA3oxQPryRSgOa-UiSsL5W-sXGiGRnZGU"/>
+</div>
+<div class="mt-4 text-center">
+<p class="text-background-dark dark:text-white font-bold">Benjamin S. Thompson</p>
+<p class="text-xs text-slate-grey dark:text-slate-400">Warehouse Manager - Global Logistics Corp</p>
+</div>
+</div>
+</div>
+<!-- GPS Location -->
+<div class="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-xl overflow-hidden shadow-sm">
+<h2 class="text-background-dark dark:text-white text-[18px] font-bold px-6 py-4 border-b border-slate-100 dark:border-white/10 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                                    Drop-off Coordinates
+                                </h2>
+<div class="h-[200px] w-full relative group">
+<!-- Using an image to simulate map as requested -->
+<div class="absolute inset-0 bg-slate-200 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover opacity-60 dark:opacity-40" data-alt="Map showing port location" data-location="New York Port Authority" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIfS714HP16OR_5dI07f-pQExXYw4TZjM9PTvLxXLFpSIPrkeXwf_dGM33jobjnyZPjuR4ByWI81DZHi_DHHLvHYrPTDdbLKnQ4V2QEJHQ2mOnCwdNhTGsfh8lHpVfpWpaGZXoxvqRoVfat6GlsfWv1eeKtQ_HRdphI_5-JI9ObnT41_pLI_YTbASfa8rXcprYFgJCaJcAfXzoc2tYh5JDBInACZ0_84IJ_YpNVvdZxOQFYV1XVjY5HlVhf49gnPhDHODJqCbh0iU"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<span class="material-symbols-outlined text-primary text-5xl drop-shadow-md">location_on</span>
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-background-dark text-white text-[10px] px-3 py-1.5 rounded-full whitespace-nowrap shadow-xl">
+                                                    40.7128° N, 74.0060° W
+                                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Tech Specs & Receiver Details -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="bg-background-dark text-white rounded-xl shadow-xl overflow-hidden">
+<div class="bg-primary px-6 py-4 flex items-center justify-between">
+<h3 class="text-background-dark font-black tracking-tight flex items-center gap-2 uppercase text-sm">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+                                    Cargo Condition Report
+                                </h3>
+<span class="bg-background-dark/10 px-2 py-0.5 rounded text-[10px] font-bold text-background-dark">SECURE</span>
+</div>
+<div class="p-6 flex flex-col gap-5">
+<div class="flex flex-col gap-1 border-b border-white/10 pb-4">
+<span class="text-xs text-primary font-bold uppercase">Receiver Details</span>
+<p class="text-sm font-medium">Port Terminal 7, Berth 42A</p>
+<p class="text-xs text-slate-400">Security Clearance Level 3 Required</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-bold">Seal Intact</span>
+<p class="text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs">check_circle</span> Yes
+                                        </p>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-bold">Temp Reg</span>
+<p class="text-sm font-bold">N/A</p>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-bold">Pallet Count</span>
+<p class="text-sm font-bold">24 Units</p>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-bold">Total Weight</span>
+<p class="text-sm font-bold">18,450 KG</p>
+</div>
+</div>
+<div class="bg-white/5 rounded-lg p-4 mt-2">
+<span class="text-[10px] text-primary font-bold uppercase block mb-2">Driver Notes</span>
+<p class="text-xs italic text-slate-300 leading-relaxed">
+                                        "Cargo offloaded successfully. No visible damage to outer packaging. Receiver inspected and approved within 15 minutes of arrival."
+                                    </p>
+</div>
+</div>
+</div>
+<!-- Technical Specification Block -->
+<div class="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-xl overflow-hidden shadow-sm">
+<h2 class="text-background-dark dark:text-white text-[16px] font-bold px-6 py-4 border-b border-slate-100 dark:border-white/10">Technical Specifications</h2>
+<div class="p-6">
+<dl class="divide-y divide-slate-100 dark:divide-white/10">
+<div class="py-3 flex justify-between text-xs">
+<dt class="text-slate-grey dark:text-slate-400">Vessel/Vehicle ID</dt>
+<dd class="text-background-dark dark:text-white font-mono">TRK-992-NY</dd>
+</div>
+<div class="py-3 flex justify-between text-xs">
+<dt class="text-slate-grey dark:text-slate-400">Loading Order</dt>
+<dd class="text-background-dark dark:text-white font-mono">LO-88273-001</dd>
+</div>
+<div class="py-3 flex justify-between text-xs">
+<dt class="text-slate-grey dark:text-slate-400">Carrier</dt>
+<dd class="text-background-dark dark:text-white font-mono">Maersk Logistics</dd>
+</div>
+<div class="py-3 flex justify-between text-xs">
+<dt class="text-slate-grey dark:text-slate-400">Transit Hash</dt>
+<dd class="text-background-dark dark:text-white font-mono text-[10px]">7f28...a9b2</dd>
+</div>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<!-- Verified Watermark Footer -->
+<div class="flex flex-col items-center justify-center py-10 gap-4 opacity-40">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">verified_user</span>
+<p class="text-xs font-bold uppercase tracking-[0.2em] text-background-dark dark:text-white">Secure Digital Evidence Verified by Mubraiz Resources Ltd</p>
+</div>
+<div class="text-[10px] text-center max-w-md italic">
+                        This digital Proof of Delivery is a legally binding document generated in real-time upon final cargo release. Digital signatures are timestamped and GPS-verified.
+                    </div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-background-dark border-t border-slate-100 dark:border-white/10 py-8 px-6 lg:px-40">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 grayscale">
+<div class="size-4">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-xs font-bold">Mubraiz Resources Ltd © 2023</span>
+</div>
+<div class="flex gap-8 text-xs text-slate-grey">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Global Compliance</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

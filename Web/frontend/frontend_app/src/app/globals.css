@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #a1dc84;
+  --color-primary-hover: #8bc76d;
+  --color-background-light: #ffffff;
+  --color-background-dark: #102210;
+  --color-slate-accent: #64748b;
+  --color-slate-dark: #0f172a;
+
+  --font-primary: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-secondary: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-default: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  body {
+    @apply bg-white font-primary text-[#0f172a] antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply capitalize;
+  }
+}
+
+/* Brand Dominance Utilities */
+.brand-glow {
+  box-shadow: 0 0 20px 5px rgba(161, 220, 132, 0.2);
+}
+
+.brand-gradient-text {
+  background: linear-gradient(135deg, #a1dc84 0%, #8bc76d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-mesh-bg {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(161, 220, 132, 0.05) 0, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(161, 220, 132, 0.05) 0, transparent 50%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Fix for overlapping elements in hero */
+.hero-content {
+  z-index: 20;
+}

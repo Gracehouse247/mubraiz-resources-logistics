@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cargo Claims &amp; Dispute Portal | Mubraiz Resources Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec13",
+                        "safety-yellow": "#FACC15",
+                        "slate-grey": "#64748B",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white">local_shipping</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Mubraiz Cargo Claims</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Guidelines</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">FAQs</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Policy</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-slate-200 dark:border-slate-700 overflow-hidden">
+<div class="text-slate-400 flex bg-slate-50 dark:bg-slate-800 items-center justify-center px-3">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-slate-50 dark:bg-slate-800 focus:ring-0 text-sm placeholder:text-slate-400" placeholder="Search claims..."/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200 dark:border-slate-700" data-alt="User profile avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmumbGtzP7_VIUfxWwLGZ5Pvr-AY9_HpdSlkrmxZh5y4ccqGTYvO7BVi8NEID5Y0fcmbTijywtPSmmQheVxTGAGOKqPG1us9lIRqNEX1_o2kP9QOBVzt-dNi9RsFkhfqJiXmVVoRztUQd7RBC4LIDHe_8k7mY_gxcG07JgepoOg6HQvdoeiktvSf2qFyVIkZHLcXouhArgYGrJG_yEGISEfQakkLGWSANTBAsl1I5TAJ0bShpy7V-6ZjZ1ZNvRS_pQPv0jY2fxKRg");'></div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto flex gap-6 p-6">
+<aside class="w-64 flex flex-col gap-6 shrink-0">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">add_circle</span>
+<p class="text-sm font-bold">New Claim</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">history</span>
+<p class="text-sm font-medium">Claim History</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">description</span>
+<p class="text-sm font-medium">Documents</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">support_agent</span>
+<p class="text-sm font-medium">Help Center</p>
+</div>
+</div>
+<div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Claim Status</p>
+<div class="flex flex-col gap-4">
+<div class="flex gap-3">
+<div class="flex flex-col items-center">
+<div class="size-5 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px] text-white">check</span>
+</div>
+<div class="w-0.5 h-8 bg-primary"></div>
+</div>
+<div class="flex flex-col">
+<p class="text-xs font-bold text-slate-900 dark:text-white">Submitted</p>
+<p class="text-[10px] text-slate-500">Oct 12, 10:24 AM</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="flex flex-col items-center">
+<div class="size-5 rounded-full border-2 border-primary bg-primary/20 flex items-center justify-center">
+<div class="size-2 rounded-full bg-primary animate-pulse"></div>
+</div>
+<div class="w-0.5 h-8 bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<div class="flex flex-col">
+<p class="text-xs font-bold text-slate-900 dark:text-white">Under Review</p>
+<p class="text-[10px] text-slate-500">Estimated 2 days left</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="flex flex-col items-center">
+<div class="size-5 rounded-full border-2 border-slate-200 dark:border-slate-700 bg-transparent"></div>
+</div>
+<div class="flex flex-col">
+<p class="text-xs font-bold text-slate-400">Resolution Pending</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Dedicated Adjuster</p>
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Portrait of a claims adjuster" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAd-gf4rZ5SyIJjxhE1rpp_fdQP60NQOLaeDSaiI7V3aR8uwmCIhK__L2eJnXMQmkTSpvcX0msTqmToDb6pcp4InPRY6LccZz9QkHF04myTtqJIMHdMMohczO7DnUIW42xpcBXqy1Zw_RWQhO5BdpAmWpAbjV5AqRwkGtm9naDKZKUUW5H-_VeqCAUWflle1jaTCfzu6QT1M7aY98R1MQh35U6OZ6NlRxdZ_VfGn9ikzwhVx7mBcaSN_HSlXsfMnIcLp1-A0juuRlY");'></div>
+<div class="flex flex-col overflow-hidden">
+<p class="text-sm font-bold text-slate-900 dark:text-white truncate">Marcus Sterling</p>
+<p class="text-xs text-slate-500">Senior Claims Agent</p>
+</div>
+</div>
+<button class="mt-4 w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span>
+                    Message Marcus
+                </button>
+</div>
+</aside>
+<section class="flex-1 flex flex-col gap-6">
+<div class="p-1 rounded-xl bg-safety-yellow/10 border border-safety-yellow/30 flex items-center justify-between px-5 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-safety-yellow flex items-center justify-center text-slate-900">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div>
+<p class="text-slate-900 font-bold text-sm">Urgent Action Required</p>
+<p class="text-slate-700 text-xs">Claim #CRG-9921: Missing high-resolution photos of external container damage.</p>
+</div>
+</div>
+<button class="bg-slate-900 text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-slate-800">
+                    Address Now
+                </button>
+</div>
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl font-black text-slate-900 dark:text-white tracking-tight">File a New Cargo Claim</h1>
+<p class="text-slate-500 dark:text-slate-400">Step 1 of 3: Identify the shipment and categorize the issue.</p>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm">
+<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<p class="font-bold text-slate-900 dark:text-white">Shipment Identification</p>
+<span class="text-xs font-bold text-primary">STEP 1</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold text-slate-500 uppercase">Tracking ID / AWB Number</label>
+<div class="relative">
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm p-3 focus:ring-primary focus:border-primary" placeholder="e.g. MBL-2023-9001" type="text"/>
+<button class="absolute right-2 top-2 h-8 px-3 bg-slate-200 dark:bg-slate-700 text-xs font-bold rounded hover:bg-slate-300 transition-colors">Validate</button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold text-slate-500 uppercase">Shipment Date</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm p-3" type="date"/>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-bold text-slate-900 dark:text-white">Issue Description</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold text-slate-500 uppercase">Nature of Dispute</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm p-3 focus:ring-primary focus:border-primary">
+<option disabled="" selected="" value="">Select issue type</option>
+<option value="damage">Cargo Damage</option>
+<option value="loss">Total/Partial Loss</option>
+<option value="delay">Critical Delay</option>
+<option value="other">Other Incident</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold text-slate-500 uppercase">Incident Location</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm p-3" placeholder="Port of Entry, Warehouse ID, etc." type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold text-slate-500 uppercase">Details &amp; Comments</label>
+<textarea class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm p-3 focus:ring-primary focus:border-primary" placeholder="Provide a brief narrative of what occurred..." rows="4"></textarea>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-bold text-slate-900 dark:text-white">Evidence &amp; Documentation</p>
+<div class="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl p-10 flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group cursor-pointer">
+<div class="size-16 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl text-slate-500">cloud_upload</span>
+</div>
+<p class="font-bold text-slate-900 dark:text-white text-base">Drag and drop documents here</p>
+<p class="text-xs text-slate-500 mt-2">Support JPG, PNG, PDF (Max 20MB per file)</p>
+<button class="mt-6 px-6 py-2 border border-slate-300 dark:border-slate-600 rounded-lg text-xs font-bold hover:bg-white dark:hover:bg-slate-700 transition-colors">Browse Files</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-800">
+<button class="px-6 py-2.5 text-slate-500 font-bold text-sm hover:text-slate-800 transition-colors">Cancel</button>
+<div class="flex gap-4">
+<button class="px-6 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg font-bold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Save as Draft</button>
+<button class="px-8 py-2.5 bg-primary text-white rounded-lg font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
+                                Next Step
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-slate-900 dark:text-white text-sm font-bold">Portal Completion Status</p>
+<p class="text-slate-500 text-xs font-medium">Step 1 of 3 Complete</p>
+</div>
+<div class="rounded-full bg-slate-100 dark:bg-slate-800 h-2 w-full overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 33.33%;"></div>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-slate-400 text-[10px] font-bold uppercase tracking-tight">Shipment Identification</p>
+<p class="text-slate-400 text-[10px] font-bold uppercase tracking-tight">Detailed Evidence</p>
+<p class="text-slate-400 text-[10px] font-bold uppercase tracking-tight">Final Review</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="mt-12 border-t border-slate-200 dark:border-slate-800 py-8 px-10 text-center">
+<p class="text-slate-400 text-xs">© 2023 Mubraiz Resources Ltd. Global Logistics Ecosystem. All rights reserved.</p>
+</footer>
+</body></html>

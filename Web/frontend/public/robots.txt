@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /portal/admin/
+Disallow: /api/
+
+Sitemap: https://mubraizresourcesltd.com/sitemap.xml

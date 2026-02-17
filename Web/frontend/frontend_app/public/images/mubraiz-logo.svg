@@ -1,0 +1,10 @@
+<svg width="800" height="250" viewBox="0 0 800 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- MR Letters in Green -->
+  <text x="20" y="180" font-family="Arial, sans-serif" font-size="140" font-weight="600" fill="#9BC49C" letter-spacing="-5">MR</text>
+  
+  <!-- Mubraiz Text -->
+  <text x="320" y="135" font-family="Arial, sans-serif" font-size="52" font-weight="600" fill="#3D3D3D">Mubraiz</text>
+  
+  <!-- Resources Limited Text -->
+  <text x="320" y="185" font-family="Arial, sans-serif" font-size="48" font-weight="400" fill="#5A5A5A">Resources Limited</text>
+</svg>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Language &amp; Regional Selector - Mubraiz Resources Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#37ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#132210",
+                        "slate-grey": "#334155",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: "Inter", sans-serif
+    }
+.modal-blur-bg {
+    background-image: linear-gradient(rgba(246, 248, 246, 0.8), rgba(246, 248, 246, 0.8)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuBD5ZZCfXNQ_rLiZIDJCFUx5nF7BX3Euvk4ckbupqKA2Pz7Kxlhxf3lFVIds44uISwGDHwLE-BQXhtD5fOR2gsSSiG4yftAOpytkcQtt6up8Ngmt9rKdTnX-tTxMlPKbvdUYXjNvX5f5RxgXmzPdBlXbIDQV09IFCN4iOmQAKGQ1TPWPWA1zA_53eX1ac4XPznkHtk7ueRkuYGo0SlmgznQvVdT2nuPS2552HT2jn8dUygUR4e9xNZGmCfaf6y0nfcWG5GFkdMXDww);
+    background-size: cover;
+    background-position: center
+    }
+.dark .modal-blur-bg {
+    background-image: linear-gradient(rgba(19, 34, 16, 0.9), rgba(19, 34, 16, 0.9)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuCO0CL0nNPuwgyQuqrnuHPlBuD5e3rwSXhWtuzCBva1bBJ8ixuc_kZyi9blvdYnzjYhLihTLocw_zfFp7_sBFg60VIjPHgajkdS9Cua7V9EXqyGInvFqH_KCatF5etr_uLaP9LzTS7AH7rt6Rj8m_duB0qmVro01ynTizwsLu-lequRXLZ4h-y87LLA4kYuseAjqywohMLDVPlTzUlV3OKq0uXC2n-tj7tWqKrwh0H3NhQeAWcYtY78IgTuPRKTqNN5qZWMMNtEmOI)
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display">
+<!-- Header / Navbar Overlay (Non-functional background) -->
+<header class="w-full px-6 lg:px-40 py-4 flex items-center justify-between border-b border-black/5 dark:border-white/5 absolute top-0 z-0 opacity-50 pointer-events-none">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-xl font-bold text-slate-grey dark:text-white">Mubraiz Resources Ltd</span>
+</div>
+<div class="flex gap-6">
+<div class="h-8 w-24 bg-slate-200 dark:bg-slate-800 rounded"></div>
+<div class="h-8 w-24 bg-slate-200 dark:bg-slate-800 rounded"></div>
+</div>
+</header>
+<!-- Main Content Area with Modal Overlay -->
+<main class="flex-1 flex items-center justify-center p-4 modal-blur-bg relative z-10 backdrop-blur-md">
+<!-- Modal Container -->
+<div class="bg-white dark:bg-[#1a2e16] w-full max-w-[1024px] rounded-xl shadow-2xl overflow-hidden flex flex-col border border-black/5 dark:border-white/10">
+<!-- Modal Header -->
+<div class="relative px-8 pt-8 pb-4 text-center">
+<button class="absolute right-6 top-6 text-slate-grey/50 hover:text-slate-grey dark:text-white/50 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h1 class="text-[#101b0d] dark:text-white tracking-tight text-3xl font-bold leading-tight">Select Your Language &amp; Region</h1>
+<p class="text-slate-grey dark:text-slate-300 text-base font-normal mt-2">Tailor your logistics experience with Mubraiz Resources Ltd.</p>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto px-8 py-4 space-y-8 max-h-[70vh]">
+<!-- Section: Language -->
+<div>
+<h2 class="text-[#101b0d] dark:text-white text-xl font-bold leading-tight flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">translate</span>
+                        Select Your Language
+                    </h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Language Card: English (Active) -->
+<div class="relative group cursor-pointer flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 transition-all">
+<div class="size-16 rounded-full overflow-hidden border-2 border-white dark:border-slate-700 shadow-sm">
+<div class="w-full h-full bg-center bg-cover" data-alt="Union Jack flag of the United Kingdom" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBX1_Z0Dk8p0obBOQCBPgqObshcCCzr1m4WdBlkDIaObJOkm1qfv4lF1AJ_l2_GPsHZ0t_ccMpRHsk0g-CZAPgUCnOc6tdyKv8PBrQcvQKFZ6LYXk2qsnd51BJbuqlqCO7rmz-fOHRgLtwK6nSTBFsh9nr-1zS9MHvkpdqHNpzivGoHf1q_ngwQs4MZhN-h3AAYsVeIyDUBuobby51yeSvGWvlxVD6ymt4Unsk3MH6NK_hA9P7SdWDAAVRp1qIlHIuIB4g4b2qhBe4');"></div>
+</div>
+<div class="text-center">
+<p class="text-[#101b0d] dark:text-white text-base font-semibold">English</p>
+<p class="text-primary text-sm font-medium">Global</p>
+</div>
+<div class="absolute top-3 right-3 text-primary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+</div>
+<!-- Language Card: French -->
+<div class="group cursor-pointer flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-transparent bg-slate-50 dark:bg-slate-800/50 hover:border-slate-200 dark:hover:border-slate-700 transition-all">
+<div class="size-16 rounded-full overflow-hidden border-2 border-white dark:border-slate-700 shadow-sm">
+<div class="w-full h-full bg-center bg-cover" data-alt="Flag of France" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBg2jvxzymGrBwMtkK6d_nQN7mcUf6QuovT3pCBSPdgOqNMaTJ_5QieEkyqneX4PZUg4gNSB-Icpb2LuH1Z-111l0N9fCOaL87SkwjGDSnQtkY7vrJIp6IX_eE8IET_DMqKP7ShezJwJ7s14iStioSgO-3Pb25t7EhyI_Owh3BPBHiIY9Ym6XWycIExMHr8D3CO9z6sbqcYGJacYmXOZZxzD6EDsKxBiKDyO7SHgKoUq8KeYW7iLjuHH1Y6w4Jfka2BqvVwF-u7tXA');"></div>
+</div>
+<div class="text-center">
+<p class="text-[#101b0d] dark:text-white text-base font-medium group-hover:font-semibold">French</p>
+<p class="text-slate-grey/60 dark:text-slate-400 text-sm font-normal">West Africa</p>
+</div>
+</div>
+<!-- Language Card: Arabic -->
+<div class="group cursor-pointer flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-transparent bg-slate-50 dark:bg-slate-800/50 hover:border-slate-200 dark:hover:border-slate-700 transition-all">
+<div class="size-16 rounded-full overflow-hidden border-2 border-white dark:border-slate-700 shadow-sm">
+<div class="w-full h-full bg-center bg-cover" data-alt="Flag of Saudi Arabia or Egypt" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDdBFeDQx9QiBL_Lz1F05BSxDgRHorJ0p-u8S6FIXQkIxPTzVP6xp2YATJBPsd2DDGOCWnB3ReYIqLHPEJuTsjQKtEC57P9PrSzeDvmmGJG3RoMaFVP-qjG0oLk4yX57_-n2lahw3me4ZLPAmhJsv3ljPTRkgw_1bnz2bPFLvJBs8r-d6Gi0orROMlVESYManhotkvBS7NZKsfpgLGoMCIDfdACGfNKEamluxYhLEQ8rCIbW9rh0WExMV19-kIb7VDgA4yVM9Uhx8');"></div>
+</div>
+<div class="text-center">
+<p class="text-[#101b0d] dark:text-white text-base font-medium group-hover:font-semibold">Arabic</p>
+<p class="text-slate-grey/60 dark:text-slate-400 text-sm font-normal">North Africa</p>
+</div>
+</div>
+<!-- Language Card: Portuguese -->
+<div class="group cursor-pointer flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-transparent bg-slate-50 dark:bg-slate-800/50 hover:border-slate-200 dark:hover:border-slate-700 transition-all">
+<div class="size-16 rounded-full overflow-hidden border-2 border-white dark:border-slate-700 shadow-sm">
+<div class="w-full h-full bg-center bg-cover" data-alt="Flag of Portugal or Angola" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTzlCjEX0VgildNUOQgU5OX7k3yc9Y2yErpgRMtW6hAQUFIcaZWlOF3jYAY-I-ZcbHq-w5LPPMKUtwtXRPd1fTagwWgm2hXX8Ez-yDISthHKHOtAKwVAtYzCM1svva66pSy24e_dWT8LeSzpgd5wIlgDSu8y1E9lHVLibp9a5x5gOywEcegnR3hU0n-u_wQqFm1j5qq7QGzQYFyKg8QmtOxCq1V3hw636wz9JOfSkpbcLUQhqXfu86wtTU07R7PaFW9Hk6-GuMRYk');"></div>
+</div>
+<div class="text-center">
+<p class="text-[#101b0d] dark:text-white text-base font-medium group-hover:font-semibold">Portuguese</p>
+<p class="text-slate-grey/60 dark:text-slate-400 text-sm font-normal">Southern Africa</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Regions -->
+<div>
+<h2 class="text-[#101b0d] dark:text-white text-xl font-bold leading-tight flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">hub</span>
+                        Select Your Regional Hub
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Hub Column: West Africa -->
+<div class="space-y-3">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-grey/50 dark:text-slate-400 px-2">West Africa</h3>
+<div class="space-y-1">
+<button class="w-full text-left px-4 py-3 rounded-lg flex items-center justify-between bg-primary/10 border border-primary/20 text-[#101b0d] dark:text-white font-medium">
+                                    Nigeria <span class="material-symbols-outlined text-primary scale-75">radio_button_checked</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-lg flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-grey dark:text-slate-300 transition-colors">
+                                    Ghana <span class="material-symbols-outlined text-slate-200 dark:text-slate-700 scale-75">radio_button_unchecked</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-lg flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-grey dark:text-slate-300 transition-colors">
+                                    Ivory Coast <span class="material-symbols-outlined text-slate-200 dark:text-slate-700 scale-75">radio_button_unchecked</span>
+</button>
+</div>
+</div>
+<!-- Hub Column: North & East Africa -->
+<div class="space-y-3">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-grey/50 dark:text-slate-400 px-2">North &amp; East</h3>
+<div class="space-y-1">
+<button class="w-full text-left px-4 py-3 rounded-lg flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-grey dark:text-slate-300 transition-colors">
+                                    Egypt <span class="material-symbols-outlined text-slate-200 dark:text-slate-700 scale-75">radio_button_unchecked</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-lg flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-grey dark:text-slate-300 transition-colors">
+                                    Kenya <span class="material-symbols-outlined text-slate-200 dark:text-slate-700 scale-75">radio_button_unchecked</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-lg flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-grey dark:text-slate-300 transition-colors">
+                                    Morocco <span class="material-symbols-outlined text-slate-200 dark:text-slate-700 scale-75">radio_button_unchecked</span>
+</button>
+</div>
+</div>
+<!-- Hub Column: International -->
+<div class="space-y-3">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-grey/50 dark:text-slate-400 px-2">Global Operations</h3>
+<div class="space-y-1">
+<button class="w-full text-left px-4 py-3 rounded-lg flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-grey dark:text-slate-300 transition-colors">
+                                    United Kingdom <span class="material-symbols-outlined text-slate-200 dark:text-slate-700 scale-75">radio_button_unchecked</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-lg flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-grey dark:text-slate-300 transition-colors">
+                                    United States <span class="material-symbols-outlined text-slate-200 dark:text-slate-700 scale-75">radio_button_unchecked</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-lg flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-grey dark:text-slate-300 transition-colors">
+                                    United Arab Emirates <span class="material-symbols-outlined text-slate-200 dark:text-slate-700 scale-75">radio_button_unchecked</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="px-8 py-6 bg-slate-50 dark:bg-black/20 border-t border-black/5 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+<a class="text-sm text-slate-grey/60 dark:text-slate-400 hover:text-primary transition-colors underline underline-offset-4" href="#">Privacy &amp; Cookie Policy</a>
+<div class="flex items-center gap-4 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none min-w-[140px] px-6 py-3 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-grey dark:text-white font-semibold hover:bg-white dark:hover:bg-slate-800 transition-all">
+                        Cancel
+                    </button>
+<button class="flex-1 sm:flex-none min-w-[180px] px-6 py-3 rounded-lg bg-primary text-slate-grey font-bold shadow-lg shadow-primary/20 hover:brightness-105 active:scale-95 transition-all">
+                        Save Preferences
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Credit -->
+<footer class="p-6 text-center text-xs text-slate-grey/40 dark:text-slate-500 absolute bottom-0 w-full z-0 pointer-events-none">
+        © 2024 Mubraiz Resources Ltd. All rights reserved. Professional Logistics Ecosystem v1.4.2
+    </footer>
+</body></html>

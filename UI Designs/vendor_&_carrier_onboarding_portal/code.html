@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vendor &amp; Carrier Onboarding Portal - Mubraiz Resources Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#37ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#132210",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#101b0d] dark:text-[#f6f8f6] min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#d3e7cf] dark:border-[#2a4524] bg-white dark:bg-[#1a2e16] px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#101b0d] dark:text-[#f6f8f6]">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Mubraiz Resources Ltd</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-primary" href="#">Carrier Portal</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Support</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#e9f3e7] dark:bg-[#2a4524] text-[#101b0d] dark:text-white">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center border-2 border-primary" data-alt="User profile avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMrx6fVX6bniUa3ijDD7N3WdeYaZMNK49HAAQbbWkZ8fn1IwEIK5YF876YWM1T5Z2BWecM7qguPg5IgunmqewivLo4o2XdG-fL546LgqnOF4w_hnA6M33RrtIMl0pEevc2SdbkNFmm8r1rwqxRx7sfXD8q0NOCrWA0IypttSfW7zHDeQ0OBRhD1fVB3nez0qMyyjiBm2o0GTc6XaLINifMpsSh-JJpRzX-TZvcZdMUQnBMuPzLCG5WXA-RKFDRkTo_jE6hdlye6PY')"></div>
+</div>
+</div>
+</header>
+<div class="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-6 p-6">
+<!-- Sidebar Navigation -->
+<aside class="w-full lg:w-72 flex flex-col gap-6">
+<div class="bg-white dark:bg-[#1a2e16] rounded-xl p-5 shadow-sm border border-[#e9f3e7] dark:border-[#2a4524]">
+<div class="mb-6">
+<h1 class="text-lg font-bold">Logistics Portal</h1>
+<p class="text-primary text-xs font-semibold uppercase tracking-wider">Carrier Onboarding</p>
+</div>
+<nav class="flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-[#101b0d] dark:text-white">
+<span class="material-symbols-outlined text-primary">domain</span>
+<span class="text-sm font-semibold">Step 1: Company Profile</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#599a4c] hover:bg-background-light dark:hover:bg-[#2a4524] transition-colors">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="text-sm font-medium">Step 2: Compliance</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#599a4c] hover:bg-background-light dark:hover:bg-[#2a4524] transition-colors">
+<span class="material-symbols-outlined">map</span>
+<span class="text-sm font-medium">Step 3: Route Specs</span>
+</div>
+</nav>
+<div class="mt-8 pt-6 border-t border-[#e9f3e7] dark:border-[#2a4524]">
+<h3 class="text-xs font-bold text-[#599a4c] uppercase mb-4">Onboarding Checklist</h3>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="text-xs font-medium">Account Registration</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">radio_button_checked</span>
+<span class="text-xs font-medium">Company Profile</span>
+</li>
+<li class="flex items-center gap-3 text-gray-400">
+<span class="material-symbols-outlined text-[20px]">radio_button_unchecked</span>
+<span class="text-xs font-medium">Compliance Docs</span>
+</li>
+<li class="flex items-center gap-3 text-gray-400">
+<span class="material-symbols-outlined text-[20px]">radio_button_unchecked</span>
+<span class="text-xs font-medium">Route Specialization</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 p-4 rounded-lg bg-primary/5 border border-primary/20">
+<p class="text-[10px] uppercase font-bold text-[#599a4c] mb-1">Verification Status</p>
+<p class="text-sm font-bold text-[#101b0d] dark:text-white">Drafting Application</p>
+<div class="mt-2 h-1.5 w-full bg-[#d3e7cf] dark:bg-[#2a4524] rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 33%"></div>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-background-dark font-bold py-3 rounded-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">save</span>
+                Save Progress
+            </button>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col gap-6">
+<!-- Progress Bar Section -->
+<div class="bg-white dark:bg-[#1a2e16] rounded-xl p-6 shadow-sm border border-[#e9f3e7] dark:border-[#2a4524]">
+<div class="flex justify-between items-end mb-3">
+<div>
+<h2 class="text-2xl font-bold text-[#101b0d] dark:text-white leading-tight">Company Profile &amp; Fleet Size</h2>
+<p class="text-[#599a4c] text-sm mt-1">Please provide accurate legal and operational information.</p>
+</div>
+<p class="text-primary font-bold text-lg">Step 1 <span class="text-xs text-[#599a4c] font-normal">/ 3</span></p>
+</div>
+<div class="rounded-full bg-[#d3e7cf] dark:bg-[#2a4524] h-2.5 overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 33%;"></div>
+</div>
+</div>
+<!-- Form Section -->
+<div class="bg-white dark:bg-[#1a2e16] rounded-xl shadow-sm border border-[#e9f3e7] dark:border-[#2a4524] overflow-hidden">
+<div class="p-6 border-b border-[#e9f3e7] dark:border-[#2a4524]">
+<h3 class="font-bold text-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">business</span>
+                        Legal &amp; Tax Information
+                    </h3>
+</div>
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#101b0d] dark:text-[#f6f8f6]">Legal Entity Name
+<input class="form-input w-full rounded-lg border-[#d3e7cf] dark:border-[#2a4524] bg-background-light dark:bg-[#132210] focus:ring-primary focus:border-primary h-12" placeholder="e.g. Swift Logistics LLC" type="text"/>
+</label></div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#101b0d] dark:text-[#f6f8f6]">Tax Identification Number (TIN)
+<input class="form-input w-full rounded-lg border-[#d3e7cf] dark:border-[#2a4524] bg-background-light dark:bg-[#132210] focus:ring-primary focus:border-primary h-12" placeholder="XX-XXXXXXX" type="text"/>
+</label></div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#101b0d] dark:text-[#f6f8f6]">DOT Number (If applicable)
+<input class="form-input w-full rounded-lg border-[#d3e7cf] dark:border-[#2a4524] bg-background-light dark:bg-[#132210] focus:ring-primary focus:border-primary h-12" placeholder="USDOT1234567" type="text"/>
+</label></div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#101b0d] dark:text-[#f6f8f6]">Headquarters Address
+<input class="form-input w-full rounded-lg border-[#d3e7cf] dark:border-[#2a4524] bg-background-light dark:bg-[#132210] focus:ring-primary focus:border-primary h-12" placeholder="Street, City, Country" type="text"/>
+</label></div>
+</div>
+<div class="p-6 border-t border-[#e9f3e7] dark:border-[#2a4524] bg-background-light/50 dark:bg-background-dark/20">
+<h3 class="font-bold text-lg flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+                        Fleet Specifications
+                    </h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-4 rounded-xl border border-[#d3e7cf] dark:border-[#2a4524] bg-white dark:bg-[#1a2e16] flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary">delivery_truck_bolt</span>
+<p class="text-xs font-bold uppercase text-[#599a4c]">Dry Vans</p>
+<input class="w-16 text-center border-none bg-background-light dark:bg-[#132210] rounded-lg font-bold" type="number" value="0"/>
+</div>
+<div class="p-4 rounded-xl border border-[#d3e7cf] dark:border-[#2a4524] bg-white dark:bg-[#1a2e16] flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary">ac_unit</span>
+<p class="text-xs font-bold uppercase text-[#599a4c]">Reefers</p>
+<input class="w-16 text-center border-none bg-background-light dark:bg-[#132210] rounded-lg font-bold" type="number" value="0"/>
+</div>
+<div class="p-4 rounded-xl border border-[#d3e7cf] dark:border-[#2a4524] bg-white dark:bg-[#1a2e16] flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary">agriculture</span>
+<p class="text-xs font-bold uppercase text-[#599a4c]">Flatbeds</p>
+<input class="w-16 text-center border-none bg-background-light dark:bg-[#132210] rounded-lg font-bold" type="number" value="0"/>
+</div>
+<div class="p-4 rounded-xl border border-[#d3e7cf] dark:border-[#2a4524] bg-white dark:bg-[#1a2e16] flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary">deployed_code</span>
+<p class="text-xs font-bold uppercase text-[#599a4c]">Specialized</p>
+<input class="w-16 text-center border-none bg-background-light dark:bg-[#132210] rounded-lg font-bold" type="number" value="0"/>
+</div>
+</div>
+</div>
+<!-- Step Navigator Footer -->
+<div class="p-6 bg-white dark:bg-[#1a2e16] flex justify-between items-center border-t border-[#e9f3e7] dark:border-[#2a4524]">
+<button class="px-6 py-2.5 font-bold text-[#599a4c] hover:bg-[#e9f3e7] dark:hover:bg-[#2a4524] rounded-lg transition-colors">
+                        Cancel
+                    </button>
+<button class="bg-primary text-background-dark px-8 py-3 rounded-lg font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform flex items-center gap-2">
+                        Next: Compliance &amp; Docs
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Preview Card for Next Step -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 opacity-60">
+<div class="bg-white dark:bg-[#1a2e16] p-5 rounded-xl border border-dashed border-[#d3e7cf] dark:border-[#2a4524] flex items-center gap-4">
+<div class="h-12 w-12 rounded-lg bg-[#e9f3e7] dark:bg-[#2a4524] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">upload_file</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Step 2: Documentation</h4>
+<p class="text-xs text-[#599a4c]">Insurance &amp; Carrier Permits</p>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2e16] p-5 rounded-xl border border-dashed border-[#d3e7cf] dark:border-[#2a4524] flex items-center gap-4">
+<div class="h-12 w-12 rounded-lg bg-[#e9f3e7] dark:bg-[#2a4524] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">explore</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Step 3: Preferred Corridors</h4>
+<p class="text-xs text-[#599a4c]">Global Trade Specialization</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Right Help/Status Sidebar -->
+<aside class="hidden xl:flex w-80 flex-col gap-6">
+<div class="bg-background-dark text-white rounded-xl p-6 shadow-xl relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-bold text-lg mb-2">Need Assistance?</h3>
+<p class="text-sm text-gray-400 mb-6">Our vendor onboarding team is available 24/7 to help you complete your application.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline" href="#">
+<span class="material-symbols-outlined text-[18px]">headset_mic</span>
+                        Chat with Support
+                    </a>
+</div>
+<!-- Abstract Gradient Background -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+</div>
+<div class="bg-white dark:bg-[#1a2e16] rounded-xl p-6 border border-[#e9f3e7] dark:border-[#2a4524] shadow-sm">
+<h3 class="font-bold text-sm mb-4 uppercase tracking-widest text-[#599a4c]">System News</h3>
+<div class="space-y-4">
+<div class="flex gap-3">
+<div class="min-w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></div>
+<p class="text-xs">New EU-UK corridor safety standards updated for 2024 compliance.</p>
+</div>
+<div class="flex gap-3">
+<div class="min-w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></div>
+<p class="text-xs">Digital signature now accepted for all carrier contracts.</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden border border-[#e9f3e7] dark:border-[#2a4524]">
+<div class="bg-center bg-no-repeat aspect-video bg-cover flex items-end p-4" data-alt="Modern logistics warehouse and trucks" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHCj3SXWJ-BJqBtVFNdGjtXFAxUwh9U5B3gsoTqwYjzg5HrKY3cBEISbrj4JQ6Jdaknk2hbEjSW14yJICbwEKjATDUko-X-a8YntseK2kJQleNOaE7h2VXNdXOc-fBusDBAIXItloTCsmRrWPEUerP866e_PXy6vyuQd0WVKfl9tjyVkg3o4gtyg6zUZ6AAoQUPGP1thjS1qua-RPUhNyH5phn_lcvcp3X95Rc9UY4OueL2-y2SGKzOJ1IoFyW5OjY5WyRoWwKMPU')">
+<p class="text-white text-[10px] font-bold uppercase tracking-widest">Global Ecosystem</p>
+</div>
+<div class="p-4 bg-white dark:bg-[#1a2e16]">
+<p class="text-xs leading-relaxed italic text-[#599a4c]">"Mubraiz Resources empowers over 5,000 carriers across 3 continents."</p>
+</div>
+</div>
+</aside>
+</div>
+<footer class="mt-auto border-t border-[#d3e7cf] dark:border-[#2a4524] py-8 px-10 flex flex-col md:flex-row justify-between items-center gap-4 bg-white dark:bg-[#1a2e16]">
+<div class="flex items-center gap-4 opacity-50 grayscale">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"></path>
+</svg>
+</div>
+<p class="text-[10px] font-medium">© 2024 Mubraiz Resources Ltd. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-[10px] font-bold uppercase hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-[10px] font-bold uppercase hover:text-primary" href="#">Terms of Service</a>
+<a class="text-[10px] font-bold uppercase hover:text-primary" href="#">Security Standards</a>
+</div>
+</footer>
+</body></html>

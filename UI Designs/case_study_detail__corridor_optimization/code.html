@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#37ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#132210",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: "Work Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#101b0d] dark:text-white antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#e9f3e7] dark:border-[#2a3e26] px-6 lg:px-40 py-3">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-tight">Mubraiz Resources Ltd</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Solutions</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Fleet</a>
+<a class="text-sm font-medium text-primary" href="#">Case Studies</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center justify-center rounded-lg h-10 px-6 bg-primary text-black text-sm font-bold transition-transform active:scale-95">
+                        Get a Quote
+                    </button>
+<button class="md:hidden flex items-center justify-center p-2 text-[#599a4c]">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Breadcrumbs -->
+<div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-4">
+<div class="flex flex-wrap items-center gap-2 text-sm">
+<a class="text-[#599a4c] font-medium" href="#">Home</a>
+<span class="text-[#599a4c] material-symbols-outlined text-sm">chevron_right</span>
+<a class="text-[#599a4c] font-medium" href="#">Case Studies</a>
+<span class="text-[#599a4c] material-symbols-outlined text-sm">chevron_right</span>
+<span class="font-medium">Corridor Optimization</span>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="max-w-[1200px] mx-auto px-6 lg:px-10 pb-8">
+<div class="relative min-h-[480px] flex flex-col justify-end overflow-hidden rounded-xl bg-cover bg-center" data-alt="Heavy duty fleet of trucks on a modern highway at sunset" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkl5oozlV-YVMGQKrhNcU79T67qYWvkhG8NLAK2v4MRYVWaG0VwLp8KmyKLNCQTUEAuc-z1PlPATIk8bKTa_lY0vT1C6DQ8xeUNKGWsGObPfja-YAxDQ-99o4h-BXKL6elzSAV0sRm58Cjbtekhcs6w5Y-DZgJNOJooWXodS3_5-tgdMcFYdum1nyDbxaUZcrOwbRyNw6Z2GkJb8YCGDCSLOJY3VjnV4EGE7sja4FrKxmNB0Tm_ZLwEw6juR5y-W1OXbf8WXZ6G3s");'>
+<div class="p-8 lg:p-12 max-w-3xl">
+<h1 class="text-white text-4xl lg:text-6xl font-black leading-tight tracking-tight mb-4">
+                            West African Corridor Optimization
+                        </h1>
+<p class="text-white/90 text-lg lg:text-xl font-normal mb-8 max-w-2xl">
+                            How we revolutionized logistics efficiency across regional trade corridors for industrial machinery transit.
+                        </p>
+<div class="flex gap-4">
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-black font-bold tracking-tight">
+                                View Technical Specs
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Grid -->
+<section class="max-w-[1200px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-12 pb-24">
+<!-- Main Content (Left Column) -->
+<div class="lg:col-span-8 space-y-16">
+<!-- The Challenge -->
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-primary font-bold text-sm tracking-widest uppercase">Phase 01</span>
+<div class="h-px flex-1 bg-[#e9f3e7] dark:bg-[#2a3e26]"></div>
+</div>
+<h2 class="text-3xl font-extrabold mb-6">The Challenge</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+<p>Navigating the West African corridor from Lagos to Bamako presented significant logistical hurdles. Increasing trade volume was meeting a legacy infrastructure that caused persistent delays at border crossings and port terminals.</p>
+</div>
+<div class="bg-background-light dark:bg-[#1a2d16] p-6 rounded-xl border border-[#d3e7cf] dark:border-[#2a3e26]">
+<h3 class="font-bold text-lg mb-4">Critical Pain Points</h3>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm">48-hour average border clearance delays</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm">Inconsistent road quality affecting vehicle lifespan</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm">Limited real-time tracking in remote zones</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm">Escalating fuel consumption due to idling</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- The Mubraiz Strategy (Process Flow) -->
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-primary font-bold text-sm tracking-widest uppercase">Phase 02</span>
+<div class="h-px flex-1 bg-[#e9f3e7] dark:bg-[#2a3e26]"></div>
+</div>
+<h2 class="text-3xl font-extrabold mb-8">The Mubraiz Strategy</h2>
+<!-- Horizontal Flow Diagram -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+<div class="flex flex-col gap-4 p-6 bg-white dark:bg-[#1a2d16] rounded-xl border border-[#d3e7cf] dark:border-[#2a3e26] z-10 shadow-sm">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">route</span>
+</div>
+<h4 class="font-bold">Dynamic Routing</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400">Integration of AI-driven route optimization to bypass congested border posts during peak hours.</p>
+</div>
+<div class="flex flex-col gap-4 p-6 bg-white dark:bg-[#1a2d16] rounded-xl border border-[#d3e7cf] dark:border-[#2a3e26] z-10 shadow-sm">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<h4 class="font-bold">Intermodal Hubs</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400">Strategically placed staging areas to switch drivers and perform rapid maintenance checks.</p>
+</div>
+<div class="flex flex-col gap-4 p-6 bg-white dark:bg-[#1a2d16] rounded-xl border border-[#d3e7cf] dark:border-[#2a3e26] z-10 shadow-sm">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">sensors</span>
+</div>
+<h4 class="font-bold">IoT Deployment</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400">Installation of satellite-linked telematics for 100% visibility even in network-blind corridors.</p>
+</div>
+</div>
+</div>
+<!-- The Outcome -->
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-primary font-bold text-sm tracking-widest uppercase">Phase 03</span>
+<div class="h-px flex-1 bg-[#e9f3e7] dark:bg-[#2a3e26]"></div>
+</div>
+<h2 class="text-3xl font-extrabold mb-8">The Outcome</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="p-6 text-center rounded-xl bg-white dark:bg-[#1a2d16] shadow-sm border-b-4 border-primary">
+<p class="text-4xl lg:text-5xl font-black text-primary mb-2">40%</p>
+<p class="text-xs font-bold uppercase tracking-wider text-gray-500">Transit Time Reduction</p>
+</div>
+<div class="p-6 text-center rounded-xl bg-white dark:bg-[#1a2d16] shadow-sm border-b-4 border-primary">
+<p class="text-4xl lg:text-5xl font-black text-primary mb-2">15%</p>
+<p class="text-xs font-bold uppercase tracking-wider text-gray-500">Operational Cost Savings</p>
+</div>
+<div class="p-6 text-center rounded-xl bg-white dark:bg-[#1a2d16] shadow-sm border-b-4 border-primary">
+<p class="text-4xl lg:text-5xl font-black text-primary mb-2">100%</p>
+<p class="text-xs font-bold uppercase tracking-wider text-gray-500">Safety &amp; Cargo Integrity</p>
+</div>
+</div>
+<div class="mt-10 p-8 rounded-xl bg-[#e9f3e7] dark:bg-[#2a3e26]/30 italic text-lg text-gray-700 dark:text-gray-300">
+                            "Mubraiz Resources transformed our supply chain reliability. What used to take weeks now moves with clockwork precision through the corridor."
+                            <footer class="mt-4 font-bold not-italic text-sm">— Director of Operations, Regional Industrial Group</footer>
+</div>
+</div>
+</div>
+<!-- Sidebar (Right Column) -->
+<aside class="lg:col-span-4">
+<div class="sticky top-24 space-y-6">
+<!-- Project Specs Card -->
+<div class="bg-white dark:bg-[#1a2d16] rounded-xl border border-[#d3e7cf] dark:border-[#2a3e26] overflow-hidden shadow-sm">
+<div class="p-5 border-b border-[#e9f3e7] dark:border-[#2a3e26] bg-gray-50 dark:bg-black/20">
+<h3 class="font-bold text-lg">Project Specifications</h3>
+</div>
+<div class="p-6 space-y-6">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-gray-500 uppercase mb-1">Route Corridor</span>
+<span class="text-base font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                                        Lagos (NGR) <span class="text-primary">→</span> Bamako (MLI)
+                                    </span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-gray-500 uppercase mb-1">Cargo Type</span>
+<span class="text-base font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">precision_manufacturing</span>
+                                        Industrial Heavy Machinery
+                                    </span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-gray-500 uppercase mb-1">Equipment Deployed</span>
+<span class="text-base font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">local_shipping</span>
+                                        Heavy-duty Flatbeds &amp; Escorts
+                                    </span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-gray-500 uppercase mb-1">Duration</span>
+<span class="text-base font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">calendar_month</span>
+                                        6-Month Pilot Program
+                                    </span>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="rounded-xl overflow-hidden h-48 bg-gray-200 dark:bg-gray-800 relative group" data-location="West Africa" style="">
+<img alt="Map of West Africa" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 transition-all duration-500" data-alt="Digital representation of West African trade map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQW3q9y0kcAWCYje9WWckDyCXDhxRex-4yWVWY7bNQkCnPtHQQ7y-X0sohU_y00RkaL-3NijOPDluAE61gpNb-tRbswnci1D1UGKkVpmdUgnQaxXrgroMJQJRUt2-YOnVP31f6dNHKeN1Ou-YYDTjO1GMQLuD7k5A9Lg9jw2wAn8qxvFo-0OrtJ4A0t-aAHMLoRRvVLQMrq_TdRkMU_gpPx5eVb80bqJJqhY64V7qEJf3JCcnw0RAQMUz8-rppyE7h-DMoMc5IIuY"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="bg-white/90 dark:bg-background-dark/90 px-4 py-2 rounded-full text-xs font-bold shadow-lg">Interactive Corridor Map</span>
+</div>
+</div>
+<!-- CTA Card -->
+<div class="bg-primary p-8 rounded-xl text-black">
+<h3 class="text-xl font-black mb-2">Technical Insight</h3>
+<p class="text-sm font-medium mb-6 opacity-80">Download our detailed whitepaper on West African corridor optimization strategies.</p>
+<button class="w-full bg-black text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-gray-900 transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+                                Download Whitepaper
+                            </button>
+</div>
+</div>
+</aside>
+</section>
+</main>
+<!-- Footer (Simplified) -->
+<footer class="bg-white dark:bg-[#0c160a] border-t border-[#e9f3e7] dark:border-[#2a3e26] py-12 px-6 lg:px-40">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3 grayscale opacity-70">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="font-bold">Mubraiz Resources</span>
+</div>
+<p class="text-sm text-gray-500">© 2024 Mubraiz Resources Ltd. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-sm font-medium hover:text-primary" href="#">LinkedIn</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Twitter</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Reports</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

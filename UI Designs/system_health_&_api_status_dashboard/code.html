@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>System Health &amp; API Status Dashboard | Mubraiz Resources Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .uptime-bar {
+            height: 24px;
+            width: 4px;
+            border-radius: 1px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-700">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 bg-white px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-slate-900">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 text-lg font-bold leading-tight tracking-tight">Mubraiz Resources Ltd</h2>
+</div>
+<nav class="flex items-center gap-6">
+<a class="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#">Tracking</a>
+<a class="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#">Fleet</a>
+<a class="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#">Calculator</a>
+<a class="text-slate-900 text-sm font-bold border-b-2 border-primary pb-1" href="#">System Status</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<div class="flex items-center gap-2 bg-primary/10 px-3 py-1.5 rounded-full border border-primary/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-xs font-bold text-slate-800 uppercase tracking-wider">System Operational</span>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 border border-slate-200" data-alt="Technical operations manager profile photo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_Q3Ou_7MY03903zYq_l9OAKkibZeP9fcfyTYPBGv5rH2nZhjGf2v7il_KH_C_xyP2IALMPdQwrZsujA7yfIolr7qvlAF3-bsSgCnmAwOIWr-2URuDNV77yWctDuiIi5QMLF3ERB7BgqacF9s50C7vIbSOVBcMWl9BaayXGV0rwe1xUF3AdEPDS6AH6O1VWnd1cOSTHbktg4T8nTJ_qbejz68xoEPEMayY47ydViq21XstqOuM_ErDAqQOti_vO0YtJwyrfKwHnTE");'></div>
+</div>
+</header>
+<main class="flex flex-1 gap-0 max-w-[1440px] mx-auto w-full">
+<!-- SideNavBar -->
+<aside class="w-72 border-r border-slate-200 bg-white p-6 flex flex-col justify-between shrink-0">
+<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-1">
+<h1 class="text-slate-900 text-base font-bold">Developer Resources</h1>
+<p class="text-slate-500 text-xs font-medium uppercase tracking-widest">Technical Ecosystem</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<p class="text-sm font-semibold">Status Overview</p>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<p class="text-sm font-medium">API Documentation</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<p class="text-sm font-medium">Client SDKs</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">webhook</span>
+<p class="text-sm font-medium">Webhooks Setup</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">security</span>
+<p class="text-sm font-medium">Security Policy</p>
+</a>
+</div>
+<div class="mt-4 p-4 rounded-xl border border-slate-200 bg-slate-50/50">
+<h3 class="text-sm font-bold text-slate-900 mb-2">Subscribe to Alerts</h3>
+<p class="text-xs text-slate-500 mb-4">Get instant notifications on incidents via email or SMS.</p>
+<form class="flex flex-col gap-2">
+<input class="text-sm px-3 py-2 rounded-lg border-slate-200 focus:ring-primary focus:border-primary" placeholder="email@company.com" type="email"/>
+<button class="w-full bg-primary text-slate-900 text-xs font-bold py-2 rounded-lg hover:bg-primary/90 transition-colors uppercase tracking-tight" type="submit">
+                                Subscribe Now
+                            </button>
+</form>
+</div>
+</div>
+<div class="pt-6 border-t border-slate-100">
+<p class="text-[10px] text-slate-400 font-mono">NODE_ID: LHR-9281-X</p>
+<p class="text-[10px] text-slate-400 font-mono">REFRESH: 60s</p>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col bg-white">
+<!-- PageHeading -->
+<div class="p-8 border-b border-slate-100">
+<div class="flex flex-wrap justify-between items-end gap-6">
+<div class="flex flex-col gap-2">
+<p class="text-slate-900 text-4xl font-black leading-tight tracking-tight">Global Network &amp; API Status</p>
+<p class="text-slate-500 text-lg font-normal max-w-2xl leading-relaxed">Monitoring the pulse of our global logistics technical infrastructure and core API services.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-100 text-slate-900 text-sm font-bold hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined text-[20px]">history</span>
+                                View History
+                            </button>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-4 gap-4 p-8">
+<div class="flex flex-col gap-3 rounded-xl p-6 border border-slate-100 bg-slate-50/30">
+<p class="text-slate-500 text-xs font-bold uppercase tracking-widest">Global Uptime</p>
+<p class="text-slate-900 text-3xl font-black">99.98%</p>
+<div class="flex items-center gap-1 text-primary text-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+                            +0.01%
+                        </div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl p-6 border border-slate-100 bg-slate-50/30">
+<p class="text-slate-500 text-xs font-bold uppercase tracking-widest">Avg Latency</p>
+<p class="text-slate-900 text-3xl font-black">42ms</p>
+<div class="flex items-center gap-1 text-red-500 text-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">trending_down</span>
+                            -2ms
+                        </div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl p-6 border border-slate-100 bg-slate-50/30">
+<p class="text-slate-500 text-xs font-bold uppercase tracking-widest">Active Incidents</p>
+<p class="text-slate-900 text-3xl font-black">1</p>
+<div class="flex items-center gap-1 text-orange-500 text-sm font-bold uppercase tracking-tighter">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+                            Minor Issues
+                        </div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl p-6 border border-slate-100 bg-slate-50/30">
+<p class="text-slate-500 text-xs font-bold uppercase tracking-widest">Last Incident</p>
+<p class="text-slate-900 text-3xl font-black">4d 12h</p>
+<p class="text-slate-400 text-xs font-medium">Since last partial outage</p>
+</div>
+</div>
+<!-- Incidents Section -->
+<div class="px-8 mb-8">
+<h2 class="text-slate-900 text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-500">error</span>
+                        Current Incidents
+                    </h2>
+<div class="border-l-4 border-orange-400 bg-orange-50 p-4 rounded-r-lg">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-orange-900 font-bold text-sm">APAC Region Gateway Degradation</h3>
+<p class="text-orange-800 text-sm mt-1 leading-snug">We are investigating intermittent latency issues affecting the Fleet GPS Hub for users in the Singapore and Tokyo hubs.</p>
+<span class="inline-block mt-3 text-[11px] font-bold bg-orange-200 text-orange-900 px-2 py-0.5 rounded uppercase">Identified</span>
+</div>
+<span class="text-orange-600 text-xs font-medium">22 mins ago</span>
+</div>
+</div>
+</div>
+<!-- Main Service Status List -->
+<div class="px-8 pb-12">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-slate-900 text-xl font-bold">Service Health (90 Days)</h2>
+<div class="flex items-center gap-4 text-xs font-medium text-slate-400">
+<div class="flex items-center gap-1"><div class="w-3 h-3 bg-primary rounded-sm"></div> Operational</div>
+<div class="flex items-center gap-1"><div class="w-3 h-3 bg-orange-400 rounded-sm"></div> Partial Outage</div>
+<div class="flex items-center gap-1"><div class="w-3 h-3 bg-red-500 rounded-sm"></div> Major Outage</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Service Item 1 -->
+<div class="p-5 border border-slate-100 rounded-xl hover:border-slate-200 transition-all">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">api</span>
+<div>
+<h3 class="text-slate-900 font-bold text-sm">Real-time Tracking API</h3>
+<p class="text-slate-500 text-[11px] uppercase tracking-wider font-bold">REST/WebSocket Endpoints</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold text-sm">99.99% Uptime</span>
+<p class="text-slate-400 text-[10px]">Operational</p>
+</div>
+</div>
+<div class="flex gap-[2px] items-center">
+<!-- Generated Uptime Blocks -->
+<div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div>
+</div>
+</div>
+<!-- Service Item 2 -->
+<div class="p-5 border border-slate-100 rounded-xl hover:border-slate-200 transition-all">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">gps_fixed</span>
+<div>
+<h3 class="text-slate-900 font-bold text-sm">Fleet GPS Hub</h3>
+<p class="text-slate-500 text-[11px] uppercase tracking-wider font-bold">IoT Data Stream</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-orange-500 font-bold text-sm">98.42% Uptime</span>
+<p class="text-slate-400 text-[10px]">Partial Degradation</p>
+</div>
+</div>
+<div class="flex gap-[2px] items-center">
+<div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-orange-400 flex-1"></div><div class="uptime-bar bg-orange-400 flex-1"></div><div class="uptime-bar bg-orange-400 flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-orange-400 flex-1"></div>
+</div>
+</div>
+<!-- Service Item 3 -->
+<div class="p-5 border border-slate-100 rounded-xl hover:border-slate-200 transition-all">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">calculate</span>
+<div>
+<h3 class="text-slate-900 font-bold text-sm">Cost Calculator Engine</h3>
+<p class="text-slate-500 text-[11px] uppercase tracking-wider font-bold">Pricing Microservice</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold text-sm">100.0% Uptime</span>
+<p class="text-slate-400 text-[10px]">Operational</p>
+</div>
+</div>
+<div class="flex gap-[2px] items-center">
+<div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div><div class="uptime-bar bg-primary flex-1"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Regional Latency Map / Graph Placeholder -->
+<div class="px-8 pb-12">
+<h2 class="text-slate-900 text-lg font-bold mb-6">Regional Hub Latency (Live)</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-600">EMEA (London)</span>
+<span class="font-bold text-primary">12ms</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[15%]"></div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-600">AMER (New York)</span>
+<span class="font-bold text-primary">34ms</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[35%]"></div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-600">APAC (Singapore)</span>
+<span class="font-bold text-orange-400">128ms</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-orange-400 h-full w-[85%]"></div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden border border-slate-200 relative aspect-video bg-slate-50">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="flex flex-col items-center gap-2 opacity-40">
+<span class="material-symbols-outlined text-4xl">show_chart</span>
+<span class="text-xs font-bold uppercase">Real-time Latency Mesh</span>
+</div>
+</div>
+<!-- Background pattern placeholder for a map -->
+<div class="w-full h-full opacity-10" data-location="Global" style="background-image: url('https://placeholder.pics/svg/300');"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-slate-200 p-8">
+<div class="max-w-[1440px] mx-auto flex justify-between items-center">
+<div class="flex flex-col gap-1">
+<p class="text-slate-900 text-sm font-bold">© 2024 Mubraiz Resources Ltd.</p>
+<p class="text-slate-400 text-xs">All systems operational unless noted otherwise.</p>
+</div>
+<div class="flex gap-6 text-xs font-bold text-slate-500 uppercase tracking-widest">
+<a class="hover:text-primary" href="#">Legal</a>
+<a class="hover:text-primary" href="#">Privacy</a>
+<a class="hover:text-primary" href="#">Contact Support</a>
+<a class="hover:text-primary" href="#">Global Site</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mubraiz Resources - Client Portal</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5bec13",
+                        "primary-hover": "#4cd60b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#0f172a", // Darker slate for dark mode
+                        "slate-grey": "#475569",
+                        "dark-text": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.375rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-600 dark:text-slate-300 antialiased overflow-hidden">
+<div class="flex h-screen w-full overflow-hidden">
+<!-- Sidebar -->
+<aside class="hidden w-64 flex-col border-r border-slate-200 bg-white dark:bg-slate-900 dark:border-slate-800 md:flex">
+<div class="flex items-center gap-3 px-6 py-6">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-slate-900">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-dark-text dark:text-white text-base font-bold leading-tight">Mubraiz Resources</h1>
+<p class="text-slate-500 text-xs font-normal">Global Logistics</p>
+</div>
+</div>
+<nav class="flex flex-1 flex-col gap-1 px-4 py-4">
+<a class="group flex items-center gap-3 rounded-lg bg-primary/20 px-4 py-3 text-slate-900 dark:text-white font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-900 dark:text-primary">dashboard</span>
+                    Dashboard
+                </a>
+<a class="group flex items-center gap-3 rounded-lg px-4 py-3 text-slate-500 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+                    My Shipments
+                </a>
+<a class="group flex items-center gap-3 rounded-lg px-4 py-3 text-slate-500 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+                    Billing
+                </a>
+<a class="group flex items-center gap-3 rounded-lg px-4 py-3 text-slate-500 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+                    Support
+                </a>
+<a class="group flex items-center gap-3 rounded-lg px-4 py-3 text-slate-500 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+</nav>
+<div class="border-t border-slate-200 dark:border-slate-800 p-4">
+<div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3 dark:bg-slate-800">
+<div class="h-10 w-10 overflow-hidden rounded-full bg-slate-200 bg-cover bg-center" data-alt="User profile avatar showing a professional person" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGn8-iGBMsJbVGcqjeO8TSus1EcLIsZkhBjoJ_sbp8fk82FTCQYdcZyjns2RzVgSUFHsKEFmHCH7yhf3NMN2cQAtmm2pqAECHA6t2lVIwpUlrn3Qgv-OC8baWxYSrFOEYilYyeXiGa3jwb9pjjjtcOGvf1IgUrAk8elMjI2sgCODMpvuTI5QiRYs7c_bpZkhaYre1cBBkjXj2QzbXxAgnCHvr1uT80D7RnF_xoQ43XSHljrQ1-33iQ47bnqxsd6XYZ95akCxTV_YA');"></div>
+<div class="flex flex-col overflow-hidden">
+<p class="truncate text-sm font-semibold text-slate-900 dark:text-white">Alex Morgan</p>
+<p class="truncate text-xs text-slate-500 dark:text-slate-400">alex.m@client.com</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex flex-1 flex-col h-full overflow-hidden relative">
+<!-- Top Nav -->
+<header class="flex h-16 w-full items-center justify-between border-b border-slate-200 bg-white px-6 dark:bg-slate-900 dark:border-slate-800 shrink-0 z-10">
+<div class="flex items-center md:hidden">
+<button class="mr-4 text-slate-500">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="text-lg font-bold text-slate-900 dark:text-white">Mubraiz</span>
+</div>
+<div class="hidden md:flex flex-1 max-w-md">
+<div class="relative w-full">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="block w-full rounded-lg border-0 bg-slate-100 py-2 pl-10 pr-4 text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:bg-white sm:text-sm sm:leading-6 dark:bg-slate-800 dark:text-white" placeholder="Track shipment ID or invoice..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative rounded-full p-2 text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute right-2 top-2 h-2 w-2 rounded-full bg-red-500 border border-white dark:border-slate-900"></span>
+</button>
+<button class="rounded-full p-2 text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 md:hidden">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark p-4 md:p-8 scroll-smooth">
+<div class="mx-auto max-w-7xl flex flex-col gap-8">
+<!-- Page Heading -->
+<div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+<div>
+<h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Welcome back, Client</h2>
+<p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Here's your logistics overview for <span class="font-medium text-slate-700 dark:text-slate-300">October 24, 2023</span>.</p>
+</div>
+<button class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-sm hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors">
+<span class="material-symbols-outlined mr-2 text-[20px]">add</span>
+                            Book New Shipment
+                        </button>
+</div>
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+<div class="relative overflow-hidden rounded-xl bg-white p-6 shadow-sm border border-slate-100 dark:bg-slate-800 dark:border-slate-700">
+<div class="flex items-center justify-between">
+<div>
+<p class="truncate text-sm font-medium text-slate-500 dark:text-slate-400">Active Shipments</p>
+<p class="mt-2 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">12</p>
+</div>
+<div class="rounded-full bg-green-50 p-3 dark:bg-green-900/20">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400">local_shipping</span>
+</div>
+</div>
+<div class="mt-4 flex items-center text-sm">
+<span class="flex items-center font-medium text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined mr-1 text-[16px]">trending_up</span>
+                                    +2
+                                </span>
+<span class="ml-2 text-slate-500 dark:text-slate-400">since yesterday</span>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-white p-6 shadow-sm border border-slate-100 dark:bg-slate-800 dark:border-slate-700">
+<div class="flex items-center justify-between">
+<div>
+<p class="truncate text-sm font-medium text-slate-500 dark:text-slate-400">Pending Invoices</p>
+<p class="mt-2 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">$3,450.00</p>
+</div>
+<div class="rounded-full bg-amber-50 p-3 dark:bg-amber-900/20">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-400">description</span>
+</div>
+</div>
+<div class="mt-4 flex items-center text-sm">
+<span class="font-medium text-amber-600 dark:text-amber-400">Due Oct 24</span>
+<span class="ml-2 text-slate-500 dark:text-slate-400">Next payment</span>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-white p-6 shadow-sm border border-slate-100 dark:bg-slate-800 dark:border-slate-700">
+<div class="flex items-center justify-between">
+<div>
+<p class="truncate text-sm font-medium text-slate-500 dark:text-slate-400">Open Tickets</p>
+<p class="mt-2 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">0</p>
+</div>
+<div class="rounded-full bg-blue-50 p-3 dark:bg-blue-900/20">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400">support_agent</span>
+</div>
+</div>
+<div class="mt-4 flex items-center text-sm">
+<span class="flex items-center font-medium text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined mr-1 text-[16px] text-green-600">check_circle</span>
+                                    All clear
+                                </span>
+<span class="ml-2 text-slate-500 dark:text-slate-400">No issues</span>
+</div>
+</div>
+</div>
+<!-- Split Layout: Table & Vault -->
+<div class="flex flex-col gap-8 lg:flex-row">
+<!-- Shipment History Table -->
+<div class="flex-1 rounded-xl bg-white shadow-sm border border-slate-100 dark:bg-slate-800 dark:border-slate-700">
+<div class="flex items-center justify-between border-b border-slate-100 px-6 py-4 dark:border-slate-700">
+<h3 class="text-base font-semibold leading-6 text-slate-900 dark:text-white">Recent Shipments</h3>
+<a class="text-sm font-medium text-primary hover:text-green-600 dark:text-primary dark:hover:text-white" href="#">View all</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-sm text-slate-500 dark:text-slate-400">
+<thead class="bg-slate-50 text-xs uppercase text-slate-700 dark:bg-slate-900 dark:text-slate-300">
+<tr>
+<th class="px-6 py-3 font-semibold" scope="col">Tracking ID</th>
+<th class="px-6 py-3 font-semibold" scope="col">Route</th>
+<th class="px-6 py-3 font-semibold" scope="col">Date</th>
+<th class="px-6 py-3 font-semibold" scope="col">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-700">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+<td class="px-6 py-4 font-medium text-slate-900 dark:text-white">#TRK-88219</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500">From: Shenzhen</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">To: Dubai</span>
+</div>
+</td>
+<td class="px-6 py-4">Oct 23</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 dark:bg-blue-900/30 dark:text-blue-400">In Transit</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+<td class="px-6 py-4 font-medium text-slate-900 dark:text-white">#TRK-88218</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500">From: London</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">To: New York</span>
+</div>
+</td>
+<td class="px-6 py-4">Oct 21</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20 dark:bg-green-900/30 dark:text-green-400">Delivered</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+<td class="px-6 py-4 font-medium text-slate-900 dark:text-white">#TRK-88215</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500">From: Berlin</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">To: Paris</span>
+</div>
+</td>
+<td class="px-6 py-4">Oct 20</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-amber-50 px-2 py-1 text-xs font-medium text-amber-700 ring-1 ring-inset ring-amber-600/20 dark:bg-amber-900/30 dark:text-amber-400">On Hold</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+<td class="px-6 py-4 font-medium text-slate-900 dark:text-white">#TRK-88210</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500">From: Tokyo</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">To: Sydney</span>
+</div>
+</td>
+<td class="px-6 py-4">Oct 18</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20 dark:bg-green-900/30 dark:text-green-400">Delivered</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Invoice Vault Widget -->
+<div class="w-full lg:w-96 flex-none">
+<div class="flex h-full flex-col rounded-xl bg-white shadow-sm border border-slate-100 dark:bg-slate-800 dark:border-slate-700">
+<div class="flex items-center justify-between border-b border-slate-100 px-6 py-4 dark:border-slate-700">
+<h3 class="text-base font-semibold leading-6 text-slate-900 dark:text-white">Invoice Vault</h3>
+<button class="rounded p-1 hover:bg-slate-100 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-slate-500">more_horiz</span>
+</button>
+</div>
+<div class="flex-1 p-4">
+<ul class="flex flex-col gap-3">
+<li class="group flex items-center justify-between rounded-lg border border-slate-100 p-3 hover:border-primary/50 hover:bg-slate-50 transition-colors dark:border-slate-700 dark:hover:bg-slate-700/50">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-red-50 text-red-500 dark:bg-red-900/20">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-medium text-slate-900 dark:text-white">INV-2023-001</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">$1,200.00 • Oct 24</p>
+</div>
+</div>
+<button class="rounded-full p-2 text-slate-400 opacity-0 group-hover:bg-white group-hover:text-primary group-hover:opacity-100 group-hover:shadow-sm dark:group-hover:bg-slate-800 transition-all">
+<span class="material-symbols-outlined">download</span>
+</button>
+</li>
+<li class="group flex items-center justify-between rounded-lg border border-slate-100 p-3 hover:border-primary/50 hover:bg-slate-50 transition-colors dark:border-slate-700 dark:hover:bg-slate-700/50">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-red-50 text-red-500 dark:bg-red-900/20">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-medium text-slate-900 dark:text-white">INV-2023-002</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">$2,250.00 • Oct 24</p>
+</div>
+</div>
+<button class="rounded-full p-2 text-slate-400 opacity-0 group-hover:bg-white group-hover:text-primary group-hover:opacity-100 group-hover:shadow-sm dark:group-hover:bg-slate-800 transition-all">
+<span class="material-symbols-outlined">download</span>
+</button>
+</li>
+<li class="group flex items-center justify-between rounded-lg border border-slate-100 p-3 hover:border-primary/50 hover:bg-slate-50 transition-colors dark:border-slate-700 dark:hover:bg-slate-700/50">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-50 text-green-600 dark:bg-green-900/20">
+<span class="material-symbols-outlined">check</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-medium text-slate-900 dark:text-white">INV-2023-003</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Paid • Sep 15</p>
+</div>
+</div>
+<button class="rounded-full p-2 text-slate-400 opacity-0 group-hover:bg-white group-hover:text-primary group-hover:opacity-100 group-hover:shadow-sm dark:group-hover:bg-slate-800 transition-all">
+<span class="material-symbols-outlined">download</span>
+</button>
+</li>
+</ul>
+</div>
+<div class="border-t border-slate-100 p-4 dark:border-slate-700">
+<button class="flex w-full items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-slate-900 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700">
+                                        View All Invoices
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Promotions / Help Area -->
+<div class="rounded-xl bg-slate-900 p-8 text-center sm:text-left shadow-lg overflow-hidden relative dark:bg-black/40">
+<!-- Abstract pattern background -->
+<div class="absolute inset-0 opacity-20" data-alt="Subtle dot pattern background" style="background-image: radial-gradient(#5bec13 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="relative z-10 flex flex-col items-center justify-between gap-6 sm:flex-row">
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-white">Need custom clearance assistance?</h3>
+<p class="max-w-xl text-slate-400">Our dedicated support team is available 24/7 to help you navigate international shipping regulations.</p>
+</div>
+<button class="shrink-0 whitespace-nowrap rounded-lg bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/20 transition-all border border-white/10">
+                                Contact Support
+                            </button>
+</div>
+</div>
+</div>
+<footer class="mt-12 text-center text-xs text-slate-400 pb-8">
+                    © 2023 Mubraiz Resources Ltd. All rights reserved. Secure Global Logistics Ecosystem.
+                </footer>
+</div>
+</main>
+</div>
+</body></html>

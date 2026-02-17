@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fleet Showcase - Mubraiz Resources</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8eec13",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#1a2210",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#232d18",
+                        "text-main": "#151b0d",
+                        "text-muted": "#5e7a3b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "heading": ["Montserrat", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white font-display overflow-x-hidden">
+<!-- Navbar -->
+<header class="sticky top-0 z-50 w-full border-b border-[#eef3e7] dark:border-[#2f3a22] bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-sm">
+<div class="max-w-[1280px] mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-text-main">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<h2 class="font-heading text-lg font-bold tracking-tight text-text-main dark:text-white">Mubraiz Resources</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-bold text-primary" href="#">Fleet</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center bg-[#eef3e7] dark:bg-[#2f3a22] rounded-lg px-3 h-10 w-64">
+<span class="material-symbols-outlined text-[#789a4c]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-text-main dark:text-white placeholder-[#789a4c]" placeholder="Search assets..." type="text"/>
+</div>
+<button class="h-10 px-5 bg-primary text-text-main text-sm font-bold rounded-lg hover:bg-[#7ed611] transition-colors whitespace-nowrap">
+                        Get Quote
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-col min-h-screen">
+<!-- Hero Section -->
+<section class="relative w-full py-16 px-6 bg-surface-light dark:bg-surface-dark">
+<div class="max-w-[960px] mx-auto text-center space-y-6">
+<h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-text-main dark:text-white">
+                    Fleet Showcase: <span class="text-primary">High-Performance Assets</span>
+</h1>
+<p class="text-lg text-text-muted dark:text-gray-300 max-w-2xl mx-auto">
+                    Explore our diverse inventory of verified, reliable machinery powering global supply chains. From heavy-duty haulers to agile last-mile vans.
+                </p>
+</div>
+</section>
+<!-- Filters & Gallery Container -->
+<section class="w-full px-6 pb-20">
+<div class="max-w-[1280px] mx-auto">
+<!-- Filter Bar -->
+<div class="sticky top-[73px] z-40 py-4 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm mb-8 border-b border-transparent">
+<div class="flex flex-wrap gap-3 justify-center">
+<button class="h-9 px-5 rounded-full bg-primary text-text-main text-sm font-bold shadow-sm transition-transform hover:scale-105">
+                            All Assets
+                        </button>
+<button class="h-9 px-5 rounded-full bg-white dark:bg-[#2f3a22] border border-[#e5e7eb] dark:border-[#3f4a32] text-text-main dark:text-gray-300 text-sm font-medium hover:border-primary hover:text-primary transition-colors">
+                            Heavy Duty
+                        </button>
+<button class="h-9 px-5 rounded-full bg-white dark:bg-[#2f3a22] border border-[#e5e7eb] dark:border-[#3f4a32] text-text-main dark:text-gray-300 text-sm font-medium hover:border-primary hover:text-primary transition-colors">
+                            Distribution Vans
+                        </button>
+<button class="h-9 px-5 rounded-full bg-white dark:bg-[#2f3a22] border border-[#e5e7eb] dark:border-[#3f4a32] text-text-main dark:text-gray-300 text-sm font-medium hover:border-primary hover:text-primary transition-colors">
+                            Container Carriers
+                        </button>
+<button class="h-9 px-5 rounded-full bg-white dark:bg-[#2f3a22] border border-[#e5e7eb] dark:border-[#3f4a32] text-text-main dark:text-gray-300 text-sm font-medium hover:border-primary hover:text-primary transition-colors">
+                            Specialized
+                        </button>
+</div>
+</div>
+<!-- Masonry Grid -->
+<div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+<!-- Item 1: Heavy Duty (Yellow) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
+<img alt="Large yellow excavator construction machinery" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Large yellow heavy duty construction truck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf_4BLw7mMy1CFJ8gzYGkgfrk4rjdXO-LUGCmK8AE9ZJbn41HSa8Og32cf33JqwJCgjf9QBZbzCmUrPrbs8aYMPS_E-64mcbQAFpQAvgI7_creb-W74agIsv9CR4fsBdArD4B0m0BgolQ_fyCKLNpcTLxgeSRqsAO3LaOe3NX2ujxjUIc0t4weBY0MXYV-1ciXZvu9PE8DLGIt9PaSm1veGHgVw0EoJUrL-gguhsKibUSslg3EHn_Ny7vkPp86g8m46eO9-EnmzyE"/>
+<!-- Hover Overlay -->
+<div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="font-heading text-white text-xl font-bold mb-2">Volvo FH16 Heavy Hauler</h3>
+<div class="grid grid-cols-2 gap-4 text-sm text-gray-300">
+<div>
+<p class="text-xs text-primary uppercase font-bold">Horsepower</p>
+<p>750 HP</p>
+</div>
+<div>
+<p class="text-xs text-primary uppercase font-bold">Payload</p>
+<p>120 Ton</p>
+</div>
+<div>
+<p class="text-xs text-primary uppercase font-bold">Drive</p>
+<p>8x4</p>
+</div>
+<div>
+<p class="text-xs text-primary uppercase font-bold">Status</p>
+<p>Available</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Distribution Van (White) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
+<img alt="White delivery van parked on street" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="White modern distribution delivery van side view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBMKeLk5BPw-JF8VTlHDfC8Y2a7VjSUuvYOVuJ9IY0cP1oPx4owrl4jNhTEc2Q1N8LG_gdrpxMqRzJD3rXRp9lXjpwmU5xsJA1XM-m7SaDEKWhwbKpg2gFsQVzRn61IY4cFUhYejl3S--I8PnGNntZOi74j0oIhrlVIqtrozRzyROtGAusKZkTIYUrLKSQZnXW_SnmCZTsS69euHsYnR2iK-iyeNjAPHX6Q2pcMLZg6m49PRPW1F3YGhBB3T9zOma9s1ooJAUyXBw"/>
+<div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="font-heading text-white text-xl font-bold mb-2">Mercedes Sprinter</h3>
+<div class="grid grid-cols-2 gap-4 text-sm text-gray-300">
+<div>
+<p class="text-xs text-primary uppercase font-bold">Engine</p>
+<p>3.0L V6 Diesel</p>
+</div>
+<div>
+<p class="text-xs text-primary uppercase font-bold">Capacity</p>
+<p>15m³ Volume</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3: Container Carrier (Red) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
+<img alt="Red container truck on highway" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Red semi-truck hauling a shipping container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8hRo0_GDDYn3y_6SXxSdQDb_NHi6cPIQuSjc9lPU-8R84lLwGKWZ-6fi0wdTxX2fFEbA4VtTpxxPoxXiaovc-rmQuctgfpHE8QuiPDwsbfKK7nxl9PZj3WeT5_DU59Rzxzna9K9ZNp9VPf3o_zMcWBgMokjutEEBh8nz4BB8jHSDqxl8ipVFDsiD9teXiqSgHpGGwz5XRK0L5CqT_GKG4Y9Salk9cTEdinzPSu6ceDcMxD8ir4sDexMAs3uSWoRj1BaB46TDupgo"/>
+<div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="font-heading text-white text-xl font-bold mb-2">Scania R-Series</h3>
+<div class="grid grid-cols-2 gap-4 text-sm text-gray-300">
+<div>
+<p class="text-xs text-primary uppercase font-bold">Power</p>
+<p>580 HP V8</p>
+</div>
+<div>
+<p class="text-xs text-primary uppercase font-bold">Config</p>
+<p>Container Lift</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 4: Industrial (Yellow/Black) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
+<img alt="Yellow forklift in warehouse" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Yellow industrial forklift in logistics warehouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnBbiPp-ef42NKCtPwxYg0OQ3ofk4MMbS8Syi4FmMpLVSUCaqFynfiaQ3RWG8m2lXF1IMVfpklKe-DYrcpYOCddErX6W8AY-lTmmipb66QEIpymjPW6dgCLzXmPmry5-MU9tKYEO5AWJmK245ZDyRdpYghgbBKYvcMalsB4pbLozWyOwIqH28NrVbfVnUdLxPeA_8Y47slDR033GMJ1V7e360uKeVq-0ZBO5lr72B_WSoLfnX3NvkxF4OTb-HBkYq8ZWCztCaCzuY"/>
+<div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="font-heading text-white text-xl font-bold mb-2">Hyster Heavy Forklift</h3>
+<div class="grid grid-cols-2 gap-4 text-sm text-gray-300">
+<div>
+<p class="text-xs text-primary uppercase font-bold">Lift Cap</p>
+<p>16 Ton</p>
+</div>
+<div>
+<p class="text-xs text-primary uppercase font-bold">Fuel</p>
+<p>Diesel</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 5: Fleet Lineup -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
+<img alt="Fleet of white trucks lined up" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Lineup of white commercial logistics trucks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBD_QUJ1MRhDX_-EL8gE1vZN2F0wZdNjRQPhRrIMDIEjsdPebd_xZfo8hvJJ8nvD8u-GBJ0pZKzSyszOU9vsbu3JGjmjpHgDHVyaHsG9tbVGfUEm_AZxGXOaA1YXdxyISQXZp11Nyb3vL5ghlhAAS5KLP8jI5CpUpYSTeZ-e8qXFWgRMCa4RUHNSzO8WlgQ76Q4K9mNpDndWJL7ttyCMtg3QpAH_iGPGb1i1iWaWbjej_x8IcVNA830AfUulZUGJCE_uBohUguCbM"/>
+<div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="font-heading text-white text-xl font-bold mb-2">Regional Fleet</h3>
+<div class="grid grid-cols-2 gap-4 text-sm text-gray-300">
+<div>
+<p class="text-xs text-primary uppercase font-bold">Units</p>
+<p>12 Vehicles</p>
+</div>
+<div>
+<p class="text-xs text-primary uppercase font-bold">Type</p>
+<p>Box Truck</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 6: Flatbed -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer">
+<img alt="Construction truck with flatbed" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Heavy duty flatbed truck for construction materials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFDwr2li0Xq4W_cUeCIxeanULCRsUJW-Rbqg9RHFjR-WalPl1LJio01pkSDFU8Qvx8LRB7OcDhYXyrZP-hnZxDESu7tjQnuIRAUzkMFD7CmIpXhWb51lAS_Coga-0qHjvwonEvxYNxhCcpRennnO_2m4h0EOY1V4MEp0iPANXHoKvYgW3_tnT-6XB7RW5nph2HAJspBJdf8dCs0Q5ISTGmLFQR72w1bPS8Pozh47AtbQJLF0ai9uMP2hLIz8oFFvQuhPbIkno_p_4"/>
+<div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="font-heading text-white text-xl font-bold mb-2">MAN TGS Flatbed</h3>
+<div class="grid grid-cols-2 gap-4 text-sm text-gray-300">
+<div>
+<p class="text-xs text-primary uppercase font-bold">Length</p>
+<p>13.6m</p>
+</div>
+<div>
+<p class="text-xs text-primary uppercase font-bold">Features</p>
+<p>Crane Equipped</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Safety & Maintenance Section -->
+<section class="bg-surface-light dark:bg-surface-dark border-y border-[#eef3e7] dark:border-[#2f3a22] py-20 px-6">
+<div class="max-w-[1080px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-text-main text-xs font-bold border border-primary/30">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        BN2911944 CERTIFIED
+                    </div>
+<h2 class="font-heading text-3xl md:text-4xl font-bold text-text-main dark:text-white leading-tight">
+                        Safety &amp; Maintenance Standards
+                    </h2>
+<p class="text-text-muted dark:text-gray-400 leading-relaxed">
+                        Our fleet meets the highest industry standards for safety and reliability. Every asset undergoes rigorous pre-trip inspections and follows a strict maintenance schedule to minimize downtime.
+                    </p>
+<div class="space-y-4 pt-4">
+<div class="flex items-start gap-4">
+<div class="min-w-10 h-10 rounded-full bg-[#eef3e7] dark:bg-[#2f3a22] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">satellite_alt</span>
+</div>
+<div>
+<h4 class="font-bold text-text-main dark:text-white">Real-Time GPS Tracking</h4>
+<p class="text-sm text-text-muted dark:text-gray-400">24/7 telematics on all vehicles for precise ETA and route optimization.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="min-w-10 h-10 rounded-full bg-[#eef3e7] dark:bg-[#2f3a22] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<div>
+<h4 class="font-bold text-text-main dark:text-white">Certified Reliability</h4>
+<p class="text-sm text-text-muted dark:text-gray-400">Operating under BN2911944 certification ensuring compliance with international logistics laws.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="min-w-10 h-10 rounded-full bg-[#eef3e7] dark:bg-[#2f3a22] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">build_circle</span>
+</div>
+<div>
+<h4 class="font-bold text-text-main dark:text-white">Proactive Maintenance</h4>
+<p class="text-sm text-text-muted dark:text-gray-400">Regular servicing by authorized dealerships to keep the fleet in peak condition.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-full min-h-[400px] rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?q=80&amp;w=800&amp;auto=format&amp;fit=crop')] bg-cover bg-center" data-alt="Logistics safety manager inspecting a truck"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-4 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-bold">Last Inspection Passed: 100%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-6 bg-background-light dark:bg-background-dark">
+<div class="max-w-4xl mx-auto text-center space-y-8 bg-surface-light dark:bg-surface-dark border border-[#eef3e7] dark:border-[#2f3a22] p-12 rounded-3xl shadow-sm">
+<h2 class="font-heading text-3xl md:text-5xl font-black text-text-main dark:text-white">
+                    Ready to optimize your logistics?
+                </h2>
+<p class="text-lg text-text-muted dark:text-gray-400 max-w-xl mx-auto">
+                    Leverage our high-performance fleet to scale your operations. Contact our leasing department today for a custom quote.
+                </p>
+<div class="pt-4">
+<button class="inline-flex items-center justify-center h-14 px-10 rounded-lg bg-primary text-text-main text-lg font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300">
+                        Inquire About Fleet Leasing
+                        <span class="material-symbols-outlined ml-2 font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-[#eef3e7] dark:border-[#2f3a22] py-8">
+<div class="max-w-[1280px] mx-auto px-6 text-center text-sm text-text-muted dark:text-gray-500">
+<p>© 2023 Mubraiz Resources Ltd. All rights reserved. | BN2911944</p>
+</div>
+</footer>
+</body></html>

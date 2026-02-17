@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Integrated Client Auth Gateway - Mubraiz Resources Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#49ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#152210",
+                        "slate-border": "#cbd5e1",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111b0d] dark:text-white transition-colors duration-300">
+<div class="flex min-h-screen w-full flex-col lg:flex-row">
+<!-- Left Side: Hero Image & Branding -->
+<div class="relative hidden lg:flex lg:w-1/2 xl:w-3/5 bg-cover bg-center items-center justify-center p-12 overflow-hidden" data-alt="Professional Mubraiz logistics truck on a highway at sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABzLwUyHZnBiXcRuS-R2YxyaKeZ7DEQ8fJJrNrzh73LwHez4iO_jGwJ9W79UrrziNvtjuMrpHKoaEK9TcYdJP5snHRNnpzcvULF4MMlhDQu19i9mSIGCoubGH-mJamj3ZuYOXtJtIcloYPkwIHUmpxbaVwAJME1I3jWWfoG8LHrWwE-OQ_N0LMoeEJTAOd01htXSx6vKKQZE_PJjWRIGJYGNBydn72xAS_yz16o3_9A5b-dx09wdOn89y3IY0lonvkHyiTIwOrX1w');">
+<!-- Overlay for readability -->
+<div class="absolute inset-0 bg-black/40"></div>
+<div class="relative z-10 max-w-2xl text-white">
+<div class="mb-8">
+<div class="flex items-center gap-3">
+<div class="bg-primary rounded-lg p-2">
+<span class="material-symbols-outlined text-background-dark font-bold text-3xl">local_shipping</span>
+</div>
+<span class="text-2xl font-black tracking-tight">MUBRAIZ</span>
+</div>
+</div>
+<h1 class="text-5xl xl:text-7xl font-black leading-tight tracking-[-0.033em] mb-6">
+                    Logistics at the <br/>
+<span class="text-primary italic">Speed of Trust</span>
+</h1>
+<p class="text-lg xl:text-xl font-normal opacity-90 leading-relaxed max-w-lg">
+                    Access the Mubraiz Resources Ltd Global Logistics Ecosystem. Secure, reliable, and integrated fleet management at your fingertips.
+                </p>
+</div>
+<!-- Bottom decorative element -->
+<div class="absolute bottom-10 left-12 right-12 flex justify-between items-center z-10 text-white/60 text-sm">
+<span>© 2024 Mubraiz Resources Ltd.</span>
+<div class="flex gap-6">
+<span>Global Operations</span>
+<span>Fleet Network</span>
+</div>
+</div>
+</div>
+<!-- Right Side: Auth Zone -->
+<div class="flex flex-1 flex-col justify-center items-center bg-white dark:bg-background-dark px-6 py-12 lg:px-12">
+<div class="w-full max-w-[480px]">
+<!-- Mobile Branding (Only visible on small screens) -->
+<div class="lg:hidden flex flex-col items-center mb-10">
+<div class="bg-primary rounded-lg p-2 mb-4">
+<span class="material-symbols-outlined text-background-dark font-bold text-3xl">local_shipping</span>
+</div>
+<h2 class="text-2xl font-black tracking-tight dark:text-white">MUBRAIZ RESOURCES</h2>
+</div>
+<!-- Header Content -->
+<div class="mb-8 text-center lg:text-left">
+<h2 class="text-3xl font-bold tracking-tight text-[#111b0d] dark:text-white mb-2">Welcome Back</h2>
+<p class="text-slate-500 dark:text-slate-400">Enter your credentials to access the gateway.</p>
+</div>
+<!-- Tabs Component -->
+<div class="mb-8">
+<div class="flex border-b border-slate-border dark:border-slate-700 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-[#111b0d] dark:text-white pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Login</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 hover:text-[#111b0d] dark:hover:text-white pb-[13px] pt-4 transition-colors" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Sign Up</p>
+</a>
+</div>
+</div>
+<!-- Form Fields -->
+<form class="space-y-5">
+<!-- Email Address Field -->
+<div class="flex flex-col">
+<label class="pb-2">
+<p class="text-[#111b0d] dark:text-white text-sm font-semibold leading-normal">Email Address</p>
+</label>
+<input class="form-input flex w-full min-w-0 rounded-lg text-[#111b0d] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-border dark:border-slate-700 bg-white dark:bg-slate-900 h-14 placeholder:text-slate-400 p-[15px] text-base font-normal transition-all" placeholder="e.g. driver@mubraiz.com" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col">
+<div class="flex justify-between items-center pb-2">
+<label class="text-[#111b0d] dark:text-white text-sm font-semibold leading-normal">Password</label>
+</div>
+<div class="relative flex w-full items-stretch rounded-lg">
+<input class="form-input flex w-full min-w-0 rounded-lg text-[#111b0d] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-border dark:border-slate-700 bg-white dark:bg-slate-900 h-14 placeholder:text-slate-400 p-[15px] text-base font-normal transition-all" placeholder="Enter your password" type="password"/>
+<div class="absolute right-0 top-0 bottom-0 flex items-center pr-4 text-slate-400 hover:text-primary cursor-pointer transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+</div>
+</div>
+<!-- Forgot Password Link -->
+<div class="flex justify-end">
+<a class="text-primary text-sm font-medium hover:underline transition-all" href="#">Forgot Password?</a>
+</div>
+<!-- CTA Button -->
+<button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 bg-primary text-[#111b0d] text-base font-bold leading-normal tracking-[0.015em] hover:brightness-95 active:scale-[0.98] transition-all shadow-lg shadow-primary/20" type="submit">
+<span class="truncate">Secure Login</span>
+</button>
+</form>
+<!-- Social Auth Placeholder (Minimalist) -->
+<div class="mt-10">
+<div class="relative flex items-center mb-6">
+<div class="flex-grow border-t border-slate-border dark:border-slate-700"></div>
+<span class="flex-shrink mx-4 text-slate-400 text-xs uppercase tracking-widest font-bold">Or continue with</span>
+<div class="flex-grow border-t border-slate-border dark:border-slate-700"></div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 flex items-center justify-center h-12 rounded-lg border border-slate-border dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="text-sm font-medium">SSO Login</span>
+</button>
+<button class="flex-1 flex items-center justify-center h-12 rounded-lg border border-slate-border dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="text-sm font-medium">Corporate ID</span>
+</button>
+</div>
+</div>
+<!-- Footer Links -->
+<div class="mt-12 text-center text-xs text-slate-400 dark:text-slate-500 space-x-4">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Help Center</a>
+</div>
+</div>
+</div>
+</div>
+</body></html>

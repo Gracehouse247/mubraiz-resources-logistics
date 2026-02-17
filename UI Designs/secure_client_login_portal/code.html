@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Secure Client Login | Mubraiz Resources Ltd</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3fe473",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "neutral-soft": "#F8F9FA",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-neutral-soft dark:bg-background-dark font-display text-[#0e1b12] dark:text-white antialiased">
+<div class="flex min-h-screen">
+<!-- Sidebar Illustration Section -->
+<div class="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-background-dark">
+<div class="absolute inset-0 z-0 opacity-60 bg-cover bg-center" data-alt="Modern logistics fleet with cargo ships and trucks" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCt0pM1XWJrUr5eCZocAwijBp4NMIH9IDsKzq3djjRd2_-2tRLFNjOC3nJaB9ob4enH1RyzF7_iwT_i3Q6_vYrYcXDLN1JxoXSbpbfYR4wwOJPG7G87IhPoxZJ5ePfHVglq1RhpQ6BmiGthT_cBzxtJ6SQ8-jPs6elyukRzNnuR8p58rbPPdQQeB2z_hYyNxhzVr3UWWVOhAP5CBTRDXHJqtXSxgDtdwWBGUQtVK2ksjv7CVzGyAGX2tWLMjFNoJ3zvHxFxaW6_jtQ");'>
+</div>
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 z-10 bg-gradient-to-br from-background-dark/80 to-transparent"></div>
+<!-- Sidebar Content -->
+<div class="relative z-20 flex flex-col justify-between p-16 w-full">
+<div class="flex items-center gap-4">
+<div class="size-10 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-white text-2xl font-bold tracking-tight">Mubraiz Resources</span>
+</div>
+<div class="max-w-md">
+<h1 class="text-white text-5xl font-black leading-tight mb-6">Global Logistics Redefined.</h1>
+<p class="text-white/80 text-lg font-light leading-relaxed">
+                        Join thousands of enterprises managing their supply chain with real-time tracking, AI-driven analytics, and seamless fleet coordination.
+                    </p>
+</div>
+<div class="flex gap-4">
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Client 1" class="inline-block h-10 w-10 rounded-full ring-2 ring-background-dark" data-alt="Client portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOGmoC5kgN5fWy8robbBVhtlPHp351tIvgWwy0By6fnotEJz1GI7sJSbDuXOufKl1H3RchItOzC7bnlSujZWPtqGfY5U8KzA8i1PF_RdVV5kIVUxn02_AG8adEjBE-JEjpMn3bagGeKh3nU9Oxf4SpVTCnIo0iB72mHWCsgOF7AGk6qwdf0nbxpW7V3_O0Z2BPsCaGaqiO7Jl8z1VyaiEj6A-6rpZRkchCb8gBnSkinM27f-uD7EYCktE5f74yl1yW9_UKW58QDSQ"/>
+<img alt="Client 2" class="inline-block h-10 w-10 rounded-full ring-2 ring-background-dark" data-alt="Client portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvuA29jUr40mAF5Wad55z3_bOp5WhTFIQ12cC8_BYrvzgshAde8IOCy0bgtv0BCOd_ygDSCeIlbMiakewnwJEJAUHV-FVGzZaq87EsZZK20mJN4we-O8vVms_CDJ6p7Ikosv4LcVFiXBQmDtMUVXq-MuH8VTDi1oVFDg5zLkON_3TfuVI2geo5ylHQ3GrKkwmnAdOpF6SxR_l_KQuFoPDpuNSNh9pv8A49yA0Tt8Gqk0BhxgMlFPtCOOXUElRYUn_ZEtv3yGFo-SM"/>
+<img alt="Client 3" class="inline-block h-10 w-10 rounded-full ring-2 ring-background-dark" data-alt="Client portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfmsTe9J1I3P7E6UxQmzl6fNcdqsUOXKaXHi8s-ofNmYXqWLLIw8iK02d6vtv9IdOp0dDGMgnzg_ES2rruJWkdTpsEJuYTiZ0fK20qls-mBZL0s6gyu3JwjCFoSqXOc2xExhurkwNN64eX7IQOMy_pS1SajDf_C_btDBfCmKij_X-_jSjJ0CX1ndsdyoil_FoGQdNiJR2E9cXkIbM1oVT4DJFRAvALRbIpD7Ml8lirfCdXpqY_Mcd7vb8r7MQEBCvjLTSDNKUay-8"/>
+</div>
+<p class="text-white/60 text-sm self-center">Trusted by 500+ global partners</p>
+</div>
+</div>
+</div>
+<!-- Login Form Section -->
+<div class="w-full lg:w-1/2 flex flex-col justify-center items-center px-6 py-12 md:px-24 bg-neutral-soft dark:bg-background-dark">
+<div class="w-full max-w-md">
+<!-- Mobile Header -->
+<div class="flex lg:hidden items-center gap-3 mb-10 justify-center">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-2xl font-bold">Mubraiz Resources</span>
+</div>
+<div class="bg-white dark:bg-background-dark/50 border border-[#e8f3eb] dark:border-white/10 p-8 md:p-10 rounded-xl shadow-xl shadow-black/5">
+<div class="mb-10 text-center lg:text-left">
+<h2 class="text-[#0e1b12] dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] mb-2">Welcome Back</h2>
+<p class="text-[#509566] dark:text-gray-400 font-medium">Please enter your details to access the dashboard.</p>
+</div>
+<form action="#" class="space-y-6">
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0e1b12] dark:text-white text-sm font-semibold leading-normal" for="email">Email Address</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0e1b12] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/30 border border-[#d1e6d7] dark:border-white/20 bg-transparent focus:border-primary h-12 placeholder:text-[#509566]/60 p-[15px] text-base font-normal leading-normal transition-all" id="email" placeholder="name@company.com" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-[#0e1b12] dark:text-white text-sm font-semibold leading-normal" for="password">Password</label>
+<a class="text-primary text-xs font-bold hover:underline" href="#">Forgot password?</a>
+</div>
+<div class="flex w-full items-stretch relative">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0e1b12] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/30 border border-[#d1e6d7] dark:border-white/20 bg-transparent focus:border-primary h-12 placeholder:text-[#509566]/60 p-[15px] pr-12 text-base font-normal leading-normal transition-all" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-[#509566] hover:text-primary" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary border-[#d1e6d7] bg-transparent" id="remember" type="checkbox"/>
+<label class="text-sm text-[#0e1b12]/70 dark:text-white/70 font-medium" for="remember">Remember for 30 days</label>
+</div>
+<!-- Sign In Button -->
+<button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-[#0e1b12] text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all shadow-lg shadow-primary/20" type="submit">
+                            Sign In
+                        </button>
+<!-- Divider -->
+<div class="relative flex items-center py-4">
+<div class="flex-grow border-t border-[#d1e6d7] dark:border-white/10"></div>
+<span class="flex-shrink mx-4 text-xs font-bold text-[#509566] uppercase tracking-wider">Or continue with</span>
+<div class="flex-grow border-t border-[#d1e6d7] dark:border-white/10"></div>
+</div>
+<!-- SSO/Social Options -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 px-4 py-2 border border-[#d1e6d7] dark:border-white/20 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-all" type="button">
+<span class="material-symbols-outlined text-xl">corporate_fare</span>
+<span class="text-sm font-semibold">SSO</span>
+</button>
+<button class="flex items-center justify-center gap-2 px-4 py-2 border border-[#d1e6d7] dark:border-white/20 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-all" type="button">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.66l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-sm font-semibold">Google</span>
+</button>
+</div>
+</form>
+<div class="mt-10 text-center">
+<p class="text-sm text-[#0e1b12]/70 dark:text-white/70">
+                            Don't have a corporate account? 
+                            <a class="text-primary font-bold hover:underline ml-1" href="#">Contact your Administrator</a>
+</p>
+</div>
+</div>
+<!-- Footer Links -->
+<div class="mt-8 flex justify-center gap-6 text-xs text-[#509566] font-medium">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Global Support</a>
+</div>
+</div>
+</div>
+</div>
+</body></html>

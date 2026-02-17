@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Real-time Shipment Milestone Tracker - Mubraiz Resources Ltd</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4CD964", // Apple Green
+                        "primary-dark": "#3CB350",
+                        "background-light": "#F8FAF8",
+                        "background-dark": "#0D1F12",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#16281B",
+                        "warning": "#FFCC00", // Safety Yellow
+                        "warning-dark": "#D4A000",
+                        "future": "#94A3B8", // Slate Grey for future
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(76, 217, 100, 0.3)',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display min-h-screen flex flex-col">
+<header class="w-full bg-surface-light dark:bg-surface-dark border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-9 bg-slate-900 dark:bg-white text-primary rounded-lg">
+<span class="material-symbols-outlined">network_node</span>
+</div>
+<h1 class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">Mubraiz <span class="text-slate-500 font-normal">Logistics</span></h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary-dark dark:hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary-dark dark:hover:text-primary transition-colors" href="#">Shipments</a>
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary-dark dark:hover:text-primary transition-colors" href="#">Analytics</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 text-white dark:text-slate-900 text-sm font-bold h-9 px-4 rounded-lg items-center justify-center transition-colors shadow-sm">
+                        Client Portal
+                    </button>
+<button class="md:hidden p-2 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center w-full">
+<section class="w-full bg-surface-light dark:bg-surface-dark border-b border-slate-200 dark:border-slate-800 py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style="background-image: linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center gap-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary-dark text-xs font-bold uppercase tracking-wider border border-primary/20">
+<span class="size-2 rounded-full bg-primary animate-pulse"></span>
+                    Live Tracking System
+                </span>
+<h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    Track Your Shipment
+                </h2>
+<div class="w-full max-w-2xl mt-4 relative group">
+<div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 group-focus-within:text-primary transition-colors">qr_code_scanner</span>
+</div>
+<input class="block w-full pl-12 pr-32 py-4 bg-white dark:bg-surface-dark border-2 border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-0 focus:border-primary shadow-lg shadow-slate-200/50 dark:shadow-none text-base font-medium transition-all" placeholder="Enter Tracking ID, BL, or Container Number" type="text" value="#MR-882910-US"/>
+<div class="absolute inset-y-2 right-2">
+<button class="h-full px-6 bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 text-white dark:text-slate-900 font-bold text-sm rounded-lg transition-colors flex items-center gap-2">
+                            Search
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<div class="w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8 md:py-12 space-y-8">
+<div class="space-y-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-6">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Bill of Lading</span>
+<span class="bg-primary/20 text-primary-dark px-2 py-0.5 rounded text-[10px] font-bold uppercase border border-primary/20">On Route</span>
+</div>
+<h3 class="text-3xl font-black text-slate-900 dark:text-white">#MR-882910-US</h3>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-semibold hover:border-slate-300 dark:hover:border-slate-600 transition-colors text-slate-700 dark:text-slate-300 shadow-sm">
+<span class="material-symbols-outlined text-lg">notifications_active</span>
+                            Get Alerts
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg text-sm font-bold hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-lg">download</span>
+                            Export
+                        </button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-white dark:bg-surface-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wider">From</span>
+<span class="material-symbols-outlined text-slate-400">factory</span>
+</div>
+<p class="text-xl font-bold text-slate-900 dark:text-white truncate">Shanghai, CN</p>
+<p class="text-xs text-slate-500 mt-1 font-medium">Yangshan Port (CN SHA)</p>
+</div>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wider">To</span>
+<span class="material-symbols-outlined text-slate-400">warehouse</span>
+</div>
+<p class="text-xl font-bold text-slate-900 dark:text-white truncate">Los Angeles, US</p>
+<p class="text-xs text-slate-500 mt-1 font-medium">Port of Long Beach (US LGB)</p>
+</div>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-xl border-l-4 border-warning shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Status</span>
+<span class="material-symbols-outlined text-warning animate-pulse">warning</span>
+</div>
+<p class="text-xl font-bold text-slate-900 dark:text-white relative z-10">Exception</p>
+<p class="text-xs text-warning-dark font-bold mt-1 relative z-10">Weather Delay (+24h)</p>
+<div class="absolute inset-0 bg-warning/5 dark:bg-warning/10 z-0"></div>
+</div>
+<div class="bg-slate-900 dark:bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex justify-between items-start mb-4">
+<span class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Estimated Arrival</span>
+<span class="material-symbols-outlined text-primary group-hover:text-white dark:group-hover:text-slate-900 transition-colors">calendar_clock</span>
+</div>
+<p class="text-xl font-bold text-white dark:text-slate-900">Nov 03, 2023</p>
+<p class="text-xs text-slate-400 dark:text-slate-500 mt-1 font-medium">Updated: 2 hours ago</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 rounded-xl p-6 md:p-8 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+<h4 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">history</span>
+                            Milestone Timeline
+                        </h4>
+<div class="bg-slate-100 dark:bg-slate-800 p-1 rounded-lg flex items-center self-start sm:self-auto">
+<button class="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-slate-700 rounded-md shadow-sm text-xs font-bold text-slate-900 dark:text-white transition-all">
+<span class="material-symbols-outlined text-base">format_list_bulleted</span>
+                                List View
+                            </button>
+<button class="flex items-center gap-2 px-3 py-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
+<span class="material-symbols-outlined text-base">map</span>
+                                Map View
+                            </button>
+</div>
+</div>
+<div class="relative pl-2">
+<div class="absolute top-2 bottom-8 left-[27px] w-[2px] bg-slate-200 dark:bg-slate-700 z-0"></div>
+<div class="relative z-10 flex gap-6 mb-12 group">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-primary ring-4 ring-white dark:ring-surface-dark z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[14px] font-bold">check</span>
+</div>
+</div>
+<div class="flex-1 -mt-1">
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+<h5 class="text-base font-bold text-slate-900 dark:text-white">Picked Up</h5>
+<span class="text-xs font-bold text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Oct 24 • 10:00 AM</span>
+</div>
+<p class="text-sm text-slate-500 mt-1">Cargo collected from shipper facility.</p>
+</div>
+</div>
+<div class="relative z-10 flex gap-6 mb-12 group">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-primary ring-4 ring-white dark:ring-surface-dark z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[14px] font-bold">check</span>
+</div>
+</div>
+<div class="flex-1 -mt-1">
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+<h5 class="text-base font-bold text-slate-900 dark:text-white">Customs Cleared</h5>
+<span class="text-xs font-bold text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Oct 26 • 02:15 PM</span>
+</div>
+<p class="text-sm text-slate-500 mt-1">Export customs documentation approved.</p>
+</div>
+</div>
+<div class="relative z-10 flex gap-6 mb-12 group">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-warning ring-4 ring-warning/30 dark:ring-warning/20 z-10 flex items-center justify-center animate-pulse shadow-glow">
+<div class="size-2 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex-1 -mt-1">
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-4">
+<h5 class="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                        In Transit
+                                        <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-warning text-slate-900">Attention Needed</span>
+</h5>
+<span class="text-xs font-bold text-warning-dark bg-warning/10 px-2 py-1 rounded border border-warning/20">Oct 28 • 09:15 AM</span>
+</div>
+<div class="bg-amber-50 dark:bg-amber-950/30 border-l-4 border-warning p-5 rounded-r-lg shadow-sm">
+<div class="flex items-start gap-4">
+<div class="p-2 bg-warning/20 rounded-lg text-warning-dark shrink-0">
+<span class="material-symbols-outlined text-xl">anchor</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h6 class="text-sm font-bold text-slate-900 dark:text-white">Port Congestion Alert</h6>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Alert ID: #DELAY-992</span>
+</div>
+<p class="text-sm text-slate-700 dark:text-slate-300 mt-2 leading-relaxed">
+                                                Vessel <strong>Northern Jasper</strong> is currently experiencing berthing delays at the transshipment hub.
+                                                <br/>
+<span class="text-xs text-slate-500 mt-1 block">Reason: High volume traffic &amp; seasonal weather impact.</span>
+</p>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded text-xs font-bold bg-white dark:bg-black/20 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                                                    Impact: +24h
+                                                </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded text-xs font-bold bg-white dark:bg-black/20 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-[14px]">update</span>
+                                                    Live GPS
+                                                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative z-10 flex gap-6 mb-12 group opacity-60">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-slate-200 dark:bg-slate-700 ring-4 ring-white dark:ring-surface-dark z-10 flex items-center justify-center">
+<div class="size-2 bg-slate-400 rounded-full"></div>
+</div>
+</div>
+<div class="flex-1 -mt-1">
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+<h5 class="text-base font-bold text-future dark:text-slate-400">Out for Delivery</h5>
+<span class="text-xs font-semibold text-slate-400 bg-slate-50 dark:bg-slate-800/50 px-2 py-1 rounded dashed border border-slate-200">Pending</span>
+</div>
+<p class="text-sm text-slate-400 mt-1">Scheduled for final mile delivery.</p>
+</div>
+</div>
+<div class="relative z-10 flex gap-6 group opacity-60">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-slate-200 dark:bg-slate-700 ring-4 ring-white dark:ring-surface-dark z-10 flex items-center justify-center">
+<div class="size-2 bg-slate-400 rounded-full"></div>
+</div>
+</div>
+<div class="flex-1 -mt-1">
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+<h5 class="text-base font-bold text-future dark:text-slate-400">Delivered</h5>
+<span class="text-xs font-semibold text-slate-400 bg-slate-50 dark:bg-slate-800/50 px-2 py-1 rounded dashed border border-slate-200">Est. Nov 03</span>
+</div>
+<p class="text-sm text-slate-400 mt-1">Proof of delivery signature required.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-hidden flex flex-col h-full max-h-[400px]">
+<div class="p-4 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center bg-slate-50 dark:bg-surface-dark/50">
+<span class="text-xs font-bold uppercase text-slate-500">Live Satellite View</span>
+<div class="flex items-center gap-1">
+<span class="size-2 bg-primary rounded-full animate-pulse"></span>
+<span class="text-xs font-bold text-primary">Online</span>
+</div>
+</div>
+<div class="relative flex-grow">
+<img alt="Map visualization showing shipping route across the Pacific Ocean" class="w-full h-full object-cover opacity-90" data-location="Pacific Ocean" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5N5cqMHr1y3rTkF4TWpyI6PEeXCfu1rqu0WxE57ht1uhRr0RFjl6SMqGVbaWfBYb4WfNpqJ5HA4Iq-bzrLd3SLn4UFk8qDjTlY6qsQbOHJrX75ToTGiIWQIiR5Quvkg9bWS3558mi8u2CGSyj9AdfQ6uPjYwCw_N6YA2JyOTRrKO9ZWKUBp8-ySpk6xoDhpWEWu3gAS25j7HMjCNVpSHHM5UCtKwx_vfHr_aSMQtwi9bhRwhhYevW65SMk09ZKdcRY8guhN-OCzQ"/>
+<div class="absolute top-4 right-4 flex flex-col gap-2">
+<button class="size-8 bg-white dark:bg-surface-dark rounded shadow flex items-center justify-center text-slate-600 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+<button class="size-8 bg-white dark:bg-surface-dark rounded shadow flex items-center justify-center text-slate-600 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<div class="bg-white/95 dark:bg-surface-dark/95 backdrop-blur p-3 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700">
+<p class="text-[10px] text-slate-500 font-bold uppercase mb-1">Current Coordinates</p>
+<div class="flex justify-between items-center">
+<p class="font-mono text-sm font-bold text-slate-900 dark:text-white">34.0522° N, 118.2437° W</p>
+<span class="material-symbols-outlined text-slate-400 text-sm">my_location</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+<div class="flex items-center gap-3 mb-3">
+<div class="p-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<h5 class="font-bold text-slate-900 dark:text-white">Need Assistance?</h5>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-5 leading-relaxed">
+                            Questions about the <strong>Port Congestion</strong> delay? Our logistics team is monitoring the situation 24/7.
+                        </p>
+<button class="w-full py-2.5 px-4 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 hover:border-primary dark:hover:border-primary text-slate-900 dark:text-white text-sm font-bold rounded-lg transition-colors flex items-center justify-center gap-2 group shadow-sm">
+                            Contact Support
+                            <span class="material-symbols-outlined text-lg text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full bg-white dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 py-8 mt-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium">© 2023 Mubraiz Resources Ltd. Global Logistics Ecosystem.</p>
+<div class="flex gap-6">
+<a class="text-sm font-semibold text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors" href="#">Help Center</a>
+</div>
+</div>
+</footer>
+
+</body></html>
