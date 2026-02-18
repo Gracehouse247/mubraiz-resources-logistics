@@ -39,6 +39,7 @@ export default function Header() {
 
     const resourceLinks = [
         { title: "Knowledge Wiki", href: "/resources/wiki", desc: "AI-powered trade & compliance engine." },
+        { title: "Industry Blog", href: "/blog", desc: "Latest logistics insights & authority posts." },
         { title: "Expert Consultation", href: "/resources/consultation", desc: "Book a 1-on-1 with logistics strategists." },
         { title: "Cost Calculator", href: "/tools/calculator", desc: "Instant freight and volumetric tool." },
         { title: "Logistics Glossary", href: "/resources/glossary", desc: "Trade terms and Incoterms guide." },

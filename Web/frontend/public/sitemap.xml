@@ -157,10 +157,33 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://mubraizresourcesltd.com/partners</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- Blog Posts -->
+  <url><loc>https://mubraizresourcesltd.com/blog/3pl-services-nigeria-b2b-scalability-benefits/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/agri-logistics-nigeria-farm-to-table-efficiency/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/b2b-logistics-nigeria-corporate-partnerships/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/bonded-warehousing-nigeria-tax-optimization/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/cargo-security-nigeria-asset-protection-protocols/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/cng-trucks-nigeria-logistics-future/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/cold-chain-logistics-nigeria-pharma-fmcg/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/cross-border-logistics-nigeria-afcfta-guide/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/digital-customs-nigeria-paperless-trade/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/digital-freight-forwarding-nigeria-efficiency/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/distribution-network-nigeria-nationwide-coverage/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/eco-friendly-haulage-nigeria-sustainable-fleet-future/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/ecommerce-logistics-nigeria-optimization-guide/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/freight-forwarding-lagos-global-trade-acceleration/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/green-logistics-nigeria-sustainable-haulage-future/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/hazmat-logistics-nigeria-safety-standards/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/heavy-equipment-transport-nigeria-industrial-haulage/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/last-mile-delivery-lagos-efficiency-strategies/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/lekki-deep-sea-port-logistics-supply-chain-impact/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/logistics-cost-reduction-nigeria-optimization-hacks/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/logistics-infrastructure-nigeria-regional-trade-hubs/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/logistics-technology-nigeria-ai-iot-future/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/multimodal-transport-nigeria-rail-road-sea-integration/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/port-to-door-logistics-streamlining-import-speed/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/reverse-logistics-nigeria-building-a-robust-loop/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/supply-chain-disruption-nigeria-risk-mitigation-strategies/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/supply-chain-strategy-nigeria-modern-architecture/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mubraizresourcesltd.com/blog/warehouse-management-nigeria-inventory-intelligence/</loc><lastmod>2026-02-18</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
