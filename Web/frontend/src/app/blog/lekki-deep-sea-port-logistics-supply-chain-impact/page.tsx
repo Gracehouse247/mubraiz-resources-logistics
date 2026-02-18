@@ -4,8 +4,8 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
     title: "Lekki Deep Sea Port Logistics | Future of Nigerian Trade",
-    description: "Unlock the potential of Lekki Deep Sea Port. Learn how to integrate this hub into your supply chain for faster turnaround and lower costs.",
-    keywords: ["Lekki Deep Sea Port Logistics", "Port-to-door logistics", "Maritime hub Lagos", "Customs clearance Lekki"],
+    description: "Unlock the potential of Lekki Deep Sea Port. Learn how to integrate this hub into your supply chain for faster turnaround and lower costs with Mubraiz Resources.",
+    keywords: ["Lekki Deep Sea Port Logistics", "Port-to-door logistics", "maritime hub Lagos", "customs clearance Lekki", "shipping turnaround Nigeria"],
     alternates: {
         canonical: "https://mubraizresourcesltd.com/blog/lekki-deep-sea-port-logistics-supply-chain-impact",
     },
@@ -16,7 +16,7 @@ export default function LekkiPortPost() {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "The Lekki Frontier: Maximizing Opportunities at Nigeria’s New Hub",
-        "description": "How the Lekki Deep Sea Port is redefining the logistics landscape of West Africa.",
+        "description": "How the Lekki Deep Sea Port is redrawing the map of West African trade and how businesses can leverage it for a competitive edge.",
         "author": {
             "@type": "Organization",
             "name": "Mubraiz Resources Ltd"
@@ -29,8 +29,8 @@ export default function LekkiPortPost() {
                 "url": "https://mubraizresourcesltd.com/images/mubraiz-logo.svg"
             }
         },
-        "datePublished": "2026-02-17",
-        "image": "https://mubraizresourcesltd.com/images/blog/lekki-port-logistics.jpg"
+        "datePublished": "2026-02-18",
+        "image": "https://mubraizresourcesltd.com/images/blog/lekki_port_premium_hero_v1.webp"
     };
 
     return (
@@ -38,75 +38,115 @@ export default function LekkiPortPost() {
             <JsonLd data={blogLd} />
             <BlogPost
                 title="The Lekki Frontier: Maximizing Opportunities at Nigeria’s New Hub"
-                description="The game has changed. Are you ready to leverage the most advanced port in West Africa?"
-                author="Maritime Strategy Division"
-                date="February 17, 2026"
-                image="/images/blog/lekki-port-logistics.jpg"
-                imageAlt="Container operations at Lekki Deep Sea Port showing modern Nigerian logistics infrastructure."
-                keywords={["Lekki", "Port", "Trade", "Nigeria"]}
+                description="The launch of the Lekki Deep Sea Port marks a generational shift in Nigerian maritime trade. For those ready to move, it represents the death of congestion and the birth of maritime velocity."
+                author="Maritime Operations Lead"
+                date="February 18, 2026"
+                image="/images/blog/lekki_port_premium_hero_v1.webp"
+                imageAlt="Massive container ships and modern gantry cranes at Lekki Deep Sea Port, the gateway to West African commerce."
+                keywords={["Lekki Port", "Logistics", "Maritime", "Nigeria", "Trade Hub"]}
                 content={
-                    <div className="space-y-8">
+                    <div className="space-y-12">
                         <section>
-                            <h2 className="text-3xl font-bold mb-4">A New Dawn for Nigerian Maritime Trade</h2>
-                            <p>
-                                For decades, Nigerian importers and exporters have grappled with the bottleneck of traditional port operations. But today, the skyline of the Lekki Free Trade Zone tells a different story. **Lekki Deep Sea Port Logistics** is not just an incremental improvement; it is a fundamental shift in how Africa trades with the world.
+                            <h2 className="text-4xl font-extrabold mb-6 text-slate-900">A New Gateway: The Strategic Importance of Lekki</h2>
+                            <p className="text-lg leading-relaxed text-slate-700">
+                                For decades, the Apapa and Tincan Island ports were the primary arteries of Nigerian commerce. However, as the economy grew, so did the bottlenecks. **Lekki Deep Sea Port Logistics** represents more than just a new facility; it is a fundamental technological upgrade to the nation’s infrastructure.
                             </p>
-                            <p>
-                                At Mubraiz Resources, we see this as more than just a port. It is a catalyst for economic empowerment. By reducing turnaround times from weeks to days, we are helping Nigerian businesses compete on a global stage with an authority that was previously reserved for western markets.
+                            <p className="text-lg leading-relaxed text-slate-700">
+                                As an authority in specialized maritime haulage, Mubraiz Resources recognized early that the successful integration of Lekki would depend on a "Port-to-Door" strategy that bypasses the traditional points of failure.
                             </p>
                         </section>
 
-                        <section className="bg-orange-50 p-8 rounded-xl border-l-4 border-orange-600">
-                            <h3 className="text-2xl font-bold mb-4 text-orange-900">Why Lekki Changes Everything</h3>
-                            <ul className="list-disc pl-6 space-y-2 text-orange-800">
-                                <li><strong>Draft Depth:</strong> Accommodating the world's largest container vessels.</li>
-                                <li><strong>Full Automation:</strong> Advanced CMS systems reducing human error in cargo handling.</li>
-                                <li><strong>Strategic Location:</strong> Bypassing the historical congestion of Apapa and Tin Can.</li>
-                            </ul>
+                        <section className="bg-slate-900 text-white p-12 rounded-3xl shadow-2xl relative">
+                            <h3 className="text-3xl font-bold mb-8 text-blue-400">The "Lekki Advantage" by the Numbers</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                                <div className="text-center">
+                                    <div className="text-5xl font-black mb-2">16.5m</div>
+                                    <p className="text-slate-400 text-sm">Draught depth, allowing the world's largest container vessels (New Panamax) to berth for the first time in Nigeria.</p>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-5xl font-black mb-2">1.2M</div>
+                                    <p className="text-slate-400 text-sm">Annual TEU capacity, significantly reducing the 'Wait-time-at-Anchorage' for global shippers.</p>
+                                    00:00:00
+                                    <div className="text-center">
+                                        <div className="text-5xl font-black mb-2">70%</div>
+                                        <p className="text-slate-400 text-sm">Targeted reduction in port-to-warehouse transit time compared to traditional Lagos ports.</p>
+                                    </div>
+                                </div>
                         </section>
 
                         <section>
-                            <h2 className="text-3xl font-bold mb-4">1. Port-to-Door Logistics: The Seamless Transition</h2>
-                            <p>
-                                The real value of a deep-sea port isn't just in how fast ships can dock; it's in how fast the cargo reaches its final destination. Our **Port-to-door logistics** solutions at Lekki focus on the "Rapid Pull-Out" strategy.
+                            <h2 className="text-3xl font-bold mb-6">1. Seamless Integration: From Berth to Warehouse</h2>
+                            <p className="text-lg mb-6 leading-relaxed">
+                                The real value of Lekki isn't found at the quay; it's found in the flow. **Port-to-door logistics** at Lekki is optimized by the Free Trade Zone (FTZ) ecosystem. This allows for 'In-Transit Storage' where goods can be held under bond, reducing immediate duty pressure and allowing for strategic distribution.
                             </p>
-                            <p>
-                                By integrating our fleet directly with the port's digital terminals, we ensure your containers are on the road while others are still clearing paperwork. This is authority logistics—anticipating the move before the ship even anchors.
-                            </p>
-                            <h3 className="text-xl font-bold mt-6 mb-2">Internal Linking:</h3>
-                            <p>
-                                🔍 *Navigate the complexities of [Customs Clearing and Forwarding](file:///c:/Projects/Mubraiz%20Resources%20UI/Web/frontend/src/app/services/customs/page.tsx) with our specialized Lekki desk.*
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-3xl font-bold mb-4">2. Maritime Hub Lagos: Your Gateway to AfCFTA</h2>
-                            <p>
-                                Lekki is positioned as the definitive **Maritime hub in Lagos**, but its reach is continental. As the African Continental Free Trade Area (AfCFTA) gains momentum, having a logistics partner with a footprint in Lekki is your most strategic asset.
-                            </p>
-                            <p>
-                                We've simplified the process of regional distribution. Whether you're transshipping to neighboring West African ports or moving cargo inland to the Northern nodes, Mubraiz provides the "Single Window" service that eliminates regional friction.
+                            <p className="text-lg">
+                                By utilizing the [Customs Clearance Services](file:///c:/Projects/Mubraiz%20Resources%20UI/Web/frontend/src/app/services/customs/page.tsx) at Mubraiz, businesses can leverage "Pre-Arrival Assessment Reports" (PAAR) to ensure that their cargo moves from the crane to our [Fleet](file:///c:/Projects/Mubraiz%20Resources%20UI/Web/frontend/src/app/fleet/page.tsx) in record time.
                             </p>
                         </section>
 
                         <section>
-                            <h2 className="text-3xl font-bold mb-4 italic">Authority Insight...</h2>
-                            <p>
-                                The difference between a leader and a follower in commerce is the ability to recognize infrastructure shifts early. The Lekki Deep Sea Port is that shift.
+                            <h2 className="text-3xl font-bold mb-6 text-slate-900 border-b-4 border-blue-600 inline-block uppercase">The Logistics Corridor: Bypassing the Lagos Gridlock</h2>
+                            <p className="text-lg py-6 italic text-slate-600 font-medium">
+                                "The Epe-Lekki corridor is the new industrial spine of Nigeria. Moving cargo through this route means avoiding the 24-hour queues of the Apapa bridge. We are talking about same-day delivery from port to warehouse—a metric previously thought impossible in Lagos."
                             </p>
                         </section>
 
-                        <section className="mt-12">
-                            <h2 className="text-3xl font-bold mb-4">Summary: The Competitive Edge</h2>
-                            <p>
-                                In 2025, speed is currency. Let Mubraiz Resources help you spend it wisely at the Lekki Frontier.
+                        <section>
+                            <h2 className="text-3xl font-bold mb-6">2. Maritime Hub Lagos: Regional Ambitions</h2>
+                            <p className="text-lg mb-8 leading-relaxed">
+                                **Maritime hub Lagos** is positioning itself as the transshipment center for the entire West African sub-region. For multinational corporations, this means Lekki becomes the primary landing point, with smaller vessels (feeders) distributing goods to neighboring ports in Ghana, Benin, and Côte d'Ivoire.
+                            </p>
+                            <div className="bg-blue-50 p-8 rounded-2xl border border-blue-100">
+                                <h4 className="font-bold mb-4 text-blue-900 text-xl">The Transshipment Playbook:</h4>
+                                <ul className="space-y-3 list-none">
+                                    <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-blue-600"></span> Consolidated Customs Processing</li>
+                                    <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-blue-600"></span> Duty-Free Re-exportation within the FTZ</li>
+                                    <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-blue-600"></span> Intermodal Rail connectivity (Upcoming Phase)</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-3xl font-bold mb-6">3. Shipping Turnaround Nigeria: A Competitive Edge</h2>
+                            <p className="text-lg mb-6">
+                                In the global supply chain, time is literally money. **Shipping turnaround in Nigeria** has historically been a pain point. Lekki changes this by utilizing semi-automated gantry cranes and OCR (Optical Character Recognition) gate systems.
+                            </p>
+                            <p className="text-lg mb-8">
+                                At Mubraiz, we integrate our [Live Tracking API](file:///c:/Projects/Mubraiz%20Resources%20UI/Web/frontend/src/app/fleet/page.tsx) with the port's vessel arrival schedule. This "Just-In-Time" (JIT) haulage approach ensures that our trucks are at the gate exactly when the container is released—zero idle time for the client, zero congestion for the port.
                             </p>
                         </section>
+
+                        <section className="bg-gradient-to-r from-blue-900 to-slate-900 text-white p-12 rounded-3xl">
+                            <h2 className="text-3xl font-bold mb-6">Expert Verdict: Diversifying Your Port Mix</h2>
+                            <p className="text-lg mb-6 opacity-90">
+                                We advise our B2B clients to maintain a "Hybrid Port Strategy." While Apapa remains viable for certain bulk commodities and regional distribution, specialized consumer goods and high-value imports should be funneled through the Lekki-Epe axis to ensure **Business Continuity**.
+                            </p>
+                            <div className="flex gap-4">
+                                <a href="/contact" className="bg-blue-500 hover:bg-blue-400 px-8 py-4 rounded-xl font-bold transition-colors">Speak to a Maritime Consultant</a>
+                                <a href="/network" className="bg-white/10 hover:bg-white/20 px-8 py-4 rounded-xl font-bold transition-colors">View Our Network Map</a>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-3xl font-bold mb-6">Future-Proofing Your Supply Chain</h2>
+                            <p className="text-lg mb-10 leading-relaxed">
+                                The businesses that thrive in the next decade are those that adapt to the shifting gravity of Nigerian trade. The Lekki Deep Sea Port is that gravitational center. By partnering with an authority like Mubraiz Resources, you aren't just shipping cargo; you are architecting a faster, leaner, and more resilient future.
+                            </p>
+                        </section>
+
+                        <footer className="pt-12 border-t text-slate-500 text-sm">
+                            <p>
+                                <strong>Technical Analysis by:</strong> Mubraiz Resources Port Operations & Strategic Advisory Group.
+                            </p>
+                            <p className="mt-4">
+                                🔍 *Deep Dive: [How AfCFTA is Revolutionizing Cross-Border Trade](file:///c:/Projects/Mubraiz%20Resources%20UI/Web/frontend/src/app/blog/cross-border-logistics-nigeria-afcfta-guide/page.tsx)*
+                            </p>
+                        </footer>
                     </div>
                 }
                 relatedPosts={[
-                    { title: "Navigating Digital Customs", slug: "digital-customs-nigeria-paperless-trade" },
-                    { title: "Cross-Border Logistics Mastery", slug: "cross-border-logistics-nigeria-afcfta-guide" }
+                    { title: "Customs Clearance Strategies", slug: "digital-customs-nigeria-paperless-trade" },
+                    { title: "Cross-Border Trade Guide", slug: "cross-border-logistics-nigeria-afcfta-guide" }
                 ]}
             />
         </>
